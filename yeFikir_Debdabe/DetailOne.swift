@@ -14,6 +14,7 @@ class DetailOne: UIViewController {
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
+  
     
     func configureView() {
         // Update the user interface for the detail item.
