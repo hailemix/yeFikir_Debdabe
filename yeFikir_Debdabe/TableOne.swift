@@ -12,7 +12,7 @@ import CoreData
 class TableOne: UITableViewController{
     
 
-    var detailViewController: DetailOne? = nil
+    var detailViewController: DetailOne?
     var objects = ["የኔ ገላ ","ሰማይ ቤት","ሰዉ በመፋቀር ","ይኸዉ ነዉ!","እንደሚሰማኝ ","የምናፍቅሽ"]
     
     let image1 = UIImage(named: "a1")
@@ -42,10 +42,7 @@ class TableOne: UITableViewController{
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
+ 
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -79,12 +76,14 @@ class TableOne: UITableViewController{
         return objects.count
     }
     
+  
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell" , for: indexPath)
         let object = objects[indexPath.row]
         
         cell.textLabel!.text = object
+        
         
         
         if(indexPath.row == 0) {
