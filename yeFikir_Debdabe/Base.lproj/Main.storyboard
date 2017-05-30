@@ -53,7 +53,6 @@
         <!--Table View Controller-->
         <scene sceneID="bdn-97-Jid">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4we-Ig-jjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="UaQ-zj-1U2" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rjs-TY-CJH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -91,6 +90,7 @@
                         <segue destination="bCQ-bK-8et" kind="showDetail" id="Hok-eM-hbH"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4we-Ig-jjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1943" y="-788"/>
         </scene>
@@ -113,7 +113,7 @@
         <!--Detail One-->
         <scene sceneID="dQD-90-x8C">
             <objects>
-                <viewController title="Detail One" id="x01-eL-ZQt" customClass="Deta" sceneMemberID="viewController">
+                <viewController title="Detail One" id="x01-eL-ZQt" customClass="DetailOne" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x11-RR-oKd"/>
                         <viewControllerLayoutGuide type="bottom" id="47u-rs-oFn"/>

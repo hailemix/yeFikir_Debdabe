@@ -6,4 +6,11 @@
 //  Copyright © 2017 AFC Ethiopia. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class DetailOne: UIViewController {
+
+
+
+}
+
