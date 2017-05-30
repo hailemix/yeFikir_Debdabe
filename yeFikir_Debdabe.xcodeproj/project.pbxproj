@@ -16,6 +16,8 @@
 		CE7571051EDD267700816A9C /* yeFikir_DebdabeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7571041EDD267700816A9C /* yeFikir_DebdabeTests.swift */; };
 		CE7571101EDD267700816A9C /* yeFikir_DebdabeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75710F1EDD267700816A9C /* yeFikir_DebdabeUITests.swift */; };
 		CE75711E1EDD26C000816A9C /* TableTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75711D1EDD26C000816A9C /* TableTwo.swift */; };
+		CE7571201EDD292E00816A9C /* TableThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75711F1EDD292E00816A9C /* TableThree.swift */; };
+		CE7571221EDD293F00816A9C /* TableFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7571211EDD293F00816A9C /* TableFour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		CE75710F1EDD267700816A9C /* yeFikir_DebdabeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yeFikir_DebdabeUITests.swift; sourceTree = "<group>"; };
 		CE7571111EDD267700816A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE75711D1EDD26C000816A9C /* TableTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTwo.swift; sourceTree = "<group>"; };
+		CE75711F1EDD292E00816A9C /* TableThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableThree.swift; sourceTree = "<group>"; };
+		CE7571211EDD293F00816A9C /* TableFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableFour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				CE7570EE1EDD267700816A9C /* TableOne.swift */,
 				CE75711D1EDD26C000816A9C /* TableTwo.swift */,
 				CE7570F01EDD267700816A9C /* Main.storyboard */,
+				CE75711F1EDD292E00816A9C /* TableThree.swift */,
+				CE7571211EDD293F00816A9C /* TableFour.swift */,
 				CE7570F61EDD267700816A9C /* Assets.xcassets */,
 				CE7570F81EDD267700816A9C /* LaunchScreen.storyboard */,
 				CE7570FB1EDD267700816A9C /* Info.plist */,
@@ -267,8 +273,10 @@
 			files = (
 				CE7570F51EDD267700816A9C /* yeFikir_Debdabe.xcdatamodeld in Sources */,
 				CE7570EF1EDD267700816A9C /* TableOne.swift in Sources */,
+				CE7571221EDD293F00816A9C /* TableFour.swift in Sources */,
 				CE7570ED1EDD267700816A9C /* AppDelegate.swift in Sources */,
 				CE75711E1EDD26C000816A9C /* TableTwo.swift in Sources */,
+				CE7571201EDD292E00816A9C /* TableThree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
