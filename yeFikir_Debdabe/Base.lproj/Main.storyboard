@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="oor-br-Ibs"/>
+                    <tabBarItem key="tabBarItem" title="Letters" image="Poem" id="oor-br-Ibs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRz-r3-n1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="K3z-9T-odC"/>
+                    <tabBarItem key="tabBarItem" title="Romance" image="Romance" id="K3z-9T-odC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haQ-Sh-PhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +70,7 @@
         <!--Item Three-->
         <scene sceneID="0jR-HU-9RQ">
             <objects>
-                <viewController title="Item Three" id="ICq-Oo-cuZ" customClass="TableTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Item Three" id="ICq-Oo-cuZ" customClass="TableThree" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZRH-Dy-LrL"/>
                         <viewControllerLayoutGuide type="bottom" id="GuK-ku-QkB"/>
@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 3" id="6wH-Is-yi5"/>
+                    <tabBarItem key="tabBarItem" title="Funny" image="Fun" id="6wH-Is-yi5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqb-MG-lPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +89,7 @@
         <!--Item Four-->
         <scene sceneID="ZJL-8H-Omo">
             <objects>
-                <viewController title="Item Four" id="hsG-Wj-vkY" customClass="TableTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Item Four" id="hsG-Wj-vkY" customClass="TableFour" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EwY-rx-TLd"/>
                         <viewControllerLayoutGuide type="bottom" id="mh3-Vs-FaQ"/>
@@ -99,11 +99,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="YTg-jm-5LN"/>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="Favourite" id="YTg-jm-5LN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P23-iq-Zli" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="146" y="528"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Favourite" width="15" height="12"/>
+        <image name="Fun" width="24" height="24"/>
+        <image name="Poem" width="32" height="32"/>
+        <image name="Romance" width="16" height="13"/>
+    </resources>
 </document>
