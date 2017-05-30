@@ -18,6 +18,7 @@
 		CE75711E1EDD26C000816A9C /* TableTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75711D1EDD26C000816A9C /* TableTwo.swift */; };
 		CE7571201EDD292E00816A9C /* TableThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75711F1EDD292E00816A9C /* TableThree.swift */; };
 		CE7571221EDD293F00816A9C /* TableFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7571211EDD293F00816A9C /* TableFour.swift */; };
+		CE7571241EDD2F9C00816A9C /* DetailOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7571231EDD2F9C00816A9C /* DetailOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CE75711D1EDD26C000816A9C /* TableTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableTwo.swift; sourceTree = "<group>"; };
 		CE75711F1EDD292E00816A9C /* TableThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableThree.swift; sourceTree = "<group>"; };
 		CE7571211EDD293F00816A9C /* TableFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableFour.swift; sourceTree = "<group>"; };
+		CE7571231EDD2F9C00816A9C /* DetailOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				CE7570EC1EDD267700816A9C /* AppDelegate.swift */,
 				CE7570EE1EDD267700816A9C /* TableOne.swift */,
+				CE7571231EDD2F9C00816A9C /* DetailOne.swift */,
 				CE75711D1EDD26C000816A9C /* TableTwo.swift */,
 				CE75711F1EDD292E00816A9C /* TableThree.swift */,
 				CE7571211EDD293F00816A9C /* TableFour.swift */,
@@ -277,6 +280,7 @@
 				CE7570ED1EDD267700816A9C /* AppDelegate.swift in Sources */,
 				CE75711E1EDD26C000816A9C /* TableTwo.swift in Sources */,
 				CE7571201EDD292E00816A9C /* TableThree.swift in Sources */,
+				CE7571241EDD2F9C00816A9C /* DetailOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
