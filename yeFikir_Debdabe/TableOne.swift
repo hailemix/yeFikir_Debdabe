@@ -12,7 +12,7 @@ import CoreData
 class TableOne: UITableViewController{
     
 
-    var detailViewController: DetailOne?
+    var detailViewController: DetailOne? = nil
     var objects = ["የኔ ገላ ","ሰማይ ቤት","ሰዉ በመፋቀር ","ይኸዉ ነዉ!","እንደሚሰማኝ ","የምናፍቅሽ"]
     
     let image1 = UIImage(named: "a1")
@@ -38,7 +38,7 @@ class TableOne: UITableViewController{
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as?DetailOne
+            self.detailViewController = (controllers[(controllers.count)-1] as! UINavigationController).topViewController as? DetailOne
         }
     }
     
