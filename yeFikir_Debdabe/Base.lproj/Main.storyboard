@@ -37,7 +37,7 @@
         <scene sceneID="MFK-e9-VH2">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="OSE-CE-rsp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Hu-fS-SIe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Hu-fS-SIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -61,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-aN-M7q">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-aN-M7q">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.81073987483978271" green="0.826465904712677" blue="0.9477875828742981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
@@ -76,7 +76,7 @@
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="yb6-qm-gpX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="StW-w5-NxY"/>
+                    <navigationItem key="navigationItem" title="Home" id="StW-w5-NxY" colorLabel="IBBuiltInLabel-Red"/>
                     <connections>
                         <outlet property="detailDescriptionTextView" destination="j3a-aN-M7q" id="yRX-3A-hjD"/>
                     </connections>
@@ -138,7 +138,7 @@
             <objects>
                 <navigationController id="EAV-6N-5eY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="Romance" id="cWF-af-Oz2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
