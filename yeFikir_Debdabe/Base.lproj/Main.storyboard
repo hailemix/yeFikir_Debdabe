@@ -36,7 +36,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MFK-e9-VH2">
             <objects>
-                <navigationController id="OSE-CE-rsp" sceneMemberID="viewController">
+                <navigationController modalTransitionStyle="flipHorizontal" id="OSE-CE-rsp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Hu-fS-SIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
