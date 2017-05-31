@@ -62,7 +62,7 @@ class TableOne: UITableViewController{
                 let object = details[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
                 controller.detailItem = object as AnyObject?
-                controller.navigationItem.leftItemsSupplementBackButton = true
+               // controller.navigationItem.leftItemsSupplementBackButton = true
                 
                 
             }
