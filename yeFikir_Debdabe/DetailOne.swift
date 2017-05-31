@@ -31,6 +31,8 @@ class DetailOne: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        navigationItem.leftItemsSupplementBackButton = true
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,8 +49,6 @@ class DetailOne: UIViewController {
         }
     }
     
-
-
 
 }
 

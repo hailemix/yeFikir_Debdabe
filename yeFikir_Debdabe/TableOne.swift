@@ -26,6 +26,7 @@ class TableOne: UITableViewController{
     
     
     
+    
     var details = ["በህይወት ልምድ \n\n ዉድ ኑሮ(እዉነትም ዉድ ነህ!) እንዴት ነህ? እንደኮረሪማ ነጋዴ የተከልነዉን ኮረሪማ ማንነታችንን እየቆፈርን ይኸዉ አለን! ኑሮ ንሮ በጣም የምናዝንበት ነገር መብዛቱና መርከሱ ካንተ መናር ጋር በተቃራኒ የቆመ ቢሆንም የልባችንን በኪሳችን ይዘን አለንልህ… አንድ ዳቦ ከ 20 ሳንቲም ተነስቶ 10 ብር መግባቱ  እኛንም ከ ሃያዎቹ እድሜያችን ወደ አስር አመት ዝቅ እንድናደርገዉ ረድቶናል ፤የቤት ሽያጭ ከ 10000 ብር ወደ ሚሊየን ብር መግባቱ እኛንም ከ 10 ሺህ ቀዳዶች ወደ ሚልየን የቀለብ ቀዳዶችን የመድፈን  ውስብስብና ልዩ ጥበብ ባለቤት አርጎናል፡፡አንተ ከፍ እያልክ ፣እየጨመርክ፣እየተወሳሰበክ ስትሄድ…የኛ የሃሳብ ምጥቀት ለምን እንዳልጨመረ አልገባንም! እየዘመንን፣ፋሽን እየተከተልን፣እስታይል በስታይል፣ ፌስ ቡክ በፌስቡክ እየሆንን አለን፡፡አዎን ምክንያት ልንሰጣቸዉ የምንችላቸዉ ሚሊየን ሃሳበች ተደምረዉ አስር ብር  አልሆኑንም! አዎን ልቅምቃሚ ወሬዎቻችን ከጀበና ቡና ስንነሳ  ተበታትነዉ ይቀራሉ! ምን እናርግ!ዉድ ኑሮ እንጀራ ከአንድ ብር ከሃምሳ፣ አምስት ብር ሲገባ የኛ አእምሮ ግን ያዉ እንዳስቀመጥነዉ ነዉ፡፡ የአእምሮአችን መሰላል በትምህርት ልቀት፣በህይወት ልምድ፣ በ ኮንዶሚኒየም ወይም ቀበሌ ቤት ዉስጥ ታጅበን በመኖር ልነለዉጠዉ አልቻልንም፡፡ነገር ግን ያንተን መተኮስንደቲያትር ተመልካች አስተሳሰቦቻችንን ሳንፈትሽ  የምናሽካካ፣የምንተምም፣የምናፏጭ ሰላማዊ ህጻናቶች ነን፡፡አንዱ ሲቀልድ ‹የአዲስ አበባ ህዝብ ቁጥር ስድስት ሚሊየን ሲሆን ህፃናቱን ካልቆጠርናቸዉ ግን 1 ሚሊየን አይሞላም!› ይገርማል ልጅነት ሳይለቀን ቢዝነስ እንጀምራለን፣እሽክርክሮሽ እየተጫወትን እናጋባለን እንግባባለን፣ ጢባጢቤ እያልን ሽምግልናችን ይወረናል…በመጨረሻ የምንመኘዉ ነገር  ልክ እንዳንተ እንደግ፣ከፍ ከፍ አሁንም ከፍ ያርገን  አሜን..(እዚህ ሃገር ሁሉም  ነገር ምኞት ብቻ ነዉ ለምትሉ ሰዎች ወዮላችሁ! አለች የጀበና ቡና!)መልስህን ከስር ባለዉ ፖስታ ሳጥን ቁጥር እንጠብቃለን ",
                    "John and Mary have been failing in love for more than a year...",
                    "This is nothing wrong to love a girl and being broken","The first thing that you realise in your single life is he hands of the lord,Jesus coming into you",
@@ -35,10 +36,12 @@ class TableOne: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailOne
+            
         }
     }
     
@@ -59,8 +62,9 @@ class TableOne: UITableViewController{
                 let object = details[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
                 controller.detailItem = object as AnyObject?
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
+               
+                
                 
             }
         }
