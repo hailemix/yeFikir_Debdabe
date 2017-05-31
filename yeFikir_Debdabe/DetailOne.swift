@@ -11,10 +11,14 @@ import UIKit
 class DetailOne: UIViewController {
     
     
-    
+    var masterViewController : TableOne?
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
   
+    @IBAction func back(_ sender: Any) {
+       
+        navigationItem.leftItemsSupplementBackButton = true
+    }
     
     func configureView() {
         // Update the user interface for the detail item.
@@ -31,7 +35,7 @@ class DetailOne: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        navigationItem.leftItemsSupplementBackButton = true
+        
         
     }
     
