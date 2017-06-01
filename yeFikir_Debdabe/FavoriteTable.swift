@@ -9,10 +9,10 @@
 import UIKit
 import CoreData
 
-class TableTwo: UITableViewController{
+class FavouriteTable: UITableViewController{
     
     
-    var detailViewController: DetailTwo? = nil
+    var detailViewController: FavouriteDetail? = nil
     var objects = ["ገላ ","ሰማይ ቤት","ሰዉ","ይኸዉ!","እንደሚሰማኝ ","የምናፍቅሽ"]
     
     let image1 = UIImage(named: "a1")
@@ -40,7 +40,7 @@ class TableTwo: UITableViewController{
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailTwo
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? FavouriteDetail
             
         }
     }
@@ -57,12 +57,12 @@ class TableTwo: UITableViewController{
     // MARK: - Segues
     
     override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail2" {
+        if segue.identifier == "Favourites" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = details[indexPath.row]
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
+                let controller = (segue.destination as! UINavigationController).topViewController as! FavouriteDetail
                 controller.detailItem = object as AnyObject?
-              
+                
                 
                 
             }
@@ -82,7 +82,7 @@ class TableTwo: UITableViewController{
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2" , for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShareCell" , for: indexPath)
         let object = objects[indexPath.row]
         
         cell.textLabel!.text = object
