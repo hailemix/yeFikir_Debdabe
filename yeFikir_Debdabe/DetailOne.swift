@@ -30,12 +30,18 @@ class DetailOne: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        navigationItem.leftItemsSupplementBackButton = true
+        
        
         
         
         
     }
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+   
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

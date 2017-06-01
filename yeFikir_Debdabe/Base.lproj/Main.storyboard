@@ -76,14 +76,25 @@
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="yb6-qm-gpX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="StW-w5-NxY" colorLabel="IBBuiltInLabel-Red"/>
+                    <navigationItem key="navigationItem" title="Detail" id="StW-w5-NxY" colorLabel="IBBuiltInLabel-Red">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="i6s-Pb-0vK">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M2K-gi-4cv">
+                                <rect key="frame" x="16" y="11" width="13" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="back_btn"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="x01-eL-ZQt" eventType="touchUpInside" id="H3N-pk-OTY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionTextView" destination="j3a-aN-M7q" id="yRX-3A-hjD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOd-vP-P7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3789.5999999999999" y="-725.48725637181417"/>
+            <point key="canvasLocation" x="3689" y="-726"/>
         </scene>
         <!--Title-->
         <scene sceneID="Zst-ba-2lY">
@@ -214,5 +225,6 @@
         <image name="Fun" width="24" height="24"/>
         <image name="Poem" width="32" height="32"/>
         <image name="Romance" width="16" height="13"/>
+        <image name="back_btn" width="13" height="21"/>
     </resources>
 </document>
