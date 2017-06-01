@@ -13,15 +13,15 @@ class TableThree: UITableViewController{
     
     
     var detailViewController: DetailThree? = nil
-    var objects = ["ገላ ","ሰማይ ቤት","ሰዉ","ይኸዉ!","እንደሚሰማኝ ","የምናፍቅሽ"]
+    var objects = ["ሰዉ","ገላ ","ቤት","የምናፍቅሽ","ይኸዉ!","እንደሚሰማኝ",]
     
-    let image1 = UIImage(named: "a1")
-    let image2 = UIImage(named: "a3")
+    let image1 = UIImage(named: "a3")
+    let image2 = UIImage(named: "a4")
     let image3 = UIImage(named: "a2")
-    let image4 = UIImage(named: "a5")
-    let image5 = UIImage(named: "a58")
-    let image6 = UIImage(named: "a6")
-    let image7 = UIImage(named: "a4")
+    let image4 = UIImage(named: "a1")
+    let image5 = UIImage(named: "a3")
+    let image6 = UIImage(named: "a5")
+    let image7 = UIImage(named: "a6")
     
     
     

@@ -21,6 +21,8 @@ class DetailOne: UIViewController {
         if let detail = self.detailItem {
             if let UITextView = self.detailDescriptionTextView {
                 UITextView.text = detail.description
+                
+                
             }
             
         }
@@ -39,6 +41,7 @@ class DetailOne: UIViewController {
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+        
     }
    
     

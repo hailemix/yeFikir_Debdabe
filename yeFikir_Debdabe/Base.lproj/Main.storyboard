@@ -18,7 +18,7 @@
         <scene sceneID="MFK-e9-VH2">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="OSE-CE-rsp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Hu-fS-SIe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Hu-fS-SIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -130,7 +130,7 @@
             <objects>
                 <navigationController id="pfq-ze-JKX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Love" image="Romance" id="uO4-gy-eUv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5Z-ou-9IC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A5Z-ou-9IC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -147,7 +147,7 @@
             <objects>
                 <navigationController id="EAV-6N-5eY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nice" image="Favourite" id="cWF-af-Oz2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -164,7 +164,7 @@
             <objects>
                 <navigationController id="rGf-jp-TRX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Great" image="Fun" selectedImage="Fun" id="Toz-ns-nwI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHz-uJ-UgZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BHz-uJ-UgZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -200,7 +200,7 @@
         <scene sceneID="y64-zf-aHk">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="siu-wp-vWt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q5r-cR-1Ee">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="q5r-cR-1Ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -312,7 +312,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -376,7 +376,7 @@
             <objects>
                 <navigationController id="IbJ-sk-d1O" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sweet" image="Poem" selectedImage="Poem" id="aXt-mr-HVx"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GiS-bx-wgP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GiS-bx-wgP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -446,7 +446,7 @@
         <scene sceneID="0dS-LL-SaQ">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="aOr-w6-Dd4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O7c-K5-VVH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O7c-K5-VVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
