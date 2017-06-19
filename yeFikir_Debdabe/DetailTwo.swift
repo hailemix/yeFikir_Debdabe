@@ -14,6 +14,8 @@ class DetailTwo: UIViewController {
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     
+  
+    
     
     func configureView() {
         // Update the user interface for the detail item.
@@ -36,6 +38,14 @@ class DetailTwo: UIViewController {
         
         
     }
+    
+  
+    @IBAction func AddFavourite(sender: UIButton) {
+     
+    
+        }
+    
+    
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
