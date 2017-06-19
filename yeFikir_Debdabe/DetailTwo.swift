@@ -41,8 +41,8 @@ class DetailTwo: UIViewController {
     
   
     @IBAction func AddFavourite(sender: UIButton) {
-     
-    
+        
+              
         }
     
     

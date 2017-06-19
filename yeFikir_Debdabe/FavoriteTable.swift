@@ -15,7 +15,7 @@ class FavouriteTable: UITableViewController{
     var detailViewController: FavouriteDetail? = nil
     var objects = [""]
     var details = [""]
-    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,9 +79,13 @@ class FavouriteTable: UITableViewController{
         return true
     }
     
+   
     
+  
     
-}
+    }
+    
+
 
 
 
