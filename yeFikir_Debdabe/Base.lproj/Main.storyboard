@@ -133,7 +133,7 @@
                     <tabBarItem key="tabBarItem" title="ዘና በሉ" image="Romance" id="uO4-gy-eUv">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5Z-ou-9IC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A5Z-ou-9IC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -152,7 +152,7 @@
                     <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="Poem" selectedImage="Poem" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -207,7 +207,7 @@
         <scene sceneID="y64-zf-aHk">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="siu-wp-vWt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q5r-cR-1Ee">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="q5r-cR-1Ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -374,7 +374,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -398,28 +398,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-c7-NGI">
-                                <rect key="frame" x="16" y="645" width="26" height="22"/>
-                                <state key="normal" image="Poem"/>
-                                <connections>
-                                    <action selector="ShareThree:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="tVO-8C-4R9"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-hv-Cgn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="580"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.81073987479999998" green="0.82646590470000003" blue="0.94778758289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g8-GB-rKn">
+                                <rect key="frame" x="324" y="620" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="K1e-tu-qEP"/>
+                                    <constraint firstAttribute="width" constant="24" id="sg4-my-OIf"/>
+                                </constraints>
+                                <state key="normal" image="Favourite"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZUK-c7-NGI" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" id="6G8-Tv-smm"/>
-                            <constraint firstItem="ZUK-c7-NGI" firstAttribute="bottom" secondItem="WNF-df-y4A" secondAttribute="top" id="8sQ-MX-sTM"/>
-                            <constraint firstItem="ZUK-c7-NGI" firstAttribute="top" secondItem="Szz-hv-Cgn" secondAttribute="bottom" constant="1" id="Lbq-lV-atz"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leading" id="Odw-sw-JmF"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="b0Q-gi-bQj"/>
-                            <constraint firstAttribute="trailing" secondItem="Szz-hv-Cgn" secondAttribute="trailing" id="kK3-xK-not"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="1g8-GB-rKn" secondAttribute="bottom" constant="23" id="1p9-hz-oAf"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leading" id="9oY-Xv-3lC"/>
+                            <constraint firstAttribute="trailing" secondItem="Szz-hv-Cgn" secondAttribute="trailing" id="aRU-RF-cCt"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="hha-YI-po9"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="WNF-df-y4A" secondAttribute="top" id="vvg-r6-XTZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1g8-GB-rKn" secondAttribute="trailing" constant="11" id="vxE-of-IOv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">
@@ -450,7 +451,7 @@
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GiS-bx-wgP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GiS-bx-wgP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -520,7 +521,7 @@
         <scene sceneID="0dS-LL-SaQ">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="aOr-w6-Dd4" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O7c-K5-VVH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="O7c-K5-VVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
