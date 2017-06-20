@@ -34,7 +34,7 @@
         <!--Detail Two-->
         <scene sceneID="dQD-90-x8C">
             <objects>
-                <viewController title="Detail Two" id="x01-eL-ZQt" customClass="DetailOne" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail Two" id="x01-eL-ZQt" customClass="DetailTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x11-RR-oKd"/>
                         <viewControllerLayoutGuide type="bottom" id="47u-rs-oFn"/>
@@ -152,7 +152,7 @@
                     <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="Poem" selectedImage="Poem" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -222,7 +222,7 @@
         <!--Detail Three-->
         <scene sceneID="lDO-Hw-rle">
             <objects>
-                <viewController title="Detail Three" id="5f7-8g-lRT" customClass="DetailTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail Three" id="5f7-8g-lRT" customClass="DetailThree" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iIW-EY-bEc"/>
                         <viewControllerLayoutGuide type="bottom" id="wOB-Zi-8lC"/>
@@ -389,7 +389,7 @@
         <!--Detail One-->
         <scene sceneID="uR0-At-pJo">
             <objects>
-                <viewController title="Detail One" id="Fgl-9b-Sg2" customClass="DetailThree" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Detail One" id="Fgl-9b-Sg2" customClass="DetailOne" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="55e-QX-50g"/>
                         <viewControllerLayoutGuide type="bottom" id="WNF-df-y4A"/>
@@ -411,6 +411,9 @@
                                     <constraint firstAttribute="width" constant="24" id="sg4-my-OIf"/>
                                 </constraints>
                                 <state key="normal" image="Favourite"/>
+                                <connections>
+                                    <action selector="shareThree:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="A2w-ar-hYO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

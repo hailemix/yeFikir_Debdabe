@@ -38,10 +38,12 @@ class DetailThree: UIViewController {
         
         
     }
-    @IBAction func ShareThree(_ sender: UIButton) {
-   
-    }
     
+    @IBAction func shareThree(_ sender: UIButton) {
+        
+        
+        
+    }
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         

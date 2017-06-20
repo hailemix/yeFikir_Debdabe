@@ -8,12 +8,16 @@
 
 import UIKit
 
+
+
 class DetailTwo: UIViewController {
     
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     
+    /* 'weak'  helps to protect your view controller in the event of the NSManagedObject being deleted and leaving a dangling reference to a non-existent object. When the property is declared as weak it is automatically set to nil when the object is deleted.
+    */
   
     
     
@@ -40,11 +44,7 @@ class DetailTwo: UIViewController {
     }
     
   
-    @IBAction func AddFavourite(sender: UIButton) {
-        
-              
-        }
-    
+  
     
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
