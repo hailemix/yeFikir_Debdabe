@@ -81,7 +81,7 @@
         <!--Title-->
         <scene sceneID="Zst-ba-2lY">
             <objects>
-                <tableViewController id="7xR-eL-qb4" customClass="TableOne" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="7xR-eL-qb4" customClass="TableTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="6kp-Bq-M5V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
                     <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="Poem" selectedImage="Poem" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -269,7 +269,7 @@
         <!--Title-->
         <scene sceneID="FQ4-Zz-Zsj">
             <objects>
-                <tableViewController id="sK9-ws-6RO" customClass="TableTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sK9-ws-6RO" customClass="TableThree" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="o7N-DF-s0o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,6 +412,7 @@
                                 </constraints>
                                 <state key="normal" image="Favourite"/>
                                 <connections>
+                                    <action selector="shareBtnOne:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="OxW-NH-R4W"/>
                                     <action selector="shareThree:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="A2w-ar-hYO"/>
                                 </connections>
                             </button>
@@ -473,7 +474,7 @@
         <!--Title-->
         <scene sceneID="BSg-0o-ajF">
             <objects>
-                <tableViewController id="FUc-AM-zkD" customClass="TableThree" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="FUc-AM-zkD" customClass="TableOne" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="P0M-52-20J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

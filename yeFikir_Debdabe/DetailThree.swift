@@ -33,17 +33,11 @@ class DetailThree: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
-        
-        
-        
+ 
         
     }
     
-    @IBAction func shareThree(_ sender: UIButton) {
-        
-        
-        
-    }
+  
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         
