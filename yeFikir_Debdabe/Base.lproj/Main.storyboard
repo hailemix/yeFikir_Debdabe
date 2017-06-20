@@ -88,7 +88,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell" textLabel="rjb-dS-gk9" style="IBUITableViewCellStyleDefault" id="N21-lz-ccg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell2" textLabel="rjb-dS-gk9" style="IBUITableViewCellStyleDefault" id="N21-lz-ccg">
                                 <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="N21-lz-ccg" id="Aa3-cE-Koq">
@@ -109,7 +109,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="OSE-CE-rsp" kind="showDetail" identifier="showDetail" id="9A6-vj-102"/>
+                                    <segue destination="OSE-CE-rsp" kind="showDetail" identifier="showDetail2" id="9A6-vj-102"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -276,7 +276,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell2" textLabel="zJu-2X-Kl4" style="IBUITableViewCellStyleDefault" id="hDG-0q-wNy">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell3" textLabel="zJu-2X-Kl4" style="IBUITableViewCellStyleDefault" id="hDG-0q-wNy">
                                 <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="hDG-0q-wNy" id="0qQ-ge-Zab">
@@ -297,7 +297,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="siu-wp-vWt" kind="showDetail" identifier="showDetail2" id="byw-d2-tP7">
+                                    <segue destination="siu-wp-vWt" kind="showDetail" identifier="showDetail3" id="byw-d2-tP7">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
@@ -481,7 +481,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell3" textLabel="SPq-vM-ZD5" style="IBUITableViewCellStyleDefault" id="7Zc-BB-pN6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell" textLabel="SPq-vM-ZD5" style="IBUITableViewCellStyleDefault" id="7Zc-BB-pN6">
                                 <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="7Zc-BB-pN6" id="oov-BE-bbc">
@@ -502,7 +502,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="T4J-p7-UDV" kind="showDetail" identifier="showDetail3" id="NzH-HX-kq5">
+                                    <segue destination="T4J-p7-UDV" kind="showDetail" identifier="showDetail" id="NzH-HX-kq5">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
