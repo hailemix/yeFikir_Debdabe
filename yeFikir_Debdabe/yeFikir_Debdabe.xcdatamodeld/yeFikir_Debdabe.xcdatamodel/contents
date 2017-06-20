@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Chapter" representedClassName="Chapter" syncable="YES" codeGenerationType="class">
+        <attribute name="chapters" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Detail" inverseName="toChapter" inverseEntity="Detail" syncable="YES"/>
+    </entity>
+    <entity name="Detail" representedClassName="Detail" syncable="YES" codeGenerationType="class">
+        <attribute name="letters" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toChapter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chapter" inverseName="toDetail" inverseEntity="Chapter" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Detail" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Chapter" positionX="-54" positionY="18" width="128" height="75"/>
+    </elements>
 </model>
