@@ -60,6 +60,7 @@ class TableTwo: UITableViewController{
                 let object = details[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailTwo
                 controller.detailItem = object as String?
+            
               
                 
                 

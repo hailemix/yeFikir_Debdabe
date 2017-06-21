@@ -46,16 +46,26 @@ class DetailTwo: UIViewController {
         
         
         
-            let item1 = TableTwo().details[0]
-           // let item2 = TableTwo().details[1]
-           //let item3 = TableTwo().details[2]
-    
+        
+        
+               let item1 = TableTwo().details[0]
+               let item2 = TableTwo().details[1]
+            // let item3 = TableTwo().details[2]
+        
+        if(detailDescriptionTextView.text=="John and Mary have been failing in love for more than a year..."){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
              self.present(activityViewController,animated:true,completion:nil)
         
      /* activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
      */
+            
+        } else{
+            let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController,animated:true,completion:nil)
+            
+        }
         
     }
     
@@ -71,6 +81,7 @@ class DetailTwo: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+  
     var detailItem: String? {
         didSet {
             // Update the view.
@@ -79,6 +90,8 @@ class DetailTwo: UIViewController {
             
             
         }
+        
+
     }
     
     
