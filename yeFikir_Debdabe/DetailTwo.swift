@@ -36,6 +36,7 @@ class DetailTwo: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+ 
     }
     
   
@@ -47,6 +48,8 @@ class DetailTwo: UIViewController {
                let item3 = TableTwo().details[2]
                let item4 = TableTwo().details[3]
                let item5 = TableTwo().details[4]
+               let item6 = TableTwo().details[5]
+               let item7 = TableTwo().details[6]
         
         if(detailDescriptionTextView.text == item1){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
@@ -74,6 +77,18 @@ class DetailTwo: UIViewController {
         }
         else if(detailDescriptionTextView.text == item5) {
             let activityViewController = UIActivityViewController(activityItems:[item5], applicationActivities:nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController,animated:true,completion:nil)
+            
+        }
+        else if(detailDescriptionTextView.text == item6) {
+            let activityViewController = UIActivityViewController(activityItems:[item6], applicationActivities:nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController,animated:true,completion:nil)
+            
+        }
+        else if(detailDescriptionTextView.text == item7) {
+            let activityViewController = UIActivityViewController(activityItems:[item7], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
