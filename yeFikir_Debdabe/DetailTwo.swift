@@ -36,23 +36,19 @@ class DetailTwo: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
- 
-        
     }
     
   
   
     @IBAction func shareButton(_ sender: UIButton) {
         
-        
-        
-        
-        
                let item1 = TableTwo().details[0]
                let item2 = TableTwo().details[1]
-            // let item3 = TableTwo().details[2]
+               let item3 = TableTwo().details[2]
+               let item4 = TableTwo().details[3]
+               let item5 = TableTwo().details[4]
         
-        if(detailDescriptionTextView.text=="John and Mary have been failing in love for more than a year..."){
+        if(detailDescriptionTextView.text == item1){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
              self.present(activityViewController,animated:true,completion:nil)
@@ -60,8 +56,24 @@ class DetailTwo: UIViewController {
      /* activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
      */
             
-        } else{
+        } else if(detailDescriptionTextView.text == item2) {
             let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController,animated:true,completion:nil)
+            
+        }else if(detailDescriptionTextView.text == item3) {
+            let activityViewController = UIActivityViewController(activityItems:[item3], applicationActivities:nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController,animated:true,completion:nil)
+            
+        }else if(detailDescriptionTextView.text == item4) {
+            let activityViewController = UIActivityViewController(activityItems:[item4], applicationActivities:nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController,animated:true,completion:nil)
+            
+        }
+        else if(detailDescriptionTextView.text == item5) {
+            let activityViewController = UIActivityViewController(activityItems:[item5], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
