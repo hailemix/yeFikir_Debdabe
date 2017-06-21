@@ -36,15 +36,28 @@ class DetailTwo: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        
-        
-        
-        
+ 
         
     }
     
   
   
+    @IBAction func shareButton(_ sender: UIButton) {
+        
+        
+        
+            let item1 = TableTwo().details[0]
+           // let item2 = TableTwo().details[1]
+           //let item3 = TableTwo().details[2]
+    
+            let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+             self.present(activityViewController,animated:true,completion:nil)
+        
+     /* activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+     */
+        
+    }
     
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -58,10 +71,11 @@ class DetailTwo: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var detailItem: AnyObject? {
+    var detailItem: String? {
         didSet {
             // Update the view.
             self.configureView()
+            
             
             
         }

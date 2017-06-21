@@ -49,12 +49,24 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-Gg-iQK">
+                                <rect key="frame" x="313" y="625" width="46" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="fnn-9U-JFQ"/>
+                                </constraints>
+                                <state key="normal" image="star_icon_filled"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="0ww-8U-2BJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26962077617645264" green="0.92661136388778687" blue="0.18824782967567444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="59C-GL-pmI"/>
                             <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="NHF-jh-tnx"/>
                             <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="j3a-aN-M7q" secondAttribute="bottom" id="Vta-dV-QmB"/>
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="ob0-go-gim"/>
+                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="NRc-Gg-iQK" secondAttribute="bottom" constant="20" id="w5v-Ew-sx9"/>
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="yb6-qm-gpX"/>
                         </constraints>
                     </view>
@@ -404,27 +416,13 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1g8-GB-rKn">
-                                <rect key="frame" x="324" y="620" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="K1e-tu-qEP"/>
-                                    <constraint firstAttribute="width" constant="24" id="sg4-my-OIf"/>
-                                </constraints>
-                                <state key="normal" image="Favourite"/>
-                                <connections>
-                                    <action selector="shareBtnOne:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="OxW-NH-R4W"/>
-                                    <action selector="shareThree:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="A2w-ar-hYO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="1g8-GB-rKn" secondAttribute="bottom" constant="23" id="1p9-hz-oAf"/>
                             <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leading" id="9oY-Xv-3lC"/>
                             <constraint firstAttribute="trailing" secondItem="Szz-hv-Cgn" secondAttribute="trailing" id="aRU-RF-cCt"/>
                             <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="hha-YI-po9"/>
                             <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="WNF-df-y4A" secondAttribute="top" id="vvg-r6-XTZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1g8-GB-rKn" secondAttribute="trailing" constant="11" id="vxE-of-IOv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">
