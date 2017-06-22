@@ -15,6 +15,7 @@ class DetailTwo: UIViewController {
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
+   
     
     /* 'weak'  helps to protect your view controller in the event of the NSManagedObject being deleted and leaving a dangling reference to a non-existent object. When the property is declared as weak it is automatically set to nil when the object is deleted.
     */
@@ -27,6 +28,8 @@ class DetailTwo: UIViewController {
         if let detail2 = self.detailItem {
             if let UITextView = self.detailDescriptionTextView {
                 UITextView.text = detail2.description
+                
+                
             }
             
         }
@@ -39,8 +42,8 @@ class DetailTwo: UIViewController {
  
     }
     
-  
-  
+    
+    
     @IBAction func shareButton(_ sender: UIButton) {
         
                let item1 = TableTwo().details[0]
@@ -131,7 +134,7 @@ class DetailTwo: UIViewController {
         didSet {
             // Update the view.
             self.configureView()
-            
+          
             
             
         }

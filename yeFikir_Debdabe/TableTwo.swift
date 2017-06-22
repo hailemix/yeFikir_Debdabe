@@ -14,6 +14,8 @@ class TableTwo: UITableViewController{
     
     var detailViewController: DetailTwo? = nil
     var objects = ["ገላ","ሰማይ ቤት","ሰዉ","ይኸዉ!","እንደሚሰማኝ ","የምናፍቅሽ"]
+   
+    
     
     let image1 = UIImage(named: "a1")
     let image2 = UIImage(named: "a3")
@@ -41,8 +43,9 @@ class TableTwo: UITableViewController{
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailTwo
             
         }
+        
+        
     }
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -77,7 +80,7 @@ class TableTwo: UITableViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
-    
+
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,6 +88,7 @@ class TableTwo: UITableViewController{
         let object = objects[indexPath.row]
         
         cell.textLabel!.text = object
+        
         
         
         
