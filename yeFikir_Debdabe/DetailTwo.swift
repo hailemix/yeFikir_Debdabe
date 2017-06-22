@@ -56,23 +56,32 @@ class DetailTwo: UIViewController {
         activityViewController.popoverPresentationController?.sourceView = self.view
              self.present(activityViewController,animated:true,completion:nil)
         
-     /* activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-     */
+     activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+     
             
         } else if(detailDescriptionTextView.text == item2) {
             let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+            
+            
         }else if(detailDescriptionTextView.text == item3) {
             let activityViewController = UIActivityViewController(activityItems:[item3], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+            
+            
         }else if(detailDescriptionTextView.text == item4) {
             let activityViewController = UIActivityViewController(activityItems:[item4], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
+            
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+            
             
         }
         else if(detailDescriptionTextView.text == item5) {
@@ -80,17 +89,26 @@ class DetailTwo: UIViewController {
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+            
+            
         }
         else if(detailDescriptionTextView.text == item6) {
             let activityViewController = UIActivityViewController(activityItems:[item6], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+            
+            
         }
         else if(detailDescriptionTextView.text == item7) {
             let activityViewController = UIActivityViewController(activityItems:[item7], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
+            
+            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+            
             
         }
         
