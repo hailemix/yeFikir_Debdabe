@@ -10,12 +10,13 @@ import UIKit
 
 
 
-class DetailTwo: UIViewController {
+class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
    
+    @IBOutlet weak var myBut: UIButton!
     
     /* 'weak'  helps to protect your view controller in the event of the NSManagedObject being deleted and leaving a dangling reference to a non-existent object. When the property is declared as weak it is automatically set to nil when the object is deleted.
     */
@@ -29,7 +30,6 @@ class DetailTwo: UIViewController {
             if let UITextView = self.detailDescriptionTextView {
                 UITextView.text = detail2.description
                 
-                
             }
             
         }
@@ -39,8 +39,23 @@ class DetailTwo: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        detailDescriptionTextView.delegate = self
+       
+
  
     }
+    
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+          myBut.isHidden = true
+    }
+    
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        myBut.isHidden = false
+    }
+    
     
     
     

@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yeFikir_Debdabe/DetailTwo.swift"
-            timestampString = "519788622.323576"
+            timestampString = "519806384.889346"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "shareButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -111,6 +111,38 @@
             endingLineNumber = "43"
             landmarkName = "getRandomColor()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yeFikir_Debdabe.About_US.getRandomColor () -&gt; ()"
+                  moduleName = "yeFikir_Debdabe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/All%20X-Code/To%20Be%20Published%20Apps/yeFikir_Debdabe/About_US.swift"
+                  timestampString = "519791840.125644"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "239">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yeFikir_Debdabe.About_US.(getRandomColor () -&gt; ()).(closure #1)"
+                  moduleName = "yeFikir_Debdabe"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/All%20X-Code/To%20Be%20Published%20Apps/yeFikir_Debdabe/About_US.swift"
+                  timestampString = "519791840.129847"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
