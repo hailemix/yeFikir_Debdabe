@@ -19,7 +19,7 @@
         <scene sceneID="MFK-e9-VH2">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="OSE-CE-rsp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Hu-fS-SIe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Hu-fS-SIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -49,10 +49,10 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-Gg-iQK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-Gg-iQK">
                                 <rect key="frame" x="299" y="555" width="60" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="fnn-9U-JFQ"/>
+                                    <constraint firstAttribute="width" constant="60" id="dtV-wK-u0O"/>
                                 </constraints>
                                 <state key="normal" image="Favourite"/>
                                 <connections>
@@ -62,11 +62,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="59C-GL-pmI"/>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" constant="491" id="1NU-cA-JLK"/>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="LMA-XH-wu1"/>
                             <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="NHF-jh-tnx"/>
                             <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="j3a-aN-M7q" secondAttribute="bottom" constant="60" id="Vta-dV-QmB"/>
+                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="NRc-Gg-iQK" secondAttribute="bottom" constant="66" id="Wip-Vu-JQz"/>
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="ob0-go-gim"/>
-                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="NRc-Gg-iQK" secondAttribute="bottom" constant="66" id="w5v-Ew-sx9"/>
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="yb6-qm-gpX"/>
                         </constraints>
                     </view>
@@ -105,7 +106,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="N21-lz-ccg" id="Aa3-cE-Koq">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14V-Zf-h4r">
@@ -113,7 +114,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="341" id="rjb-dS-gk9">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="172.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -146,7 +147,7 @@
                     <tabBarItem key="tabBarItem" title="ዘና በሉ" image="Romance" id="uO4-gy-eUv">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5Z-ou-9IC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A5Z-ou-9IC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -165,7 +166,7 @@
                     <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="Poem" selectedImage="Poem" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -184,7 +185,7 @@
                     <tabBarItem key="tabBarItem" title="ግጥሞች" image="Fun" selectedImage="Fun" id="Toz-ns-nwI">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHz-uJ-UgZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BHz-uJ-UgZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -219,7 +220,7 @@
         <scene sceneID="y64-zf-aHk">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="siu-wp-vWt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q5r-cR-1Ee">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="q5r-cR-1Ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -292,7 +293,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="hDG-0q-wNy" id="0qQ-ge-Zab">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LLo-fR-mze">
@@ -300,7 +301,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="341" id="zJu-2X-Kl4">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="172.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -335,7 +336,7 @@
                         <inset key="imageInsets" minX="-4" minY="-2" maxX="-3" maxY="-3"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hmT-UX-h4R">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hmT-UX-h4R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -386,7 +387,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -459,7 +460,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="7Zc-BB-pN6" id="oov-BE-bbc">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YnE-dS-CSH">
@@ -467,7 +468,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="341" id="SPq-vM-ZD5">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="172.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
