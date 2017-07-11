@@ -17,13 +17,13 @@ class TableThree: UITableViewController{
                    "እድሜሽ","ቁማሩን በልተሻል","ሰዉ እንዳለ..አወቅኩ","ፐፑፒፓ","ፍቅርሽና ፍቅሬ","ተረት","አልቻልኩም","ፍቅር ድሮ ድሮ..","ይሻለኛል",
                    "መነሻዉ..","እመጣለሁ"]
     
-    let image1 = UIImage(named: "a3")
-    let image2 = UIImage(named: "a4")
-    let image3 = UIImage(named: "a2")
-    let image4 = UIImage(named: "a1")
-    let image5 = UIImage(named: "a3")
-    let image6 = UIImage(named: "a5")
-    let image7 = UIImage(named: "a6")
+    let image1 = UIImage(named: "b1")
+    let image2 = UIImage(named: "b1")
+    let image3 = UIImage(named: "b1")
+    let image4 = UIImage(named: "b1")
+    let image5 = UIImage(named: "b1")
+    let image6 = UIImage(named: "b1")
+    let image7 = UIImage(named: "b1")
     
     
     
