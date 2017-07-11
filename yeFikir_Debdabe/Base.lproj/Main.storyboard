@@ -387,7 +387,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -417,13 +417,27 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNk-wH-sz1">
+                                <rect key="frame" x="299" y="564" width="60" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Ief-sy-fx0"/>
+                                </constraints>
+                                <state key="normal" image="Favourite"/>
+                                <connections>
+                                    <action selector="butOne:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Z1X-lr-CgY"/>
+                                    <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="zEy-3a-UQU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leading" id="9oY-Xv-3lC"/>
-                            <constraint firstAttribute="trailing" secondItem="Szz-hv-Cgn" secondAttribute="trailing" id="aRU-RF-cCt"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="hha-YI-po9"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="WNF-df-y4A" secondAttribute="top" id="vvg-r6-XTZ"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="WNF-df-y4A" secondAttribute="top" id="5Yi-tZ-e15"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="uNk-wH-sz1" secondAttribute="bottom" constant="57" id="5bh-qn-YAg"/>
+                            <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="AXZ-Te-AQb"/>
+                            <constraint firstItem="uNk-wH-sz1" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" constant="500" id="Fj0-e5-4LO"/>
+                            <constraint firstAttribute="trailing" secondItem="Szz-hv-Cgn" secondAttribute="trailing" id="RzH-ay-Wof"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leading" id="TGH-EO-Ghd"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="uI4-MZ-D0I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">
