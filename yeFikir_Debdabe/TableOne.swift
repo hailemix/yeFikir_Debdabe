@@ -22,7 +22,12 @@ class TableOne: UITableViewController{
     let image4 = UIImage(named: "a4")
     let image5 = UIImage(named: "a5")
     let image6 = UIImage(named: "a6")
-    let image7 = UIImage(named: "a58")
+    let image7 = UIImage(named: "a7")
+    let image8 = UIImage(named: "a8")
+    let image9 = UIImage(named: "a9")
+    let image10 = UIImage(named: "a10")
+    let image11 = UIImage(named: "a11")
+  
     
     
     
@@ -119,14 +124,14 @@ class TableOne: UITableViewController{
         else if(indexPath.row == 1)
         {
             
-            cell.imageView!.image = image3
+            cell.imageView!.image = image2
             
             
         }
             
         else if (indexPath.row == 2)
         {
-            cell.imageView!.image = image5
+            cell.imageView!.image = image3
             
             
             
@@ -134,27 +139,56 @@ class TableOne: UITableViewController{
         else if (indexPath.row == 3)
             
         {
-            cell.imageView!.image = image6
+            cell.imageView!.image = image4
             
         }
             
         else if (indexPath.row == 4)
             
         {
-            cell.imageView!.image = image7
-            
+            cell.imageView!.image = image5
         }
         else if (indexPath.row == 5)
         {
-            cell.imageView!.image = image1
+            cell.imageView!.image = image6
             
         }
         else if (indexPath.row == 6)
             
         {
-            cell.imageView!.image = image3
+            cell.imageView!.image = image7
             
         }
+        
+        else if (indexPath.row == 7) {
+        
+        cell.imageView!.image = image8
+            
+        }
+        
+        else if (indexPath.row == 8) {
+        
+        
+        
+        cell.imageView!.image = image9
+            
+        }
+            
+            
+        else if (indexPath.row == 9) {
+        
+         cell.imageView!.image = image10
+            
+        
+        }
+        
+        else if (indexPath.row == 10) {
+        
+        
+        cell.imageView!.image = image11
+        
+        }
+  
         
         return cell
     }
