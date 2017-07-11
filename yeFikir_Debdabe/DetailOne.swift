@@ -8,12 +8,15 @@
 
 import UIKit
 
-class DetailOne: UIViewController {
+class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
   
+    
+    @IBOutlet weak var myBut: UIButton!
+    
     
     func configureView() {
         // Update the user interface for the detail item.
@@ -33,10 +36,20 @@ class DetailOne: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         
-       
+        detailDescriptionTextView.delegate = self //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
         
+    }
+  
+    func scrollViewDidScroll(_ scrollView: UIScrollView){
+    
+    myBut.isHidden = true
         
-        
+        //Becareful of the lowerSlash(_) since if you don't give one space moe.it won't work
+    
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        myBut.isHidden = false
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -44,9 +57,8 @@ class DetailOne: UIViewController {
         
     }
    
-  
-    @IBAction func butOne(_ sender: UIButton) {
-        
+    @IBAction func myBut(_ sender: Any) {
+    
         let item1 = TableTwo().details[0]
         let item2 = TableTwo().details[1]
         let item3 = TableTwo().details[2]

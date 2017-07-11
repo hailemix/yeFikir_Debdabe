@@ -12,7 +12,7 @@ import UIKit
 
 class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     
-    
+    //Don't forget to add the delegates in the class extension,otherwise it won't work
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
    

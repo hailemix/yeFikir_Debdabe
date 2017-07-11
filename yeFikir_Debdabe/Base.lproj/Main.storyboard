@@ -387,7 +387,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -425,6 +425,7 @@
                                 <state key="normal" image="Favourite"/>
                                 <connections>
                                     <action selector="butOne:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Z1X-lr-CgY"/>
+                                    <action selector="myBut:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Zio-Jl-ffH"/>
                                     <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="zEy-3a-UQU"/>
                                 </connections>
                             </button>
@@ -454,6 +455,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionTextView" destination="Szz-hv-Cgn" id="3ID-qS-jdN"/>
+                        <outlet property="myBut" destination="uNk-wH-sz1" id="auM-5S-diZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSK-rZ-30z" userLabel="First Responder" sceneMemberID="firstResponder"/>
