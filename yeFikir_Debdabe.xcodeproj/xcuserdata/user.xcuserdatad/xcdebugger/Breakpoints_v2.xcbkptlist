@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yeFikir_Debdabe/DetailTwo.swift"
-            timestampString = "519806507.540291"
+            timestampString = "521435840.307869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "shareButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yeFikir_Debdabe/TableTwo.swift"
-            timestampString = "521365804.92389"
+            timestampString = "521435840.307869"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "details"
             landmarkType = "24">
          </BreakpointContent>

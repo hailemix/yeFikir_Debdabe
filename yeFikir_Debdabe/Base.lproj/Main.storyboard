@@ -96,25 +96,25 @@
         <scene sceneID="Zst-ba-2lY">
             <objects>
                 <tableViewController id="7xR-eL-qb4" customClass="TableTwo" customModule="yeFikir_Debdabe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="6kp-Bq-M5V">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" id="6kp-Bq-M5V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell2" textLabel="rjb-dS-gk9" style="IBUITableViewCellStyleDefault" id="N21-lz-ccg">
-                                <rect key="frame" x="0.0" y="28" width="375" height="173"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="9" reuseIdentifier="Cell2" textLabel="rjb-dS-gk9" rowHeight="113" style="IBUITableViewCellStyleDefault" id="N21-lz-ccg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="113"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" semanticContentAttribute="forceLeftToRight" tableViewCell="N21-lz-ccg" id="Aa3-cE-Koq">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="172"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14V-Zf-h4r">
-                                            <rect key="frame" x="15" y="8" width="228" height="146"/>
+                                            <rect key="frame" x="15" y="8" width="146" height="82"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="341" id="rjb-dS-gk9">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="172"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <nil key="textColor"/>
