@@ -86,7 +86,7 @@ class TableOne: UITableViewController{
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = details[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
-                controller.detailItem = object as AnyObject?
+                controller.detailItem = object as String?
                // controller.navigationItem.leftItemsSupplementBackButton = true
                 
                 

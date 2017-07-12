@@ -15,7 +15,24 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     @IBOutlet weak var detailDescriptionTextView: UITextView!
   
     
+   
+    
     @IBOutlet weak var myBut: UIButton!
+    
+    
+    let item1 = TableOne().details[0]
+    let item2 = TableOne().details[1]
+    let item3 = TableOne().details[2]
+    let item4 = TableOne().details[3]
+    let item5 = TableOne().details[4]
+    let item6 = TableOne().details[5]
+    let item7 = TableOne().details[6]
+    let item8 = TableOne().details[7]
+    let item9 = TableOne().details[8]
+    let item10 = TableOne().details[9]
+    let item11 = TableOne().details[10]
+    
+
     
     
     func configureView() {
@@ -32,44 +49,18 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-        
-        detailDescriptionTextView.delegate = self //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
-        
-    }
-  
-    func scrollViewDidScroll(_ scrollView: UIScrollView){
-    
-    myBut.isHidden = true
-        
-        //Becareful of the lowerSlash(_) since if you don't give one space moe.it won't work
-    
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        myBut.isHidden = false
-    }
-    
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        detailDescriptionTextView.delegate = self
+       
+        //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
         
     }
-   
-    @IBAction func myBut(_ sender: Any) {
     
-        let item1 = TableTwo().details[0]
-        let item2 = TableTwo().details[1]
-        let item3 = TableTwo().details[2]
-        let item4 = TableTwo().details[3]
-        let item5 = TableTwo().details[4]
-        let item6 = TableTwo().details[5]
-        let item7 = TableTwo().details[6]
-        let item8 = TableTwo().details[7]
-        let item9 = TableTwo().details[8]
-        let item10 = TableTwo().details[9]
-        let item11 = TableTwo().details[10]
+    
+    
+    
+    @IBAction func myShare(_ sender: UIButton) {
         
         
         
@@ -175,9 +166,30 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             
             
         }
+ 
+        
+        
+        
+    }
+    
+  
+    func scrollViewDidScroll(_ scrollView: UIScrollView){
+    
+           myBut.isHidden = true
+        
+        //Becareful of the lowerSlash(_) since if you don't give one space moe.it won't work
+    
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        myBut.isHidden = false
+    }
+    
+  
 
-        
-        
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
         
     }
 
@@ -186,7 +198,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    var detailItem: AnyObject? {
+    var detailItem: String? {
         didSet {
             // Update the view.
             self.configureView()

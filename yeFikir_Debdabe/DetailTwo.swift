@@ -18,6 +18,38 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
    
     @IBOutlet weak var myBut: UIButton!
     
+    let item1 = TableTwo().details[0]
+    let item2 = TableTwo().details[1]
+    let item3 = TableTwo().details[2]
+    let item4 = TableTwo().details[3]
+    let item5 = TableTwo().details[4]
+    let item6 = TableTwo().details[5]
+    let item7 = TableTwo().details[6]
+    let item8 = TableTwo().details[7]
+    let item9 = TableTwo().details[8]
+    let item10 = TableTwo().details[9]
+    let item11 = TableTwo().details[10]
+    let item12 = TableTwo().details[11]
+    let item13 = TableTwo().details[12]
+    let item14 = TableTwo().details[13]
+    let item15 = TableTwo().details[14]
+    let item16 = TableTwo().details[15]
+    let item17 = TableTwo().details[16]
+    let item18  = TableTwo().details[17]
+    let item19  = TableTwo().details[18]
+    let item20  = TableTwo().details[19]
+    let item21  = TableTwo().details[20]
+    let item22  = TableTwo().details[21]
+    let item23  = TableTwo().details[22]
+    let item24  = TableTwo().details[23]
+    let item25  = TableTwo().details[24]
+    let item26  = TableTwo().details[25]
+    let item27  = TableTwo().details[26]
+    let item28  = TableTwo().details[27]
+    let item29  = TableTwo().details[28]
+    let item30  = TableTwo().details[29]
+    let item31  = TableTwo().details[30]
+    
     /* 'weak'  helps to protect your view controller in the event of the NSManagedObject being deleted and leaving a dangling reference to a non-existent object. When the property is declared as weak it is automatically set to nil when the object is deleted.
     */
   
@@ -48,11 +80,13 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
           myBut.isHidden = true
     }
     
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
         myBut.isHidden = false
     }
     
@@ -61,37 +95,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     
     @IBAction func shareButton(_ sender: UIButton) {
         
-               let item1 = TableTwo().details[0]
-               let item2 = TableTwo().details[1]
-               let item3 = TableTwo().details[2]
-               let item4 = TableTwo().details[3]
-               let item5 = TableTwo().details[4]
-               let item6 = TableTwo().details[5]
-               let item7 = TableTwo().details[6]
-               let item8 = TableTwo().details[7]
-               let item9 = TableTwo().details[8]
-               let item10 = TableTwo().details[9]
-               let item11 = TableTwo().details[10]
-               let item12 = TableTwo().details[11]
-               let item13 = TableTwo().details[12]
-               let item14 = TableTwo().details[13]
-               let item15 = TableTwo().details[14]
-               let item16 = TableTwo().details[15]
-               let item17 = TableTwo().details[16]
-               let item18  = TableTwo().details[17]
-               let item19  = TableTwo().details[18]
-               let item20  = TableTwo().details[19]
-               let item21  = TableTwo().details[20]
-               let item22  = TableTwo().details[21]
-               let item23  = TableTwo().details[22]
-               let item24  = TableTwo().details[23]
-               let item25  = TableTwo().details[24]
-               let item26  = TableTwo().details[25]
-               let item27  = TableTwo().details[26]
-               let item28  = TableTwo().details[27]
-               let item29  = TableTwo().details[28]
-               let item30  = TableTwo().details[29]
-               let item31  = TableTwo().details[30]
+        
         
         
         if(detailDescriptionTextView.text == item1){

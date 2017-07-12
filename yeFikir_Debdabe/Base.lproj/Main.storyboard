@@ -163,7 +163,7 @@
         <scene sceneID="h7j-sN-BrA">
             <objects>
                 <navigationController id="EAV-6N-5eY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="Poem" selectedImage="Poem" id="cWF-af-Oz2">
+                    <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="email_icon" selectedImage="email_icon" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
@@ -244,19 +244,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-Ke-HCt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-Ke-HCt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.81073987479999998" green="0.82646590470000003" blue="0.94778758289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-dr-74q">
+                                <rect key="frame" x="299" y="574" width="60" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="iNO-UX-YXq"/>
+                                </constraints>
+                                <state key="normal" image="Favourite"/>
+                                <connections>
+                                    <action selector="myBut:" destination="5f7-8g-lRT" eventType="touchUpInside" id="Lkj-Pj-6Lg"/>
+                                    <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="r1G-u7-irR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="Gyy-pY-GLX"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="iH5-fs-mwt"/>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" id="nc2-Kt-QJO"/>
-                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="toh-Ex-UjX"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="7JI-cT-I6u"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="e9B-dr-74q" secondAttribute="bottom" constant="47" id="8is-yR-Hst"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="bottom" secondItem="wOB-Zi-8lC" secondAttribute="top" id="SFW-QX-GG3"/>
+                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="SsE-FH-bM5"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="bL0-Wn-syz"/>
+                            <constraint firstItem="e9B-dr-74q" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" constant="510" id="feq-Xb-nwb"/>
+                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="hDt-M4-WgP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="C9G-2e-Rxu" colorLabel="IBBuiltInLabel-Red">
@@ -273,6 +287,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionTextView" destination="zuA-Ke-HCt" id="h8B-DX-EOt"/>
+                        <outlet property="myBut" destination="e9B-dr-74q" id="gVg-Fy-cJT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxg-JY-0n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,7 +426,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-hv-Cgn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-hv-Cgn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.81073987479999998" green="0.82646590470000003" blue="0.94778758289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
@@ -424,9 +439,7 @@
                                 </constraints>
                                 <state key="normal" image="Favourite"/>
                                 <connections>
-                                    <action selector="butOne:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Z1X-lr-CgY"/>
-                                    <action selector="myBut:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Zio-Jl-ffH"/>
-                                    <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="zEy-3a-UQU"/>
+                                    <action selector="myShare:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Mp7-vK-BdW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -455,7 +468,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailDescriptionTextView" destination="Szz-hv-Cgn" id="3ID-qS-jdN"/>
-                        <outlet property="myBut" destination="uNk-wH-sz1" id="auM-5S-diZ"/>
+                        <outlet property="myBut" destination="uNk-wH-sz1" id="AOe-Fi-okZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSK-rZ-30z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -516,10 +529,10 @@
     <resources>
         <image name="Favourite" width="15" height="12"/>
         <image name="Fun" width="24" height="24"/>
-        <image name="Poem" width="26" height="19"/>
         <image name="Romance" width="16" height="13"/>
         <image name="about_us" width="704" height="847"/>
         <image name="back_btn" width="13" height="21"/>
+        <image name="email_icon" width="20" height="16"/>
         <image name="star_icon_filled" width="22" height="21"/>
     </resources>
 </document>
