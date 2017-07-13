@@ -45,7 +45,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-aN-M7q">
                                 <rect key="frame" x="0.0" y="64" width="375" height="543"/>
-                                <color key="backgroundColor" red="0.81073987483978271" green="0.826465904712677" blue="0.9477875828742981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.92506206948878433" green="0.94273628328742853" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NRc-Gg-iQK" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" constant="491" id="1NU-cA-JLK"/>
                             <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="LMA-XH-wu1"/>
@@ -244,9 +244,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-Ke-HCt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-Ke-HCt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.81073987479999998" green="0.82646590470000003" blue="0.94778758289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.90812785689369324" green="0.94645584235617808" blue="0.96707255473503695" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -262,7 +262,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="7JI-cT-I6u"/>
                             <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="e9B-dr-74q" secondAttribute="bottom" constant="47" id="8is-yR-Hst"/>
@@ -426,9 +426,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-hv-Cgn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.81073987479999998" green="0.82646590470000003" blue="0.94778758289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-hv-Cgn">
+                                <rect key="frame" x="1" y="56" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.9413313936291684" green="0.95149393409292837" blue="0.99799679487179482" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.059823975089391489" green="0.070733173076923062" blue="0.031541804900400594" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -443,15 +444,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.26962077620000002" green="0.92661136389999998" blue="0.18824782970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="WNF-df-y4A" secondAttribute="top" id="5Yi-tZ-e15"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="r9x-5S-2uC" secondAttribute="topMargin" constant="56" id="40K-np-X9N"/>
                             <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="uNk-wH-sz1" secondAttribute="bottom" constant="57" id="5bh-qn-YAg"/>
                             <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="AXZ-Te-AQb"/>
                             <constraint firstItem="uNk-wH-sz1" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" constant="500" id="Fj0-e5-4LO"/>
-                            <constraint firstAttribute="trailing" secondItem="Szz-hv-Cgn" secondAttribute="trailing" id="RzH-ay-Wof"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leading" id="TGH-EO-Ghd"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="uI4-MZ-D0I"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="VYz-Cb-uuR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="Z0x-pu-ivX"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="Szz-hv-Cgn" secondAttribute="bottom" constant="8" symbolic="YES" id="fQq-ey-ILU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">
