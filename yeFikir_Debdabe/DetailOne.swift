@@ -70,7 +70,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADInt
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
-      //   interstitial = createAndLoadInterstitial()
+        //interstitial = createAndLoadInterstitial()
         
     }
     
