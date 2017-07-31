@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
+class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADInterstitialDelegate {
     
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
+    @IBOutlet weak var bannerView : GADBannerView!
+    
+    var interstitial : GADInterstitial!
   
     
    
@@ -33,6 +37,13 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     let item11 = TableOne().details[10]
     
 
+    struct Constants {
+    
+    static let adRate = 3
+        
+    }
+    
+    
     
     
     func configureView() {
@@ -54,6 +65,12 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
         detailDescriptionTextView.delegate = self
        
         //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+      //   interstitial = createAndLoadInterstitial()
         
     }
     
