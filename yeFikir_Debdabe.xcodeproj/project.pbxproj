@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11573AD6AF863DF1547CC81D /* Pods_yeFikir_Debdabe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDCCCF433AF468C447A30D7 /* Pods_yeFikir_Debdabe.framework */; };
+		AC2EFE25065685DF367E9C8C /* Pods_yeFikir_DebdabeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14AEAA6519A0ED707EAED337 /* Pods_yeFikir_DebdabeUITests.framework */; };
 		CE7570ED1EDD267700816A9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7570EC1EDD267700816A9C /* AppDelegate.swift */; };
 		CE7570EF1EDD267700816A9C /* TableOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7570EE1EDD267700816A9C /* TableOne.swift */; };
 		CE7570F21EDD267700816A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7570F01EDD267700816A9C /* Main.storyboard */; };
@@ -24,6 +26,7 @@
 		CE8C79B41EDFFBD500E14EF1 /* DetailThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */; };
 		CE8C79B61EDFFF9300E14EF1 /* FavoriteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B51EDFFF9300E14EF1 /* FavoriteTable.swift */; };
 		CE8C79B81EDFFFB300E14EF1 /* FavouriteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B71EDFFFB300E14EF1 /* FavouriteDetail.swift */; };
+		E5B856AB8EE32D8C78E78785 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF89542116561F24623874FD /* Pods_yeFikir_DebdabeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05B6FEB48AF9BDE624F49D9B /* Pods-yeFikir_DebdabeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeUITests/Pods-yeFikir_DebdabeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		14AEAA6519A0ED707EAED337 /* Pods_yeFikir_DebdabeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_DebdabeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		232C951747CF5EEF1D5B5D3E /* Pods-yeFikir_DebdabeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeUITests/Pods-yeFikir_DebdabeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		26F8802DEF07C7D52457F678 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2EFB2B764D19FD3092FD9B54 /* Pods-yeFikir_DebdabeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E41A0C443B45EF8A0A21941 /* Pods-yeFikir_Debdabe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.debug.xcconfig"; sourceTree = "<group>"; };
+		A3E147DAB4D5D88D3FD88199 /* Pods-yeFikir_Debdabe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.release.xcconfig"; sourceTree = "<group>"; };
+		BF89542116561F24623874FD /* Pods_yeFikir_DebdabeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_DebdabeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDCCCF433AF468C447A30D7 /* Pods_yeFikir_Debdabe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_Debdabe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7570E91EDD267700816A9C /* yeFikir_Debdabe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeFikir_Debdabe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7570EC1EDD267700816A9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7570EE1EDD267700816A9C /* TableOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOne.swift; sourceTree = "<group>"; };
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11573AD6AF863DF1547CC81D /* Pods_yeFikir_Debdabe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B856AB8EE32D8C78E78785 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC2EFE25065685DF367E9C8C /* Pods_yeFikir_DebdabeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30CA28B96648C0E47287F6DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBDCCCF433AF468C447A30D7 /* Pods_yeFikir_Debdabe.framework */,
+				BF89542116561F24623874FD /* Pods_yeFikir_DebdabeTests.framework */,
+				14AEAA6519A0ED707EAED337 /* Pods_yeFikir_DebdabeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD27209C0EDAD56C96F98693 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E41A0C443B45EF8A0A21941 /* Pods-yeFikir_Debdabe.debug.xcconfig */,
+				A3E147DAB4D5D88D3FD88199 /* Pods-yeFikir_Debdabe.release.xcconfig */,
+				26F8802DEF07C7D52457F678 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */,
+				2EFB2B764D19FD3092FD9B54 /* Pods-yeFikir_DebdabeTests.release.xcconfig */,
+				232C951747CF5EEF1D5B5D3E /* Pods-yeFikir_DebdabeUITests.debug.xcconfig */,
+				05B6FEB48AF9BDE624F49D9B /* Pods-yeFikir_DebdabeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE7570E01EDD267700816A9C = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +139,8 @@
 				CE7571031EDD267700816A9C /* yeFikir_DebdabeTests */,
 				CE75710E1EDD267700816A9C /* yeFikir_DebdabeUITests */,
 				CE7570EA1EDD267700816A9C /* Products */,
+				AD27209C0EDAD56C96F98693 /* Pods */,
+				30CA28B96648C0E47287F6DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7571141EDD267700816A9C /* Build configuration list for PBXNativeTarget "yeFikir_Debdabe" */;
 			buildPhases = (
+				DC19080E896A903DB4643C3D /* [CP] Check Pods Manifest.lock */,
 				CE7570E51EDD267700816A9C /* Sources */,
 				CE7570E61EDD267700816A9C /* Frameworks */,
 				CE7570E71EDD267700816A9C /* Resources */,
+				B24A6A0CD902DF29FC39BEE0 /* [CP] Embed Pods Frameworks */,
+				87CA5BD1572DF3A041A3CACF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7571171EDD267700816A9C /* Build configuration list for PBXNativeTarget "yeFikir_DebdabeTests" */;
 			buildPhases = (
+				18CD6A598701D5E70B30EBFE /* [CP] Check Pods Manifest.lock */,
 				CE7570FC1EDD267700816A9C /* Sources */,
 				CE7570FD1EDD267700816A9C /* Frameworks */,
 				CE7570FE1EDD267700816A9C /* Resources */,
+				785521B018D04DDC9623E3DB /* [CP] Embed Pods Frameworks */,
+				A62664E85EBB316B69A56AAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE75711A1EDD267700816A9C /* Build configuration list for PBXNativeTarget "yeFikir_DebdabeUITests" */;
 			buildPhases = (
+				32E87FB86AB7DE205D46F02A /* [CP] Check Pods Manifest.lock */,
 				CE7571071EDD267700816A9C /* Sources */,
 				CE7571081EDD267700816A9C /* Frameworks */,
 				CE7571091EDD267700816A9C /* Resources */,
+				155287CB36B12077B94132BD /* [CP] Embed Pods Frameworks */,
+				B4CEB138552B2E7AEF9E6DF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,6 +333,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		155287CB36B12077B94132BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_DebdabeUITests/Pods-yeFikir_DebdabeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18CD6A598701D5E70B30EBFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		32E87FB86AB7DE205D46F02A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		785521B018D04DDC9623E3DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87CA5BD1572DF3A041A3CACF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62664E85EBB316B69A56AAB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24A6A0CD902DF29FC39BEE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4CEB138552B2E7AEF9E6DF7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_DebdabeUITests/Pods-yeFikir_DebdabeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC19080E896A903DB4643C3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE7570E51EDD267700816A9C /* Sources */ = {
@@ -450,6 +637,7 @@
 		};
 		CE7571151EDD267700816A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E41A0C443B45EF8A0A21941 /* Pods-yeFikir_Debdabe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = yeFikir_Debdabe/Info.plist;
@@ -462,6 +650,7 @@
 		};
 		CE7571161EDD267700816A9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3E147DAB4D5D88D3FD88199 /* Pods-yeFikir_Debdabe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = yeFikir_Debdabe/Info.plist;
@@ -474,6 +663,7 @@
 		};
 		CE7571181EDD267700816A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26F8802DEF07C7D52457F678 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +678,7 @@
 		};
 		CE7571191EDD267700816A9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EFB2B764D19FD3092FD9B54 /* Pods-yeFikir_DebdabeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +693,7 @@
 		};
 		CE75711B1EDD267700816A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 232C951747CF5EEF1D5B5D3E /* Pods-yeFikir_DebdabeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = yeFikir_DebdabeUITests/Info.plist;
@@ -515,6 +707,7 @@
 		};
 		CE75711C1EDD267700816A9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05B6FEB48AF9BDE624F49D9B /* Pods-yeFikir_DebdabeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = yeFikir_DebdabeUITests/Info.plist;
