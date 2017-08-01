@@ -9,16 +9,17 @@
 import UIKit
 import GoogleMobileAds
 
-class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADInterstitialDelegate {
+class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
     
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
-    @IBOutlet weak var bannerView : GADBannerView!
+    
     
     var interstitial : GADInterstitial!
   
     
+    var adMobBannerView = GADBannerView()
    
     
     @IBOutlet weak var myBut: UIButton!
@@ -35,6 +36,9 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADInt
     let item9 = TableOne().details[8]
     let item10 = TableOne().details[9]
     let item11 = TableOne().details[10]
+    
+   
+    
     
 
     struct Constants {
@@ -59,23 +63,128 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADInt
         }
     }
     
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
         detailDescriptionTextView.delegate = self
+        initAdmobBanner()
        
         //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
+
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+       // bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         
-        //interstitial = createAndLoadInterstitial()
+        interstitial = createAndLoadInterstitial()
+        
+    }
+    
+    func initAdmobBanner() {
+    
+        if UIDevice.current.userInterfaceIdiom == .phone {
+        
+        // iPhone
+            adMobBannerView.adSize = GADAdSizeFromCGSize(CGSize(width:320, height:50))
+            adMobBannerView.frame = CGRect(x:0 , y:view.frame.size.height, width:320, height:50)
+            
+        
+        } else {
+         
+            //iPad
+            adMobBannerView.adSize = GADAdSizeFromCGSize(CGSize(width:468, height:60))
+            adMobBannerView.frame = CGRect(x:0, y:view.frame.size.height, width: 468, height:60)
+      
+        }
+        
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adMobBannerView.rootViewController = self
+        adMobBannerView.delegate = self
+        view.addSubview(adMobBannerView)
+        
+        let request = GADRequest()
+        adMobBannerView.load(request)
+ 
+    
+    }
+    
+    
+    func hideBanner(_ banner:UIView) {
+        
+        UIView.beginAnimations("hideBanner", context: nil)
+        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width: banner.frame.size.width,height: banner.frame.size.height)
+        UIView.commitAnimations()
+        banner.isHidden = true
+
+    
+    }
+    
+    func showBanner(_ banner:UIView) {
+    
+        UIView.beginAnimations("showBanner", context: nil)
+        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width: banner.frame.size.width,height: banner.frame.size.height)
+        UIView.commitAnimations()
+        banner.isHidden = false
+
+    
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        showBanner(adMobBannerView)
+    }
+    
+   func adView(_ view: GADBannerView,didFailToReceiveAdWithError error: GADRequestError){
+       hideBanner(adMobBannerView)
+    
+    }
+  
+    
+  
+    
+    fileprivate func createAndLoadInterstitial() -> GADInterstitial {
+     
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.load(GADRequest())
+        interstitial.delegate = self
+        return interstitial
+    
+    }
+    
+    func randomNumberInRange(lower:Int, upper:Int) -> Int {
+    
+    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
         
     }
     
     
     
+    func randomPresentation(oneIn:Int) {
+    let randomNumber = randomNumberInRange(lower: 1, upper: Constants.adRate)
+        if randomNumber == 1 {
+            
+            if interstitial != nil {
+                if interstitial!.isReady{
+                
+                interstitial.present(fromRootViewController: self)
+                    
+                } else {
+                
+                print("Ad is not Ready")
+                    
+                }
+            
+            }
+        
+        
+        }
+    
+    }
+    
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
+        
+    }
     
     @IBAction func myShare(_ sender: UIButton) {
         

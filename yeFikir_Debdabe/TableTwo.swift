@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+
 
 class TableTwo: UITableViewController{
     
