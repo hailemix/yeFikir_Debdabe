@@ -125,6 +125,11 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width: banner.frame.size.width,height: banner.frame.size.height)
         UIView.commitAnimations()
         banner.isHidden = false
+        
+        /* If you want to put the banner ad in the top part of the View,make the value of the view frame as 0 and the banner height as it is i.e
+         y:banner.frame.size.height
+         
+         */
 
     
     }
