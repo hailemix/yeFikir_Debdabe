@@ -19,7 +19,7 @@
         <scene sceneID="MFK-e9-VH2">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="OSE-CE-rsp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Hu-fS-SIe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Hu-fS-SIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -50,9 +50,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-Gg-iQK">
-                                <rect key="frame" x="274" y="530" width="85" height="91"/>
+                                <rect key="frame" x="274" y="534" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="dtV-wK-u0O"/>
+                                    <constraint firstAttribute="width" constant="85" id="SR7-bi-EfV"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
@@ -62,13 +62,12 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" constant="466" id="1NU-cA-JLK"/>
-                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="j3a-aN-M7q" secondAttribute="bottom" constant="62" id="Bhs-1E-gwH"/>
-                            <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="GsT-Mr-0Xv"/>
-                            <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="IyG-5r-e39"/>
-                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="LMA-XH-wu1"/>
-                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="NRc-Gg-iQK" secondAttribute="bottom" constant="46" id="Wip-Vu-JQz"/>
-                            <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="az2-VD-C3e"/>
+                            <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="23Q-gF-3np"/>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="Mms-2h-6Q2"/>
+                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="j3a-aN-M7q" secondAttribute="bottom" constant="62" id="NXP-Nm-S3X"/>
+                            <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="gTd-Go-Enh"/>
+                            <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="kIz-Si-aMw"/>
+                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="NRc-Gg-iQK" secondAttribute="bottom" constant="38" id="z7i-s6-x2w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*  ደብዳቤዎች  *" id="StW-w5-NxY" colorLabel="IBBuiltInLabel-Red">
@@ -147,7 +146,7 @@
                     <tabBarItem key="tabBarItem" title="ዘና በሉ" image="Fun" selectedImage="Fun" id="uO4-gy-eUv">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A5Z-ou-9IC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5Z-ou-9IC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -166,7 +165,7 @@
                     <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="email_icon" selectedImage="email_icon" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -185,7 +184,7 @@
                     <tabBarItem key="tabBarItem" title="ግጥሞች" image="ic_book" selectedImage="ic_book" id="Toz-ns-nwI">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BHz-uJ-UgZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHz-uJ-UgZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -220,7 +219,7 @@
         <scene sceneID="y64-zf-aHk">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="siu-wp-vWt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="q5r-cR-1Ee">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q5r-cR-1Ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,9 +250,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-dr-74q">
-                                <rect key="frame" x="274" y="530" width="85" height="91"/>
+                                <rect key="frame" x="274" y="534" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="Lh3-9D-hNo"/>
+                                    <constraint firstAttribute="width" constant="85" id="XIm-Q1-YRj"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
@@ -264,13 +263,12 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" constant="62" id="6p6-fj-nqH"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="BLe-Uw-xCT"/>
-                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="Eot-mk-c5x"/>
-                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="P6U-XI-pFN"/>
-                            <constraint firstItem="e9B-dr-74q" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" constant="466" id="ToT-Vt-Ixr"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="zTk-8G-880"/>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="e9B-dr-74q" secondAttribute="bottom" constant="46" id="zr2-yE-Qdn"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" constant="62" id="608-Hy-IV4"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="CYg-SH-b3o"/>
+                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="Qbx-in-cQR"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="e9B-dr-74q" secondAttribute="bottom" constant="38" id="bT0-hb-Qe2"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="k58-7v-dxK"/>
+                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="kOd-my-pj1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*   ግጥሞች   *" id="C9G-2e-Rxu" colorLabel="IBBuiltInLabel-Red">
@@ -351,7 +349,7 @@
                         <inset key="imageInsets" minX="-4" minY="-2" maxX="-3" maxY="-3"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hmT-UX-h4R">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hmT-UX-h4R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -402,7 +400,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -434,9 +432,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNk-wH-sz1">
-                                <rect key="frame" x="274" y="530" width="85" height="91"/>
+                                <rect key="frame" x="274" y="534" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="WY6-ol-bYv"/>
+                                    <constraint firstAttribute="width" constant="85" id="Ej8-sk-QqY"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
@@ -446,19 +444,18 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="Szz-hv-Cgn" secondAttribute="bottom" constant="62" id="Aqz-Cy-Zp9"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="FU5-Zv-SrA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="FkI-Vf-fpi"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="r9x-5S-2uC" secondAttribute="topMargin" constant="56" id="XXF-uj-Mmy"/>
-                            <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="hEi-P1-tgJ"/>
-                            <constraint firstItem="uNk-wH-sz1" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" constant="466" id="q33-Xa-tCW"/>
-                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="uNk-wH-sz1" secondAttribute="bottom" constant="46" id="wAB-NH-39m"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="uNk-wH-sz1" secondAttribute="bottom" constant="38" id="JGP-fc-ZHJ"/>
+                            <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="ODV-ru-xQ4"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="r9x-5S-2uC" secondAttribute="topMargin" constant="56" id="QZM-Zw-vCS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="TDo-iE-ldQ"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="rYm-Jq-C9b"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="Szz-hv-Cgn" secondAttribute="bottom" constant="62" id="tfG-bH-jqh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="              *  ዘና .. ዘና  *" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">
                         <barButtonItem key="leftBarButtonItem" id="lTf-XM-4Hk">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rzK-g1-aOW">
-                                <rect key="frame" x="16" y="11" width="13" height="22"/>
+                                <rect key="frame" x="20" y="11" width="13" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back_btn"/>
                                 <connections>
