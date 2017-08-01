@@ -23,6 +23,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
    
     
     @IBOutlet weak var myBut: UIButton!
+    @IBOutlet weak var Advert: UIButton!
+
     
     
     let item1 = TableOne().details[0]
@@ -37,18 +39,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     let item10 = TableOne().details[9]
     let item11 = TableOne().details[10]
     
-   
-    
-    
 
-    struct Constants {
-    
-    static let adRate = 3
-        
-    }
-    
-    
-    
     
     func configureView() {
         // Update the user interface for the detail item.
@@ -72,12 +63,10 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         initAdmobBanner()
        
         //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
-
+         interstitial = createAndLoadInterstitial()
         
-       // bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        
-        interstitial = createAndLoadInterstitial()
-        
+         AdvertController()
+       
     }
     
     func initAdmobBanner() {
@@ -143,66 +132,65 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     }
   
-    
   
-    
-    fileprivate func createAndLoadInterstitial() -> GADInterstitial {
-     
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+     func createAndLoadInterstitial() -> GADInterstitial {
+        
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")  // GADInterstitialAd loads a single Interstitail
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
     
     }
     
-    func randomNumberInRange(lower:Int, upper:Int) -> Int {
-    
-    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-        
-    }
-    
-    
-    
-    func randomPresentation(oneIn:Int) {
-    let randomNumber = randomNumberInRange(lower: 1, upper: Constants.adRate)
-        if randomNumber == 1 {
-            
-            if interstitial != nil {
-                if interstitial!.isReady{
-                
-                interstitial.present(fromRootViewController: self)
-                    
-                } else {
-                
-                print("Ad is not Ready")
-                    
-                }
-            
-            }
-        
-        
-        }
-    
-    }
-    
-    
+   
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitial = createAndLoadInterstitial()
         
     }
     
+    
+    
+    @IBAction func myAdvert(_ sender: UIButton) {
+        
+        if interstitial.isReady {
+            
+            interstitial.present(fromRootViewController: self)
+            
+        } else {
+            
+            print("Ad wasn't ready")
+        }
+   
+    }
+    
+    
+    func AdvertController () {
+   
+        
+        if detailDescriptionTextView.text == item3 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item9 {
+        
+            Advert.isHidden = false
+          
+        }
+    
+    }
+    
+    
+    
     @IBAction func myShare(_ sender: UIButton) {
-        
-        
-        
+
         
         if(detailDescriptionTextView.text == item1){
+            
+          
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
             
+            
+           
             
         } else if(detailDescriptionTextView.text == item2) {
             let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
@@ -213,6 +201,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
             
         }else if(detailDescriptionTextView.text == item3) {
+            
+            
             let activityViewController = UIActivityViewController(activityItems:[item3], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
@@ -308,15 +298,33 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
            myBut.isHidden = true
         
+        
+        if detailDescriptionTextView.text == item3 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item9 {
+           Advert.isHidden = true
+        }
+        
+        if detailDescriptionTextView.text == item2 {
+            
+            myBut.isHidden = false
+            
+        }
+        
         //Becareful of the lowerSlash(_) since if you don't give one space moe.it won't work
     
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        
         myBut.isHidden = false
+        
+        if detailDescriptionTextView.text == item3 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item9 {
+            Advert.isHidden = false
+        }
+       
     }
     
-  
+    
 
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
