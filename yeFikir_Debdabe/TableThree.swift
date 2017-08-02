@@ -120,9 +120,7 @@ class TableThree: UITableViewController{
                 let object = details[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailThree
                 controller.detailItem = object as String?
-                
-                
-                
+            
             }
         }
     }
@@ -137,16 +135,14 @@ class TableThree: UITableViewController{
         return objects.count
     }
     
-    
-    
+ 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3" , for: indexPath)
         let object = objects[indexPath.row]
         
         cell.textLabel!.text = object
         
-        
-        
+
         // In TableView Three,the imageView are put in switch statement
         
         switch indexPath.row {
@@ -246,8 +242,7 @@ class TableThree: UITableViewController{
                 }
         
         return cell
-    
-    
+
     
     }
     
@@ -255,9 +250,7 @@ class TableThree: UITableViewController{
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
-    
-    
+ 
 }
 
 
