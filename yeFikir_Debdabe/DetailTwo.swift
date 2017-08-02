@@ -13,7 +13,7 @@ import GoogleMobileAds
 
 class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
-    // Don't forget to add the delegates in the class extension,otherwise it won't work
+    // Don't forget to add the delegates in the class extension,otherwise it won't work and Becareful of segues(delete their relationships) when copy-pasting buttons from one viewcontroller to another view controller
     
     var interstitialTwo : GADInterstitial!
     var adMobBannerView = GADBannerView()
