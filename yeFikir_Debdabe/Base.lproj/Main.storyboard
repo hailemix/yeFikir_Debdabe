@@ -19,7 +19,7 @@
         <scene sceneID="MFK-e9-VH2">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="OSE-CE-rsp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Hu-fS-SIe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Hu-fS-SIe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -156,7 +156,7 @@
                     <tabBarItem key="tabBarItem" title="ዘና በሉ" image="Fun" selectedImage="Fun" id="uO4-gy-eUv">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A5Z-ou-9IC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5Z-ou-9IC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -175,7 +175,7 @@
                     <tabBarItem key="tabBarItem" title="ደብዳቤዎች" image="email_icon" selectedImage="email_icon" id="cWF-af-Oz2">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vbs-CN-G4d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbs-CN-G4d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -194,7 +194,7 @@
                     <tabBarItem key="tabBarItem" title="ግጥሞች" image="ic_book" selectedImage="ic_book" id="Toz-ns-nwI">
                         <inset key="imageInsets" minX="-3" minY="-3" maxX="-3" maxY="-3"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BHz-uJ-UgZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BHz-uJ-UgZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -229,7 +229,7 @@
         <scene sceneID="y64-zf-aHk">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="siu-wp-vWt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="q5r-cR-1Ee">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q5r-cR-1Ee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -259,35 +259,34 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-dr-74q">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-dr-74q">
                                 <rect key="frame" x="274" y="534" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="7MM-RN-Zbc"/>
+                                    <constraint firstAttribute="width" constant="85" id="10l-vS-rdL"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
-                                    <action selector="myBut:" destination="5f7-8g-lRT" eventType="touchUpInside" id="Lkj-Pj-6Lg"/>
-                                    <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="r1G-u7-irR"/>
+                                    <action selector="shareTwo:" destination="5f7-8g-lRT" eventType="touchUpInside" id="qZz-Aw-S9i"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M2D-0v-SDZ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNZ-Dl-04C">
                                 <rect key="frame" x="16" y="537" width="80" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7y-ha-RW1">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="92"/>
-                                        <state key="normal" image="Advertise"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <state key="normal" image="Advertise"/>
+                                <connections>
+                                    <action selector="AdThreeAction:" destination="5f7-8g-lRT" eventType="touchUpInside" id="xEb-PS-wrp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="1bP-yU-srp"/>
-                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="aLh-ce-zmw"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="eaA-qQ-tnl"/>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" constant="62" id="oPg-ue-jph"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="oYp-K6-BAg"/>
+                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leadingMargin" id="CMS-Fk-Kfh"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" constant="62" id="U55-t8-8ee"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="bWg-gx-kVs"/>
+                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="fvb-Dc-YdR"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="jF7-r0-TAV"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="JNZ-Dl-04C" secondAttribute="bottom" constant="38" id="kiu-st-9Tk"/>
+                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="o4t-X6-LxO"/>
+                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="vVU-K1-ABC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*   ግጥሞች   *" id="C9G-2e-Rxu" colorLabel="IBBuiltInLabel-Red">
@@ -303,6 +302,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="AdThreeBut" destination="JNZ-Dl-04C" id="WYO-DL-dq2"/>
                         <outlet property="detailDescriptionTextView" destination="zuA-Ke-HCt" id="h8B-DX-EOt"/>
                         <outlet property="myBut" destination="e9B-dr-74q" id="gVg-Fy-cJT"/>
                     </connections>
@@ -368,7 +368,7 @@
                         <inset key="imageInsets" minX="-4" minY="-2" maxX="-3" maxY="-3"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hmT-UX-h4R">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hmT-UX-h4R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -419,7 +419,7 @@
         <scene sceneID="Lbi-y1-dc8">
             <objects>
                 <navigationController modalTransitionStyle="flipHorizontal" id="T4J-p7-UDV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="J7l-13-KGK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J7l-13-KGK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

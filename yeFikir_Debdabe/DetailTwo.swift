@@ -148,7 +148,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     }
     
   
-    @IBAction func AdvertTwoButton(_ sender: Any)
+    @IBAction func AdvertTwoButton(_ sender:UIButton)
     
       {
         
@@ -187,11 +187,9 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         myBut.isHidden = false
         
         }
-        
-        
+    
     }
-    
-    
+  
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         myBut.isHidden = false

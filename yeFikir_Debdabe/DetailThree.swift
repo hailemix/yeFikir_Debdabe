@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
+class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
     
     
     
+    var interstitialThree : GADInterstitial!
+    var adMobBannerView = GADBannerView()
     
+ 
     @IBOutlet weak var detailDescriptionTextView: UITextView!
-    
+    @IBOutlet weak var AdThreeBut: UIButton!
     @IBOutlet weak var myBut: UIButton!
     
     let item1 = TableThree().details[0]
@@ -60,16 +64,103 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
         self.configureView()
         detailDescriptionTextView.delegate = self
         
+        initAdmobBanner()
+        interstitialThree = createAndLoadInterstitial()
+        AdvertController()
         
+    }
+    func initAdmobBanner() {
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            adMobBannerView.adSize = kGADAdSizeSmartBannerPortrait
+        } else {
+            
+            adMobBannerView.adSize = kGADAdSizeSmartBannerLandscape
+            
+        }
+        
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adMobBannerView.rootViewController = self
+        adMobBannerView.delegate = self
+        view.addSubview(adMobBannerView)
+        
+        let request = GADRequest()
+        adMobBannerView.load(request)
         
     }
     
     
-    @IBAction func myBut(_ sender: UIButton) {
+    func hidebanner(_ banner:UIView) {
         
-       
+        UIView.beginAnimations("hideBanner", context: nil)
+        
+        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width:banner.frame.size.width,height:banner.frame.size.height)
+        
+        UIView.commitAnimations()
+        banner.isHidden = true
         
         
+    }
+    
+    func showBanner(_ banner: UIView) {
+        
+        UIView.beginAnimations("showBanner",context:nil)
+        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y: view.frame.size.height - banner.frame.size.height,width:banner.frame.size.width,height:banner.frame.size.height)
+        
+        UIView.commitAnimations()
+        banner.isHidden  = false
+        
+    }
+    
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        showBanner(adMobBannerView)
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        hidebanner(adMobBannerView)
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+        
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.load(GADRequest())
+        interstitial.delegate = self
+        return interstitial
+        
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitialThree = createAndLoadInterstitial()
+    }
+    
+
+    @IBAction func AdThreeAction(_ sender: UIButton) {
+   
+        if interstitialThree.isReady {
+            
+            interstitialThree.present(fromRootViewController: self)
+            
+        } else {
+            
+            print("Ad wasn't ready")
+            
+        }
+        
+    }
+    
+    func AdvertController () {
+        
+        if detailDescriptionTextView.text == item1 || detailDescriptionTextView.text == item6 || detailDescriptionTextView.text == item9 || detailDescriptionTextView.text == item16 || detailDescriptionTextView.text == item20  {
+            
+            AdThreeBut.isHidden = false
+            
+        }
+        
+    }
+
+    @IBAction func shareTwo(_ sender: UIButton) {
+    
         if(detailDescriptionTextView.text == item1){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
