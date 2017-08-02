@@ -17,8 +17,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     
     var interstitial : GADInterstitial!
-  
-    
     var adMobBannerView = GADBannerView()
    
     
@@ -47,8 +45,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         if let detail = self.detailItem {
             if let UITextView = self.detailDescriptionTextView {
                 UITextView.text = detail.description
-                
-                
+           
             }
             
         }
@@ -59,13 +56,15 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        
+        
         detailDescriptionTextView.delegate = self
         initAdmobBanner()
+        interstitial = createAndLoadInterstitial()
+        AdvertController()
        
         //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
-         interstitial = createAndLoadInterstitial()
         
-         AdvertController()
        
     }
     
@@ -74,16 +73,14 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         if UIDevice.current.userInterfaceIdiom == .phone {
         
         // iPhone
-            adMobBannerView.adSize = GADAdSizeFromCGSize(CGSize(width:320, height:50))
-            adMobBannerView.frame = CGRect(x:0 , y:view.frame.size.height, width:320, height:50)
             
-        
+            adMobBannerView.adSize = kGADAdSizeSmartBannerPortrait
+       
         } else {
          
             //iPad
-            adMobBannerView.adSize = GADAdSizeFromCGSize(CGSize(width:468, height:60))
-            adMobBannerView.frame = CGRect(x:0, y:view.frame.size.height, width: 468, height:60)
-      
+            adMobBannerView.adSize = kGADAdSizeSmartBannerLandscape
+    
         }
         
         adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -120,7 +117,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
          
          */
 
-    
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -147,7 +143,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         interstitial = createAndLoadInterstitial()
         
     }
-    
     
     
     @IBAction func myAdvert(_ sender: UIButton) {
@@ -189,9 +184,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
             
-            
-           
-            
+        
         } else if(detailDescriptionTextView.text == item2) {
             let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
@@ -234,8 +227,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+         
         }
         else if(detailDescriptionTextView.text == item7) {
             let activityViewController = UIActivityViewController(activityItems:[item7], applicationActivities:nil)
@@ -284,13 +276,9 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
- 
-        
-        
-        
+      
     }
     
   
@@ -323,10 +311,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         }
        
     }
-    
-    
-
-    
+  
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         

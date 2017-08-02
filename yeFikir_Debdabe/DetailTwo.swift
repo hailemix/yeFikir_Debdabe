@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 
 
-class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
+class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
-    //Don't forget to add the delegates in the class extension,otherwise it won't work
+    // Don't forget to add the delegates in the class extension,otherwise it won't work
+    
+    var interstitialTwo : GADInterstitial!
+    var adMobBannerView = GADBannerView()
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
-   
     @IBOutlet weak var myBut: UIButton!
+    @IBOutlet weak var AdvertTwo: UIButton!
+    
+  
     
     let item1 = TableTwo().details[0]
     let item2 = TableTwo().details[1]
@@ -53,8 +59,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
     /* 'weak'  helps to protect your view controller in the event of the NSManagedObject being deleted and leaving a dangling reference to a non-existent object. When the property is declared as weak it is automatically set to nil when the object is deleted.
     */
   
-    
-    
     func configureView() {
         // Update the user interface for the detail item.
         
@@ -71,32 +75,136 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        
         detailDescriptionTextView.delegate = self
-       
-
- 
+        initAdmobBanner()
+        interstitialTwo = createAndLoadInterstitial()
+        AdvertController()
+    }
+    
+    func initAdmobBanner() {
+    
+        if UIDevice.current.userInterfaceIdiom == .phone {
+        adMobBannerView.adSize = kGADAdSizeSmartBannerPortrait
+        } else {
+        
+        adMobBannerView.adSize = kGADAdSizeSmartBannerLandscape
+        
+        }
+      
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adMobBannerView.rootViewController = self
+        adMobBannerView.delegate = self
+        view.addSubview(adMobBannerView)
+        
+        let request = GADRequest()
+        adMobBannerView.load(request)
+    
     }
     
     
+    func hidebanner(_ banner:UIView) {
+    
+        UIView.beginAnimations("hideBanner", context: nil)
+        
+        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width:banner.frame.size.width,height:banner.frame.size.height)
+    
+        UIView.commitAnimations()
+        banner.isHidden = true
+    
+    
+    }
+    
+    func showBanner(_ banner: UIView) {
+    
+        UIView.beginAnimations("showBanner",context:nil)
+        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y: view.frame.size.height - banner.frame.size.height,width:banner.frame.size.width,height:banner.frame.size.height)
+        
+        UIView.commitAnimations()
+        banner.isHidden  = false
+    
+    }
+    
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        showBanner(adMobBannerView)
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        hidebanner(adMobBannerView)
+    }
+    
+    func createAndLoadInterstitial() -> GADInterstitial {
+    
+    let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.load(GADRequest())
+        interstitial.delegate = self
+        return interstitial
+  
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitialTwo = createAndLoadInterstitial()
+    }
+    
+  
+    @IBAction func AdvertTwoButton(_ sender: Any)
+    
+      {
+        
+        if interstitialTwo.isReady {
+            
+            interstitialTwo.present(fromRootViewController: self)
+            
+        } else {
+            
+            print("Ad wasn't ready")
+            
+        }
+    }
+    
+    func AdvertController () {
+    
+        if detailDescriptionTextView.text == item2 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item13 || detailDescriptionTextView.text == item19 || detailDescriptionTextView.text == item25 || detailDescriptionTextView.text == item31 {
+            AdvertTwo.isHidden = false
+            
+        }
+  
+    }
+ 
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
           myBut.isHidden = true
+        
+        if detailDescriptionTextView.text == item2 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item13 || detailDescriptionTextView.text == item19 || detailDescriptionTextView.text == item25 || detailDescriptionTextView.text == item31 {
+            AdvertTwo.isHidden = true
+            
+        }
+        
+        if(detailDescriptionTextView.text == item30) {
+        
+        myBut.isHidden = false
+        
+        }
+        
+        
     }
     
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         myBut.isHidden = false
+        
+        if detailDescriptionTextView.text == item2 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item13 || detailDescriptionTextView.text == item19 || detailDescriptionTextView.text == item25 || detailDescriptionTextView.text == item31 {
+            AdvertTwo.isHidden = false
+            
+        }
     }
     
-    
-    
-    
+
     @IBAction func shareButton(_ sender: UIButton) {
-        
-        
-        
+     
         
         if(detailDescriptionTextView.text == item1){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
@@ -128,8 +236,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+       
         }
         else if(detailDescriptionTextView.text == item5) {
             let activityViewController = UIActivityViewController(activityItems:[item5], applicationActivities:nil)
@@ -137,8 +244,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+       
         }
         else if(detailDescriptionTextView.text == item6) {
             let activityViewController = UIActivityViewController(activityItems:[item6], applicationActivities:nil)
@@ -146,8 +252,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+         
         }
         else if(detailDescriptionTextView.text == item7) {
             let activityViewController = UIActivityViewController(activityItems:[item7], applicationActivities:nil)
@@ -155,8 +260,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+           
         }
         
         else if (detailDescriptionTextView.text == item8){
@@ -166,8 +270,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+         
         }
         else if (detailDescriptionTextView.text == item9){
             
@@ -177,7 +280,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
             
-            
         }
         else if (detailDescriptionTextView.text == item10){
             
@@ -186,8 +288,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+      
         }
         else if (detailDescriptionTextView.text == item11){
             
@@ -196,7 +297,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
+    
             
         }
         else if (detailDescriptionTextView.text == item12){
@@ -206,8 +307,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
         
         else if (detailDescriptionTextView.text == item13){
@@ -217,8 +317,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+           
         }
         else if (detailDescriptionTextView.text == item14){
             
@@ -227,8 +326,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
         else if (detailDescriptionTextView.text == item15){
             
@@ -237,8 +335,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
         else if (detailDescriptionTextView.text == item16){
             
@@ -247,8 +344,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
         
         else if (detailDescriptionTextView.text == item17){
@@ -258,8 +354,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+         
         }
         else if (detailDescriptionTextView.text == item18){
             
@@ -268,8 +363,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+         
         }
         else if (detailDescriptionTextView.text == item19){
             
@@ -278,8 +372,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+       
         }
         
         else if (detailDescriptionTextView.text == item20){
@@ -289,8 +382,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+        
         }
         else if (detailDescriptionTextView.text == item21){
             
@@ -299,8 +391,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
         }
         else if (detailDescriptionTextView.text == item22){
             
@@ -309,8 +399,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+       
         }
         else if (detailDescriptionTextView.text == item23){
             
@@ -319,8 +408,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+       
         }
         else if (detailDescriptionTextView.text == item24){
             
@@ -329,7 +417,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
             
         }
         else if (detailDescriptionTextView.text == item25){
@@ -340,7 +427,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
             
-            
         }
         
         else if (detailDescriptionTextView.text == item26){
@@ -350,8 +436,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
         
         else if (detailDescriptionTextView.text == item27){
@@ -361,8 +446,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+          
         }
         
         else if (detailDescriptionTextView.text == item28){
@@ -383,8 +467,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+         
         }
         else if (detailDescriptionTextView.text == item30){
             
@@ -403,19 +486,15 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
             self.present(activityViewController,animated:true,completion:nil)
             
             activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
+           
         }
         
     }
     
-    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -426,14 +505,9 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate {
         didSet {
             // Update the view.
             self.configureView()
-          
-            
-            
+           
         }
-        
-
     }
-    
-    
+  
 }
 
