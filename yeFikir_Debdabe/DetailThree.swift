@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import AVFoundation
 
 class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
@@ -16,11 +17,19 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     
     var interstitialThree : GADInterstitial!
     var adMobBannerView = GADBannerView()
+    var player : AVAudioPlayer?
     
  
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var AdThreeBut: UIButton!
     @IBOutlet weak var myBut: UIButton!
+    
+    
+    struct Constants {
+    
+    static let adRate = 3
+        
+    }
     
     let item1 = TableThree().details[0]
     let item2 = TableThree().details[1]
@@ -67,6 +76,27 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         initAdmobBanner()
         interstitialThree = createAndLoadInterstitial()
         AdvertController()
+        
+        
+        let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
+        
+        do{
+        
+            player = try AVAudioPlayer(contentsOf: url!)
+            
+            guard let player = player
+                else {
+              return
+            
+            }
+            
+            player.prepareToPlay()
+ 
+        } catch let error {
+        
+        print(error.localizedDescription)
+            
+        }
         
     }
     func initAdmobBanner() {
@@ -134,16 +164,49 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         interstitialThree = createAndLoadInterstitial()
     }
     
+    func randomNumberInRange(lower:Int ,upper:Int) -> Int {
+    
+    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+    
+    
+    }
+    
+    func randomPresentationAd (oneIn:Int){
+    
+    let randomNumber = randomNumberInRange(lower:1 , upper: Constants.adRate)
+        print("Random Number :\(randomNumber)")
+        
+        if (randomNumber == 1) {
+            
+            if(interstitialThree != nil) {
+            
+                if interstitialThree!.isReady {
+                
+                interstitialThree.present(fromRootViewController:self)
+                } else {
+                
+                print("Ad is not ready")
+                    
+                }
+            
+            }
+        
+        }
+    
+    
+    }
+    
 
     @IBAction func AdThreeAction(_ sender: UIButton) {
    
-        if interstitialThree.isReady {
-            
-            interstitialThree.present(fromRootViewController: self)
-            
+      randomPresentationAd(oneIn: Constants.adRate)
+        
+        if(player?.isPlaying)! {
+        
+        player?.stop()
         } else {
-            
-            print("Ad wasn't ready")
+        
+        player?.play()
             
         }
         
@@ -160,6 +223,10 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     }
 
     @IBAction func shareTwo(_ sender: UIButton) {
+        
+        randomPresentationAd(oneIn: Constants.adRate)
+        
+        
     
         if(detailDescriptionTextView.text == item1){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)

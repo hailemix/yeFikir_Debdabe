@@ -25,6 +25,7 @@
 		CE8C79B41EDFFBD500E14EF1 /* DetailThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */; };
 		CE8C79B61EDFFF9300E14EF1 /* FavoriteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B51EDFFF9300E14EF1 /* FavoriteTable.swift */; };
 		CE8C79B81EDFFFB300E14EF1 /* FavouriteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B71EDFFFB300E14EF1 /* FavouriteDetail.swift */; };
+		CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEB6BDE51F4C77EF00759048 /* sleep.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailThree.swift; sourceTree = "<group>"; };
 		CE8C79B51EDFFF9300E14EF1 /* FavoriteTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTable.swift; sourceTree = "<group>"; };
 		CE8C79B71EDFFFB300E14EF1 /* FavouriteDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteDetail.swift; sourceTree = "<group>"; };
+		CEB6BDE51F4C77EF00759048 /* sleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sleep.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				CE8C79B51EDFFF9300E14EF1 /* FavoriteTable.swift */,
 				CE84372E1EE144D30069B39B /* About_US.swift */,
 				CE7571451EDD98AA00816A9C /* jiret.ttf */,
+				CEB6BDE51F4C77EF00759048 /* sleep.mp3 */,
 				CE7570F01EDD267700816A9C /* Main.storyboard */,
 				CE7570F61EDD267700816A9C /* Assets.xcassets */,
 				CE7570F81EDD267700816A9C /* LaunchScreen.storyboard */,
@@ -290,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */,
 				CE7570FA1EDD267700816A9C /* LaunchScreen.storyboard in Resources */,
 				CE7570F71EDD267700816A9C /* Assets.xcassets in Resources */,
 				CE7570F21EDD267700816A9C /* Main.storyboard in Resources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import AVFoundation
 
 
 
@@ -18,9 +19,20 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var interstitialTwo : GADInterstitial!
     var adMobBannerView = GADBannerView()
     
+    var player : AVAudioPlayer?
+    
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var AdvertTwo: UIButton!
+    
+    
+    struct Constants{
+    
+    
+    
+    static let adRate = 3
+        
+    }
     
   
     
@@ -80,6 +92,29 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         initAdmobBanner()
         interstitialTwo = createAndLoadInterstitial()
         AdvertController()
+        
+        
+        let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
+        
+        do {
+        
+            player = try AVAudioPlayer(contentsOf: url!)
+            
+            guard let player = player
+                else {
+             return
+            
+            }
+            
+            player.prepareToPlay()
+        
+        } catch let error {
+        
+        print(error.localizedDescription)
+            
+        }
+        
+        
     }
     
     func initAdmobBanner() {
@@ -147,20 +182,56 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         interstitialTwo = createAndLoadInterstitial()
     }
     
+    
+    func randomNumberInRange(lower:Int, upper:Int) -> Int
+    {
+    
+    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+    
+    }
+    
+    func randomPresentationAd(oneIn:Int) {
+        
+        let randomNumber = randomNumberInRange(lower:1 ,upper:Constants.adRate)
+        print("Random Number:\(randomNumber)")
+        
+        if(randomNumber == 1) {
+        
+            if(interstitialTwo != nil){
+            
+                if interstitialTwo!.isReady {
+                interstitialTwo.present(fromRootViewController: self)
+                
+                } else {
+                
+                print("Ad is not ready")
+                    
+                }
+            
+            }
+        
+        }
+    
+    
+    
+    }
   
     @IBAction func AdvertTwoButton(_ sender:UIButton)
     
       {
         
-        if interstitialTwo.isReady {
-            
-            interstitialTwo.present(fromRootViewController: self)
-            
-        } else {
-            
-            print("Ad wasn't ready")
-            
+     randomPresentationAd(oneIn: Constants.adRate)
+        
+        if(player?.isPlaying)!{
+        
+        player?.stop()
+        }  else {
+        
+            player?.play()
+        
         }
+        
+     
     }
     
     func AdvertController () {
@@ -202,7 +273,9 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
 
     @IBAction func shareButton(_ sender: UIButton) {
-     
+        
+        
+     randomPresentationAd(oneIn: Constants.adRate)
         
         if(detailDescriptionTextView.text == item1){
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "yeFikir_Debdabe/DetailThree.swift"
-            timestampString = "523339009.299715"
+            timestampString = "525104887.564397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
+            startingLineNumber = "453"
+            endingLineNumber = "453"
             landmarkName = "backBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>

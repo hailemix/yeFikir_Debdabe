@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMobileAds
+import AVFoundation
 
 class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
@@ -18,15 +19,17 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     var interstitial : GADInterstitial!
     var adMobBannerView = GADBannerView()
+    
+    var player : AVAudioPlayer?
+    
    
     
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var Advert: UIButton!
     
     
-    struct Constants{
-    
-    
+    struct Constants {
+
     static let adRate = 3
         
     }
@@ -73,7 +76,26 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
        
         //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
         
-       
+      
+        
+        let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
+        
+        do {
+        
+            player = try AVAudioPlayer(contentsOf: url!)
+            
+            guard let player = player
+                else {
+            return
+            }
+            player.prepareToPlay()
+        
+        } catch let error {
+        
+        print(error.localizedDescription)
+        
+        }
+        
     }
     
     func initAdmobBanner() {
@@ -159,7 +181,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     }
     
-    func randomPresentationAd(oneIn:Int){
+    func randomPresentationAd (oneIn:Int){
     
     let randomNumber = randomNumberInRange(lower: 1, upper: Constants.adRate)
         print("Random Number :\(randomNumber)")
@@ -174,7 +196,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
       
             } else {
             
-                print("Ad is not Ready")
+                print("Ad is not ready")
             
             }
             }
@@ -185,13 +207,16 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     @IBAction func myAdvert(_ sender: UIButton) {
         
-        if interstitial.isReady {
+       randomPresentationAd(oneIn: Constants.adRate)
+        
+        if(player?.isPlaying)!{
             
-            interstitial.present(fromRootViewController: self)
+        player?.stop()
             
         } else {
             
-            print("Ad wasn't ready")
+        player?.play()
+            
         }
    
     }
