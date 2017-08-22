@@ -535,7 +535,7 @@
 				INFOPLIST_FILE = yeFikir_Debdabe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Hailemichael.yeFikir-Debdabe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hailemichael.Yefikir-Debdabe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -555,7 +555,7 @@
 				INFOPLIST_FILE = yeFikir_Debdabe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Hailemichael.yeFikir-Debdabe";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Hailemichael.Yefikir-Debdabe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
