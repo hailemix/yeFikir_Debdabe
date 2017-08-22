@@ -22,6 +22,14 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var Advert: UIButton!
+    
+    
+    struct Constants{
+    
+    
+    static let adRate = 3
+        
+    }
 
     
     
@@ -144,6 +152,36 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
+    func randomNumberInRange(lower:Int,upper:Int) -> Int {
+    
+    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+        
+    
+    }
+    
+    func randomPresentationAd(oneIn:Int){
+    
+    let randomNumber = randomNumberInRange(lower: 1, upper: Constants.adRate)
+        print("Random Number :\(randomNumber)")
+        
+        if(randomNumber == 1){
+        
+        if(interstitial != nil) {
+        
+            if interstitial!.isReady{
+            
+            interstitial.present(fromRootViewController: self)
+      
+            } else {
+            
+                print("Ad is not Ready")
+            
+            }
+            }
+        }
+    
+    }
+    
     
     @IBAction func myAdvert(_ sender: UIButton) {
         
@@ -173,9 +211,13 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     
     @IBAction func myShare(_ sender: UIButton) {
+        
+        randomPresentationAd(oneIn: Constants.adRate)
+
 
         
         if(detailDescriptionTextView.text == item1){
+            
             
           
             let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
@@ -186,6 +228,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         
         } else if(detailDescriptionTextView.text == item2) {
+           
+            
             let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
             activityViewController.popoverPresentationController?.sourceView = self.view
             self.present(activityViewController,animated:true,completion:nil)
@@ -194,6 +238,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
             
         }else if(detailDescriptionTextView.text == item3) {
+            
+         
             
             
             let activityViewController = UIActivityViewController(activityItems:[item3], applicationActivities:nil)

@@ -3,103 +3,103 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "LoveLetter@2x.png",
+      "filename" : "Group.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "LoveLetter@3x.png",
+      "filename" : "Group@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "LoveLetter29@2x.png",
+      "filename" : "Group-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "LoveLetter29@3x.png",
+      "filename" : "Group@3x-1.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "LoveLetter40@2x.png",
+      "filename" : "Group-2.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "LoveLetter40@3x.png",
+      "filename" : "Group@3x-2.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "LoveLetter60@2x.png",
+      "filename" : "Group-3.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "LoveLetter60@3x.png",
+      "filename" : "Group@3x-3.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "LoveLetter20@1x.png",
+      "filename" : "Group-4.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "LoveLetter20@2x.png",
+      "filename" : "Group@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "LoveLetter29@1x.png",
+      "filename" : "Group-5.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "LoveLetter29@2x-1.png",
+      "filename" : "Group@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "LoveLetter40@1x.png",
+      "filename" : "Group-6.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "LoveLetter40@2x-1.png",
+      "filename" : "Group@2x-2.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "LoveLetter76@1x.png",
+      "filename" : "Group-7.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "LoveLetter76@2x.png",
+      "filename" : "Group@2x-3.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "LoveLetter83.5@1x.png",
+      "filename" : "167.png",
       "scale" : "2x"
     }
   ],
