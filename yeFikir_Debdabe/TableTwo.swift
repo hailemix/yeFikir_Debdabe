@@ -151,9 +151,6 @@ class TableTwo: UITableViewController{
                 let object = details[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailTwo
                 controller.detailItem = object as String?
-            
-              
-                
                 
             }
         }
@@ -176,9 +173,6 @@ class TableTwo: UITableViewController{
         let object = objects[indexPath.row]
         
         cell.textLabel!.text = object
-        
-        
-        
         
         if(indexPath.row == 0) {
             

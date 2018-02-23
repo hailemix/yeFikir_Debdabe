@@ -13,29 +13,21 @@ import AVFoundation
 class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
     
-    
+
     @IBOutlet weak var detailDescriptionTextView: UITextView!
-    
-    
-    var interstitial : GADInterstitial!
-    var adMobBannerView = GADBannerView()
-    
-    var player : AVAudioPlayer?
-    
-   
-    
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var Advert: UIButton!
     
+    var interstitial : GADInterstitial!
+    var adMobBannerView = GADBannerView()
+    var player : AVAudioPlayer?
+    var detailOneContent : String = ""
+    enum failed : Error {
     
-    struct Constants {
-
-    static let adRate = 3
+    case failedCode(String)
         
     }
 
-    
-    
     let item1 = TableOne().details[0]
     let item2 = TableOne().details[1]
     let item3 = TableOne().details[2]
@@ -48,35 +40,26 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     let item10 = TableOne().details[9]
     let item11 = TableOne().details[10]
     
-
-    
-    func configureView() {
-        // Update the user interface for the detail item.
+    struct Constants {
         
-        if let detail = self.detailItem {
-            if let UITextView = self.detailDescriptionTextView {
-                UITextView.text = detail.description
-           
-            }
-            
-        }
-    }
-    
-    
- 
+        static let adRate = 3
+        
+       }
+   
+
     override func viewDidLoad() {
-        super.viewDidLoad() // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
         self.configureView()
         
-        
         detailDescriptionTextView.delegate = self
-        initAdmobBanner()
+        adMobBannerView.delegate = self
+        view.addSubview(adMobBannerView)
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adMobBannerView.rootViewController = self
+        adMobBannerView.adSize = kGADAdSizeBanner
+        adMobBannerView.load(GADRequest())
         interstitial = createAndLoadInterstitial()
-        AdvertController()
-       
-        //Any additional functionality happening in the Description TextView will be working only if you set the DescriptionTextView as a self delegate.
         
-      
         
         let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
         
@@ -85,9 +68,11 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             player = try AVAudioPlayer(contentsOf: url!)
             
             guard let player = player
-                else {
+                else
+            {
             return
             }
+            
             player.prepareToPlay()
         
         } catch let error {
@@ -98,77 +83,16 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-    func initAdmobBanner() {
     
-        if UIDevice.current.userInterfaceIdiom == .phone {
+    func createAndLoadInterstitial() -> GADInterstitial {
         
-        // iPhone
-            
-            adMobBannerView.adSize = kGADAdSizeSmartBannerPortrait
-       
-        } else {
-         
-            //iPad
-            adMobBannerView.adSize = kGADAdSizeSmartBannerLandscape
-    
-        }
-        
-        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        adMobBannerView.rootViewController = self
-        adMobBannerView.delegate = self
-        view.addSubview(adMobBannerView)
-        
-        let request = GADRequest()
-        adMobBannerView.load(request)
- 
-    
-    }
-    
-    
-    func hideBanner(_ banner:UIView) {
-        
-        UIView.beginAnimations("hideBanner", context: nil)
-        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width: banner.frame.size.width,height: banner.frame.size.height)
-        UIView.commitAnimations()
-        banner.isHidden = true
-
-    
-    }
-    
-    func showBanner(_ banner:UIView) {
-    
-        UIView.beginAnimations("showBanner", context: nil)
-        banner.frame = CGRect(x:view.frame.size.width/2 - banner.frame.size.width/2, y:view.frame.size.height - banner.frame.size.height,width: banner.frame.size.width,height: banner.frame.size.height)
-        UIView.commitAnimations()
-        banner.isHidden = false
-        
-        /* If you want to put the banner ad in the top part of the View,make the value of the view frame as 0 and the banner height as it is i.e
-         y:banner.frame.size.height
-         
-         */
-
-    }
-    
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        showBanner(adMobBannerView)
-    }
-    
-   func adView(_ view: GADBannerView,didFailToReceiveAdWithError error: GADRequestError){
-       hideBanner(adMobBannerView)
-    
-    }
-  
-  
-     func createAndLoadInterstitial() -> GADInterstitial {
-        
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")  // GADInterstitialAd loads a single Interstitail
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
     
     }
-    
-   
+
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitial = createAndLoadInterstitial()
         
@@ -177,20 +101,19 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func randomNumberInRange(lower:Int,upper:Int) -> Int {
     
     return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-        
-    
+ 
     }
     
-    func randomPresentationAd (oneIn:Int){
+    func randomPresentationAd (oneIn:Int) {
     
     let randomNumber = randomNumberInRange(lower: 1, upper: Constants.adRate)
         print("Random Number :\(randomNumber)")
         
         if(randomNumber == 1){
         
-        if(interstitial != nil) {
+          if(interstitial != nil) {
         
-            if interstitial!.isReady{
+             if interstitial!.isReady{
             
             interstitial.present(fromRootViewController: self)
       
@@ -198,7 +121,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
                 print("Ad is not ready")
             
-            }
+                   }
+            
             }
         }
     
@@ -209,7 +133,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
        randomPresentationAd(oneIn: Constants.adRate)
         
-        if(player?.isPlaying)!{
+        if(player?.isPlaying)! {
             
         player?.stop()
             
@@ -222,134 +146,66 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     }
     
     
-    func AdvertController () {
-   
-        
-        if detailDescriptionTextView.text == item3 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item9 {
-        
-            Advert.isHidden = false
-          
-        }
-    
-    }
-    
-    
-    
     @IBAction func myShare(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
-
-
         
-        if(detailDescriptionTextView.text == item1){
-            
-            
-          
-            let activityViewController = UIActivityViewController(activityItems:[item1], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
         
-        } else if(detailDescriptionTextView.text == item2) {
-           
+        switch detailDescriptionTextView.text {
             
-            let activityViewController = UIActivityViewController(activityItems:[item2], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
+        case item1:
+            detailOneContent = item1
             
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+        case item2:
+            detailOneContent = item2
             
+        case item3:
+            detailOneContent = item3
             
-        }else if(detailDescriptionTextView.text == item3) {
+        case item4:
+            detailOneContent = item4
             
-         
+        case item5:
+            detailOneContent = item5
             
+        case item6:
+            detailOneContent = item6
             
-            let activityViewController = UIActivityViewController(activityItems:[item3], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
+        case item7:
+            detailOneContent = item7
             
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+        case item8:
+            detailOneContent = item8
             
+        case item9:
+            detailOneContent = item9
             
-        }else if(detailDescriptionTextView.text == item4) {
-            let activityViewController = UIActivityViewController(activityItems:[item4], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
+        case item10:
+            detailOneContent = item10
             
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+        case item11:
+            detailOneContent = item11
             
+        default:
+            print("Please Check the code")
+        }
+        
+        let activityViewController = UIActivityViewController(activityItems:[detailOneContent], applicationActivities:nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController,animated:true,completion:nil)
+         activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
+        
+    }
+    
+    func configureView() {
+        
+        if let detail = self.detailItem {
+            if let UITextView = self.detailDescriptionTextView {
+                UITextView.text = detail.description
+                
+            }
             
         }
-        else if(detailDescriptionTextView.text == item5) {
-            let activityViewController = UIActivityViewController(activityItems:[item5], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
-        }
-        else if(detailDescriptionTextView.text == item6) {
-            let activityViewController = UIActivityViewController(activityItems:[item6], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-         
-        }
-        else if(detailDescriptionTextView.text == item7) {
-            let activityViewController = UIActivityViewController(activityItems:[item7], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
-        }
-            
-        else if (detailDescriptionTextView.text == item8){
-            
-            let activityViewController = UIActivityViewController(activityItems:[item8], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
-        }
-        else if (detailDescriptionTextView.text == item9){
-            
-            let activityViewController = UIActivityViewController(activityItems:[item9], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
-        }
-        else if (detailDescriptionTextView.text == item10){
-            
-            let activityViewController = UIActivityViewController(activityItems:[item10], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-            
-            
-        }
-        else if (detailDescriptionTextView.text == item11){
-            
-            let activityViewController = UIActivityViewController(activityItems:[item11], applicationActivities:nil)
-            activityViewController.popoverPresentationController?.sourceView = self.view
-            self.present(activityViewController,animated:true,completion:nil)
-            
-            activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-          
-        }
-      
     }
     
   
@@ -358,18 +214,17 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
            myBut.isHidden = true
         
         
-        if detailDescriptionTextView.text == item3 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item9 {
-           Advert.isHidden = true
-        }
-        
-        if detailDescriptionTextView.text == item2 {
+        switch detailDescriptionTextView.text {
+            
+        case item3,item7,item9:
+            
+               Advert.isHidden = true
+            
+        default:
             
             myBut.isHidden = false
-            
         }
         
-        //Becareful of the lowerSlash(_) since if you don't give one space moe.it won't work
-    
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -377,8 +232,18 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         myBut.isHidden = false
         
-        if detailDescriptionTextView.text == item3 || detailDescriptionTextView.text == item7 || detailDescriptionTextView.text == item9 {
+        switch detailDescriptionTextView.text {
+            
+          case item3, item7, item9:
+            
             Advert.isHidden = false
+            
+          case item1, item3, item5, item9, item11:
+            
+             randomPresentationAd(oneIn: Constants.adRate)
+            
+          default:
+             print(failed.failedCode("Error is found in the scrollVew function.Please check!"))
         }
        
     }
@@ -390,15 +255,14 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
     
     var detailItem: String? {
+        
         didSet {
-            // Update the view.
+            
             self.configureView()
-            
-            
         }
     }
     
