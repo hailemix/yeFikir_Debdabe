@@ -55,7 +55,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
         musicControl()
-        
+       
     }
     
     func musicControl(){
@@ -85,7 +85,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
@@ -94,7 +94,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func createAndLoadInterstitial() -> GADInterstitial {
         
 
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
@@ -242,9 +242,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     func scrollViewDidScroll(_ scrollView: UIScrollView){
         
-        myBut.isHidden = true
-        
-        
         switch detailDescriptionTextView.text {
             
         case item3,item7,item9:
@@ -253,15 +250,14 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         default:
             
-            myBut.isHidden = false
+            myBut.isHidden = true
         }
         
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        
-        myBut.isHidden = false
+         myBut.isHidden = false
         
         switch detailDescriptionTextView.text {
             
@@ -274,7 +270,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             randomPresentationAd(oneIn: Constants.adRate)
             
         default:
-            print(failed.failedCode("Error is found in the scrollVew function.Please check!"))
+            print(failed.failedCode("Error is found in the scrollVew func.Please check!"))
         }
         
     }
@@ -287,6 +283,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+
     }
     
     var detailItem: String? {

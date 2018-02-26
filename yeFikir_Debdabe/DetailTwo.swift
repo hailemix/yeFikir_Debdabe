@@ -97,7 +97,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
@@ -130,7 +130,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func createAndLoadInterstitial() -> GADInterstitial {
         
    
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
