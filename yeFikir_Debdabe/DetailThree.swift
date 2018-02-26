@@ -16,18 +16,18 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     
     
     var interstitialThree : GADInterstitial!
-    var adMobBannerView = GADBannerView()
+    var adMobBannerView : GADBannerView!
     var player : AVAudioPlayer?
     var detailThreeContent = ""
- 
+    
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var AdThreeBut: UIButton!
     @IBOutlet weak var myBut: UIButton!
     
     
     struct Constants {
-    
-    static let adRate = 3
+        
+        static let adRate = 3
         
     }
     
@@ -68,46 +68,76 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         
         self.configureView()
+        bannerAdController()
+        addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialThree = createAndLoadInterstitial()
-        
-        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-        adMobBannerView.rootViewController = self
-        adMobBannerView.delegate = self
-        view.addSubview(adMobBannerView)
-        adMobBannerView.load(GADRequest())
+        musicControl()
+    }
+    
+    func musicControl(){
         
         let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
         
         do {
-        
+            
             player = try AVAudioPlayer(contentsOf: url!)
             
             guard let player = player
-                else {
-              return
-            
+                else
+            {
+                return
             }
             
             player.prepareToPlay()
- 
+            
         } catch let error {
-        
-        print(error.localizedDescription)
+            
+            print(error.localizedDescription)
             
         }
-    
         
     }
     
+    func addBannerViewToView(_ bannerView : GADBannerView){
+        
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(adMobBannerView)
+        view.addConstraints([
+            
+            NSLayoutConstraint(item:bannerView,
+                               attribute: .bottom,
+                               relatedBy: .equal,
+                               toItem: bottomLayoutGuide,
+                               attribute: .bottom,
+                               multiplier: 1,
+                               constant: 0),
+            
+            NSLayoutConstraint(item:bannerView,
+                               attribute: .centerX,
+                               relatedBy: .equal,
+                               toItem: view,
+                               attribute: .centerX,
+                               multiplier: 1,
+                               constant: 0) ])
+        
+    }
     
+    func bannerAdController() {
+        
+        adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        adMobBannerView.rootViewController = self
+        adMobBannerView.delegate = self
+        adMobBannerView.load(GADRequest())
+    }
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
@@ -119,55 +149,54 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     }
     
     func randomNumberInRange(lower:Int ,upper:Int) -> Int {
-    
-    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-    
+        
+        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+        
     }
     
     func randomPresentationAd (oneIn:Int)  {
         
-    
-    let randomNumber = randomNumberInRange(lower:1 , upper: Constants.adRate)
+        
+        let randomNumber = randomNumberInRange(lower:1 , upper: Constants.adRate)
         print("Random Number :\(randomNumber)")
         
         if (randomNumber == 1) {
             
             if(interstitialThree != nil) {
-            
+                
                 if interstitialThree!.isReady {
-                
-                interstitialThree.present(fromRootViewController:self)
+                    
+                    interstitialThree.present(fromRootViewController:self)
                 } else {
-                
-                print("Ad is not ready")
+                    
+                    print("Ad is not ready")
                     
                 }
-            
+                
             }
-        
+            
         }
-    
-    
+        
     }
     
-
+    
     @IBAction func AdThreeAction(_ sender: UIButton) {
-   
-      randomPresentationAd(oneIn: Constants.adRate)
+        
+        randomPresentationAd(oneIn: Constants.adRate)
         
         if(player?.isPlaying)! {
-        
-        player?.stop()
+            
+            player?.stop()
             
         } else {
-        
-        player?.play()
+            
+            player?.play()
             
         }
         
     }
     
-
+    
     @IBAction func shareTwo(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
@@ -182,43 +211,43 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
             
         case item3:
             detailThreeContent = item3
-           
+            
             
         case item4:
             detailThreeContent = item4
             
         case item5:
-           detailThreeContent = item5
+            detailThreeContent = item5
             
         case item6:
-           detailThreeContent = item6
- 
+            detailThreeContent = item6
+            
         case item7:
-           detailThreeContent = item7
+            detailThreeContent = item7
             
         case item8:
-           detailThreeContent = item8
+            detailThreeContent = item8
             
         case item9:
-           detailThreeContent = item9
+            detailThreeContent = item9
             
         case item10:
-          detailThreeContent = item10
+            detailThreeContent = item10
             
         case item11:
-           detailThreeContent = item11
+            detailThreeContent = item11
             
         case item12:
-           detailThreeContent = item12
+            detailThreeContent = item12
             
         case item13:
-           detailThreeContent = item13
-          
+            detailThreeContent = item13
+            
         case item14:
-           detailThreeContent = item14
+            detailThreeContent = item14
             
         case item15:
-           detailThreeContent = item15
+            detailThreeContent = item15
             
         case item16:
             detailThreeContent = item16
@@ -228,18 +257,18 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
             
         case item18:
             detailThreeContent = item18
-           
+            
         case item19:
-           detailThreeContent = item19
+            detailThreeContent = item19
             
         case item20:
-           detailThreeContent = item20
+            detailThreeContent = item20
             
         case item21:
-           detailThreeContent = item21
+            detailThreeContent = item21
             
         case item22:
-           detailThreeContent = item22
+            detailThreeContent = item22
             
         default:
             print("Please Check the code")
@@ -250,31 +279,26 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         self.present(activityViewController,animated:true,completion:nil)
         activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
         
-        
-
-
     }
     
-  
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
     
     var detailItem: String? {
         didSet {
-            // Update the view.
-            self.configureView()
             
+            self.configureView()
             
         }
     }
-    
     
 }
 

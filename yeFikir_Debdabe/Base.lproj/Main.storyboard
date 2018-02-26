@@ -451,9 +451,9 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNk-wH-sz1">
-                                <rect key="frame" x="274" y="534" width="85" height="95"/>
+                                <rect key="frame" x="274" y="510" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="lh8-rQ-XjG"/>
+                                    <constraint firstAttribute="width" constant="85" id="sKf-UZ-pgH"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
@@ -461,7 +461,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vh-x3-JQw">
-                                <rect key="frame" x="19" y="537" width="80" height="92"/>
+                                <rect key="frame" x="16" y="510" width="80" height="95"/>
                                 <state key="normal" image="Advertise"/>
                                 <connections>
                                     <action selector="myAdvert:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Tsj-gS-5Hs"/>
@@ -470,14 +470,15 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="r9x-5S-2uC" secondAttribute="topMargin" constant="56" id="0gW-hI-YVz"/>
-                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="9vh-x3-JQw" secondAttribute="bottom" constant="38" id="QOd-aU-yZC"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="Tim-4S-Svz"/>
-                            <constraint firstItem="9vh-x3-JQw" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="3" id="ZdI-qT-rYz"/>
-                            <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="aPv-T1-qC1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="cyb-G1-tGx"/>
-                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="Szz-hv-Cgn" secondAttribute="bottom" constant="62" id="rIP-W8-Uw6"/>
-                            <constraint firstItem="9vh-x3-JQw" firstAttribute="bottom" secondItem="uNk-wH-sz1" secondAttribute="bottom" id="vV5-U9-4lS"/>
+                            <constraint firstItem="9vh-x3-JQw" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" id="5rL-jr-K9c"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="9vh-x3-JQw" secondAttribute="bottom" id="A5Q-1u-39e"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="9vh-x3-JQw" secondAttribute="bottom" constant="62" id="MZU-A7-CFg"/>
+                            <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="NFF-ip-KyG"/>
+                            <constraint firstItem="9vh-x3-JQw" firstAttribute="top" secondItem="uNk-wH-sz1" secondAttribute="top" id="ahi-D5-K8z"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="cbq-Xa-adD"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="r9x-5S-2uC" secondAttribute="topMargin" constant="56" id="fHV-Y1-s2Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="u8c-mU-Cgv"/>
+                            <constraint firstItem="9vh-x3-JQw" firstAttribute="bottom" secondItem="uNk-wH-sz1" secondAttribute="bottom" id="uim-Aa-m4H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="              *  ዘና .. ዘና  *" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">

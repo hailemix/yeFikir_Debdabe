@@ -14,15 +14,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-yeFikir_DebdabeTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>nanopb.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00103D6C821BE85971C563025527BA5D</key>
+		<key>022803B5FE55F9B56E0632F9059E7581</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44FFF8EDD6767B0297BE7AB9495388F1</key>
+		<key>41D2E33482C4222BFE2F4E4FF59789E4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A442D416509FC6BC1BDDE5B3F1EB3933</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5B80060FE8C664DF08841000F41D515</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9E09CD201856CAE72EFA021E /* Pods_yeFikir_Debdabe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBE3DC39BC0451702630236 /* Pods_yeFikir_Debdabe.framework */; };
+		CE16525B2044346400762CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE16525A2044346400762CF7 /* GoogleService-Info.plist */; };
+		CE16525C2044346400762CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE16525A2044346400762CF7 /* GoogleService-Info.plist */; };
+		CE16525D2044346400762CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE16525A2044346400762CF7 /* GoogleService-Info.plist */; };
 		CE7570ED1EDD267700816A9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7570EC1EDD267700816A9C /* AppDelegate.swift */; };
 		CE7570EF1EDD267700816A9C /* TableOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7570EE1EDD267700816A9C /* TableOne.swift */; };
 		CE7570F21EDD267700816A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7570F01EDD267700816A9C /* Main.storyboard */; };
@@ -26,6 +29,7 @@
 		CE8C79B61EDFFF9300E14EF1 /* FavoriteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B51EDFFF9300E14EF1 /* FavoriteTable.swift */; };
 		CE8C79B81EDFFFB300E14EF1 /* FavouriteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B71EDFFFB300E14EF1 /* FavouriteDetail.swift */; };
 		CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEB6BDE51F4C77EF00759048 /* sleep.mp3 */; };
+		FA4A5E27E000B4EE1BE03E98 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +52,11 @@
 /* Begin PBXFileReference section */
 		2229C3BC62A024CD08BF0883 /* Pods-yeFikir_Debdabe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.debug.xcconfig"; sourceTree = "<group>"; };
 		2E2758637364AEC005D614F0 /* Pods-yeFikir_Debdabe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.release.xcconfig"; sourceTree = "<group>"; };
+		517C823394518AF9AE24BF84 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FBE3DC39BC0451702630236 /* Pods_yeFikir_Debdabe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_Debdabe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_DebdabeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1EED8215DF41ECDE066986A /* Pods-yeFikir_DebdabeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE16525A2044346400762CF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE7570E91EDD267700816A9C /* yeFikir_Debdabe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeFikir_Debdabe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7570EC1EDD267700816A9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7570EE1EDD267700816A9C /* TableOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOne.swift; sourceTree = "<group>"; };
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4A5E27E000B4EE1BE03E98 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				9FBE3DC39BC0451702630236 /* Pods_yeFikir_Debdabe.framework */,
+				A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +124,8 @@
 			children = (
 				2229C3BC62A024CD08BF0883 /* Pods-yeFikir_Debdabe.debug.xcconfig */,
 				2E2758637364AEC005D614F0 /* Pods-yeFikir_Debdabe.release.xcconfig */,
+				517C823394518AF9AE24BF84 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */,
+				C1EED8215DF41ECDE066986A /* Pods-yeFikir_DebdabeTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -159,6 +171,7 @@
 				CE7570F61EDD267700816A9C /* Assets.xcassets */,
 				CE7570F81EDD267700816A9C /* LaunchScreen.storyboard */,
 				CE7570FB1EDD267700816A9C /* Info.plist */,
+				CE16525A2044346400762CF7 /* GoogleService-Info.plist */,
 				CE7570F31EDD267700816A9C /* yeFikir_Debdabe.xcdatamodeld */,
 			);
 			path = yeFikir_Debdabe;
@@ -209,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE7571171EDD267700816A9C /* Build configuration list for PBXNativeTarget "yeFikir_DebdabeTests" */;
 			buildPhases = (
+				D628401E065A4342BB556B26 /* [CP] Check Pods Manifest.lock */,
 				CE7570FC1EDD267700816A9C /* Sources */,
 				CE7570FD1EDD267700816A9C /* Frameworks */,
 				CE7570FE1EDD267700816A9C /* Resources */,
+				0EF626672C66D303AB52BBAA /* [CP] Embed Pods Frameworks */,
+				31863BAC941EFEAC3F50FDA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,6 +314,7 @@
 				CE7570F71EDD267700816A9C /* Assets.xcassets in Resources */,
 				CE7570F21EDD267700816A9C /* Main.storyboard in Resources */,
 				CE7571461EDD98AA00816A9C /* jiret.ttf in Resources */,
+				CE16525B2044346400762CF7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE16525C2044346400762CF7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,13 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE16525D2044346400762CF7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42AE18AFA25618262F2203AE /* [CP] Embed Pods Frameworks */ = {
+		0EF626672C66D303AB52BBAA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,6 +346,43 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31863BAC941EFEAC3F50FDA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42AE18AFA25618262F2203AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -339,13 +395,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yeFikir_Debdabe-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E54D653370E6D6CD43396CF /* [CP] Copy Pods Resources */ = {
@@ -361,6 +420,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D628401E065A4342BB556B26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yeFikir_DebdabeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -570,6 +647,7 @@
 		};
 		CE7571181EDD267700816A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 517C823394518AF9AE24BF84 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +662,7 @@
 		};
 		CE7571191EDD267700816A9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EED8215DF41ECDE066986A /* Pods-yeFikir_DebdabeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

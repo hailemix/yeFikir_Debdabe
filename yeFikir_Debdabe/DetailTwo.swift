@@ -6,7 +6,7 @@
 //  Copyright © 2017 AFC Ethiopia. All rights reserved.
 
 /* Don't forget to add the delegates in the class extension,otherwise it won't work and Becareful of segues(delete their relationships) when copy-pasting buttons from one viewcontroller to another view controller
-*/
+ */
 
 import UIKit
 import GoogleMobileAds
@@ -17,7 +17,7 @@ import AVFoundation
 class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
     var interstitialTwo : GADInterstitial!
-    var adMobBannerView = GADBannerView()
+    var adMobBannerView : GADBannerView!
     var detailTwoContent = ""
     
     var player : AVAudioPlayer?
@@ -27,18 +27,16 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBOutlet weak var AdvertTwo: UIButton!
     
     enum detailTwoFailed : Error {
-    
-    case codeError(String)
+        
+        case codeError(String)
         
     }
     
     struct Constants{
-      
-    static let adRate = 3
+        
+        static let adRate = 3
         
     }
-    
-
     
     let item1 = TableTwo().details[0]
     let item2 = TableTwo().details[1]
@@ -72,7 +70,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     let item30  = TableTwo().details[29]
     let item31  = TableTwo().details[30]
     
-  
+    
     func configureView() {
         
         if let detail2 = self.detailItem {
@@ -88,54 +86,65 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         self.configureView()
         
         detailDescriptionTextView.delegate = self
-        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerAdController()
+        addBannerViewToView(adMobBannerView)
+        interstitialTwo = createAndLoadInterstitial()
+        controlMusic()
+        
+        
+    }
+    
+    func bannerAdController() {
+        
+        adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
-        view.addSubview(adMobBannerView)
         adMobBannerView.load(GADRequest())
-        interstitialTwo = createAndLoadInterstitial()
+    }
+    
+    func controlMusic () {
         
         let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
         
         do {
-        
+            
             player = try AVAudioPlayer(contentsOf: url!)
             
             guard let player = player
                 else {
-             return
-            
+                    return
+                    
             }
             
             player.prepareToPlay()
-        
+            
         } catch let error {
-        
-        print(error.localizedDescription)
+            
+            print(error.localizedDescription)
             
         }
         
     }
-
-    func createAndLoadInterstitial() -> GADInterstitial {
     
-    let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+    func createAndLoadInterstitial() -> GADInterstitial {
+        
+   
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
-  
+        
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitialTwo = createAndLoadInterstitial()
     }
     
-    
-    func randomNumberInRange(lower:Int, upper:Int) -> Int
-    {
-    
-    return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-    
+    func randomNumberInRange(lower:Int, upper:Int) -> Int {
+        
+        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
+        
     }
     
     func randomPresentationAd(oneIn:Int) {
@@ -144,41 +153,63 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         print("Random Number:\(randomNumber)")
         
         if(randomNumber == 1) {
-        
-            if(interstitialTwo != nil){
             
+            if(interstitialTwo != nil){
+                
                 if interstitialTwo!.isReady {
-                interstitialTwo.present(fromRootViewController: self)
-                
+                    interstitialTwo.present(fromRootViewController: self)
+                    
                 } else {
-                
-                print("Ad is not ready")
+                    
+                    print("Ad is not ready")
                     
                 }
             }
         }
     }
-  
-    @IBAction func AdvertTwoButton(_ sender:UIButton)
     
-      {
+    func addBannerViewToView(_ bannerView : GADBannerView){
         
-     randomPresentationAd(oneIn: Constants.adRate)
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(adMobBannerView)
+        view.addConstraints([
+            
+            NSLayoutConstraint(item:bannerView,
+                               attribute: .bottom,
+                               relatedBy: .equal,
+                               toItem: bottomLayoutGuide,
+                               attribute: .bottom,
+                               multiplier: 1,
+                               constant: 0),
+            
+            NSLayoutConstraint(item:bannerView,
+                               attribute: .centerX,
+                               relatedBy: .equal,
+                               toItem: view,
+                               attribute: .centerX,
+                               multiplier: 1,
+                               constant: 0) ])
+        
+    }
+    
+    @IBAction func AdvertTwoButton(_ sender:UIButton) {
+        
+        randomPresentationAd(oneIn: Constants.adRate)
         
         if(player?.isPlaying)!{
-        
-        player?.stop()
+            
+            player?.stop()
         }  else {
-        
+            
             player?.play()
-        
+            
         }
         
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-          myBut.isHidden = true
+        myBut.isHidden = true
         
         switch detailDescriptionTextView.text {
             
@@ -189,10 +220,10 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         default:
             print(detailTwoFailed.codeError("Please Check the code!"))
         }
-    
-    
+        
+        
     }
-  
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         myBut.isHidden = false
@@ -201,23 +232,22 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         case item1, item5, item12, item19, item18, item28:
             
-             AdvertTwo.isHidden = false
+            AdvertTwo.isHidden = false
             
         case item2, item6, item13, item17, item20, item25, item31:
             
             randomPresentationAd(oneIn: Constants.adRate)
-
+            
         default:
             print(detailTwoFailed.codeError("Please Check the code!"))
         }
         
     }
     
-
     @IBAction func shareButton(_ sender: UIButton) {
         
         
-     randomPresentationAd(oneIn: Constants.adRate)
+        randomPresentationAd(oneIn: Constants.adRate)
         
         switch detailDescriptionTextView.text {
             
@@ -256,7 +286,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         case item12:
             detailTwoContent = item12
-    
+            
         case item13:
             detailTwoContent = item13
             
@@ -328,19 +358,18 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-           }
+    }
     
-  
     var detailItem: String? {
         didSet {
             
             self.configureView()
-           
+            
         }
     }
-  
+    
 }
 
