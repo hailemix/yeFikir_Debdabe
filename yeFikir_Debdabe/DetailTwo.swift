@@ -69,7 +69,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     let item29  = TableTwo().details[28]
     let item30  = TableTwo().details[29]
     let item31  = TableTwo().details[30]
-    
+    let item32  = TableTwo().details[31]
     
     func configureView() {
         
@@ -213,7 +213,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         switch detailDescriptionTextView.text {
             
-        case item1, item5, item12, item19, item18, item28:
+        case item1,item2, item5, item12, item19, item18, item28:
             
             AdvertTwo.isHidden = true
             
@@ -230,7 +230,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         switch detailDescriptionTextView.text {
             
-        case item1, item5, item12, item19, item18, item28:
+        case item1,item2, item5, item12, item19, item18, item28:
             
             AdvertTwo.isHidden = false
             
@@ -343,6 +343,10 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         case item31:
             detailTwoContent = item31
+            
+        case item32:
+            detailTwoContent = item32
+            
         default:
             print("Please Check the code")
         }
