@@ -18,10 +18,19 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var Advert: UIButton!
     
+    static var player : AVAudioPlayer?
+    
     var interstitialOne : GADInterstitial!
     var adMobBannerView : GADBannerView!
-    var player : AVAudioPlayer?
     var detailOneContent : String = ""
+    var detailItem: String? {
+        
+        didSet {
+            
+            self.configureView()
+        }
+    }
+    
     enum failed : Error {
         
         case failedCode(String)
@@ -47,18 +56,25 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.configureView()
         bannerAdController()
         addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
-        musicControl()
+        DetailOne.musicControl()
        
     }
     
-    func musicControl(){
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    static func musicControl() {
         
         let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
         
@@ -66,13 +82,13 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
             player = try AVAudioPlayer(contentsOf: url!)
             
-            guard let player = player
+            guard let myPlayer = player
                 else
             {
                 return
             }
             
-            player.prepareToPlay()
+            myPlayer.prepareToPlay()
             
         } catch let error {
             
@@ -93,7 +109,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-
         let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
         interstitial.load(GADRequest())
         interstitial.delegate = self
@@ -159,24 +174,68 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         }
         
     }
+
+    func configureView() {
+        
+        if let detail = self.detailItem {
+            if let UITextView = self.detailDescriptionTextView {
+                UITextView.text = detail.description
+                
+            }
+            
+        }
+    }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView){
+        
+        switch detailDescriptionTextView.text {
+            
+        case item3,item7,item9:
+            
+            Advert.isHidden = true
+            
+        default:
+            
+            myBut.isHidden = true
+        }
+        
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        myBut.isHidden = false
+        
+        switch detailDescriptionTextView.text {
+            
+        case item3, item7, item9:
+            
+            Advert.isHidden = false
+            
+        case item1, item3, item5, item9, item11:
+            
+            randomPresentationAd(oneIn: Constants.adRate)
+            
+        default:
+            print(failed.failedCode("Error is found in the scrollVew func.Please check!"))
+        }
+        
+    }
     
     @IBAction func myAdvert(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
         
-        if(player?.isPlaying)! {
+        if(DetailOne.player?.isPlaying)! {
             
-            player?.stop()
+            DetailOne.player?.stop()
             
         } else {
             
-            player?.play()
+            DetailOne.player?.play()
             
         }
         
     }
-    
     
     @IBAction func myShare(_ sender: UIButton) {
         
@@ -229,71 +288,12 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-    func configureView() {
-        
-        if let detail = self.detailItem {
-            if let UITextView = self.detailDescriptionTextView {
-                UITextView.text = detail.description
-                
-            }
-            
-        }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView){
-        
-        switch detailDescriptionTextView.text {
-            
-        case item3,item7,item9:
-            
-            Advert.isHidden = true
-            
-        default:
-            
-            myBut.isHidden = true
-        }
-        
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-         myBut.isHidden = false
-        
-        switch detailDescriptionTextView.text {
-            
-        case item3, item7, item9:
-            
-            Advert.isHidden = false
-            
-        case item1, item3, item5, item9, item11:
-            
-            randomPresentationAd(oneIn: Constants.adRate)
-            
-        default:
-            print(failed.failedCode("Error is found in the scrollVew func.Please check!"))
-        }
-        
-    }
-    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-
-    }
-    
-    var detailItem: String? {
-        
-        didSet {
-            
-            self.configureView()
-        }
-    }
-    
+  
     
 }
 

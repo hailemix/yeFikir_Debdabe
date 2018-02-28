@@ -19,8 +19,13 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var interstitialTwo : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailTwoContent = ""
-    
-    var player : AVAudioPlayer?
+    var detailItem: String? {
+        didSet {
+            
+            self.configureView()
+            
+        }
+    }
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
@@ -71,6 +76,25 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     let item31  = TableTwo().details[30]
     let item32  = TableTwo().details[31]
     
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configureView()
+        
+        detailDescriptionTextView.delegate = self
+        bannerAdController()
+        addBannerViewToView(adMobBannerView)
+        interstitialTwo = createAndLoadInterstitial()
+        DetailOne.musicControl()
+        
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     func configureView() {
         
         if let detail2 = self.detailItem {
@@ -81,19 +105,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configureView()
-        
-        detailDescriptionTextView.delegate = self
-        bannerAdController()
-        addBannerViewToView(adMobBannerView)
-        interstitialTwo = createAndLoadInterstitial()
-        controlMusic()
-        
-        
-    }
-    
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
@@ -101,30 +112,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
-    }
-    
-    func controlMusic () {
-        
-        let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
-        
-        do {
-            
-            player = try AVAudioPlayer(contentsOf: url!)
-            
-            guard let player = player
-                else {
-                    return
-                    
-            }
-            
-            player.prepareToPlay()
-            
-        } catch let error {
-            
-            print(error.localizedDescription)
-            
-        }
-        
     }
     
     func createAndLoadInterstitial() -> GADInterstitial {
@@ -192,21 +179,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-    @IBAction func AdvertTwoButton(_ sender:UIButton) {
-        
-        randomPresentationAd(oneIn: Constants.adRate)
-        
-        if(player?.isPlaying)!{
-            
-            player?.stop()
-        }  else {
-            
-            player?.play()
-            
-        }
-        
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         myBut.isHidden = true
@@ -240,6 +212,21 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         default:
             print(detailTwoFailed.codeError("Please Check the code!"))
+        }
+        
+    }
+    
+    @IBAction func AdvertTwoButton(_ sender:UIButton) {
+        
+        randomPresentationAd(oneIn: Constants.adRate)
+        
+        if(DetailOne.player?.isPlaying)!{
+            
+            DetailOne.player?.stop()
+        }  else {
+            
+            DetailOne.player?.play()
+            
         }
         
     }
@@ -363,17 +350,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         dismiss(animated: true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    var detailItem: String? {
-        didSet {
-            
-            self.configureView()
-            
-        }
-    }
+  
     
 }
 

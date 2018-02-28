@@ -45,38 +45,38 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-aN-M7q">
                                 <rect key="frame" x="0.0" y="64" width="375" height="541"/>
-                                <color key="backgroundColor" red="0.92506206948878433" green="0.94273628328742853" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.96586619127516782" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A88-ea-MsL">
+                                <rect key="frame" x="16" y="513" width="80" height="92"/>
+                                <state key="normal" image="Advertise"/>
+                                <connections>
+                                    <action selector="AdvertTwoButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="KQy-5G-89q"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-Gg-iQK">
-                                <rect key="frame" x="274" y="534" width="85" height="95"/>
+                                <rect key="frame" x="274" y="510" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="0c9-oD-UhU"/>
+                                    <constraint firstAttribute="width" constant="85" id="BPw-cT-9O4"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
                                     <action selector="shareButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="0ww-8U-2BJ"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A88-ea-MsL">
-                                <rect key="frame" x="16" y="537" width="80" height="92"/>
-                                <state key="normal" image="Advertise"/>
-                                <connections>
-                                    <action selector="AdvertTwoButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="KQy-5G-89q"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="IGl-MN-eQZ"/>
-                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="A88-ea-MsL" secondAttribute="bottom" constant="38" id="NMf-mB-JbK"/>
-                            <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="WoH-JO-RSH"/>
-                            <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="aSd-2G-SZ9"/>
-                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="ecY-Gh-cKV"/>
-                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="j3a-aN-M7q" secondAttribute="bottom" constant="62" id="gXK-cR-IED"/>
-                            <constraint firstItem="A88-ea-MsL" firstAttribute="bottom" secondItem="NRc-Gg-iQK" secondAttribute="bottom" id="tCR-2p-zjZ"/>
-                            <constraint firstItem="A88-ea-MsL" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leadingMargin" id="ykn-bK-mQW"/>
+                            <constraint firstItem="j3a-aN-M7q" firstAttribute="bottom" secondItem="A88-ea-MsL" secondAttribute="bottom" id="Qg0-V9-vkR"/>
+                            <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="YfN-2A-Eed"/>
+                            <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="ZDm-sI-WFn"/>
+                            <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="ma6-pM-1nM"/>
+                            <constraint firstItem="A88-ea-MsL" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leadingMargin" id="oVi-fW-Ujd"/>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="r15-Iv-lTg"/>
+                            <constraint firstItem="A88-ea-MsL" firstAttribute="bottom" secondItem="NRc-Gg-iQK" secondAttribute="bottom" id="ryN-9n-FLb"/>
+                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="A88-ea-MsL" secondAttribute="bottom" constant="62" id="yHS-uL-Zu2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*  ደብዳቤዎች  *" id="StW-w5-NxY" colorLabel="IBBuiltInLabel-Red">
@@ -255,38 +255,38 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-Ke-HCt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="541"/>
-                                <color key="backgroundColor" red="0.90812785689369324" green="0.94645584235617808" blue="0.96707255473503695" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.96777999161073824" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNZ-Dl-04C">
+                                <rect key="frame" x="16" y="513" width="80" height="92"/>
+                                <state key="normal" image="Advertise"/>
+                                <connections>
+                                    <action selector="AdThreeAction:" destination="5f7-8g-lRT" eventType="touchUpInside" id="xEb-PS-wrp"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-dr-74q">
-                                <rect key="frame" x="274" y="534" width="85" height="95"/>
+                                <rect key="frame" x="274" y="510" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="10l-vS-rdL"/>
+                                    <constraint firstAttribute="width" constant="85" id="MME-ub-ysH"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
                                     <action selector="shareTwo:" destination="5f7-8g-lRT" eventType="touchUpInside" id="qZz-Aw-S9i"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNZ-Dl-04C">
-                                <rect key="frame" x="16" y="537" width="80" height="92"/>
-                                <state key="normal" image="Advertise"/>
-                                <connections>
-                                    <action selector="AdThreeAction:" destination="5f7-8g-lRT" eventType="touchUpInside" id="xEb-PS-wrp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leadingMargin" id="CMS-Fk-Kfh"/>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" constant="62" id="U55-t8-8ee"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="bWg-gx-kVs"/>
-                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="fvb-Dc-YdR"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="jF7-r0-TAV"/>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="JNZ-Dl-04C" secondAttribute="bottom" constant="38" id="kiu-st-9Tk"/>
-                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="o4t-X6-LxO"/>
-                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="vVU-K1-ABC"/>
+                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="1oq-Nc-1Yd"/>
+                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="CWH-lk-EMC"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="QGW-3K-8G5"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="JNZ-Dl-04C" secondAttribute="bottom" constant="62" id="Qsk-Zg-4Eh"/>
+                            <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="k1v-er-XIS"/>
+                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leadingMargin" id="l0P-bV-ugm"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="vIk-Kd-SJp"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="y5m-Dd-PZY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*   ግጥሞች   *" id="C9G-2e-Rxu" colorLabel="IBBuiltInLabel-Red">
@@ -445,7 +445,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-hv-Cgn">
                                 <rect key="frame" x="1" y="56" width="375" height="549"/>
-                                <color key="backgroundColor" red="0.9413313936291684" green="0.95149393409292837" blue="0.99799679487179482" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.97409114741639002" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.059823975089391489" green="0.070733173076923062" blue="0.031541804900400594" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

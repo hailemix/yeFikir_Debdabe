@@ -40,10 +40,7 @@ class TableThree: UITableViewController{
     let image21 = UIImage(named: "b21")
     let image22 = UIImage(named: "b22")
     
-    
-    
-    
-    var details = ["የሰከነ ፍቅር ምን ያደርግልናል?\nይልቅ ተበዳደረን ቸባ በል ቸባ በይ ሞቅ አርጊዉ  ይበጃል\nየሰከነ መዉደድ ምኑ ያዋጣናል?\nይልቅ ተቦዳድነን ብንጨፍር ይሻላል\nየሰከነ ፍቅር የቱጋ ጠቅሞናል??\nይልቅ ቅልጥ በትን ብትንትን ድርግምግም ብንል ያምርብናል\n የፍቅር ተስቦ በዚህ ዘመን ገብቶ \nአናክሶንልና ይፋፋም እሳቱ ይንደድ እንቶ ፈንቶ\nበሰከረ ፍቅር አለመስከር ከቻልን\nከመዉደድ ተስቦ ክትባት ተከትበን\nበነተበ ህይወት በዛለዉ ማንነት መኪና ገዝተናል\nፋሽናም ዘመናይ ወደፊት! ብለናል..\nኖራዉ ዘመናችን እንትናን ቀብቶ እንትን አበላሽቶ እንትን ቤቱ ሆኗል!",
+    var details = ["የሰከነ ፍቅር ምን ያደርግልናል?\nይልቅ ተበዳደረን ቸባ በል ቸባ በይ ሞቅ አርጊዉ ይበጃል\nየሰከነ መዉደድ ምኑ ያዋጣናል?\nይልቅ ተቦዳድነን ብንጨፍር ይሻላል\nየሰከነ ፍቅር የቱጋ ጠቅሞናል??\nይልቅ ቅልጥ በትን ብትንትን ድርግምግም ብንል ያምርብናል\n የፍቅር ተስቦ በዚህ ዘመን ገብቶ \nአናክሶንልና ይፋፋም እሳቱ ይንደድ እንቶ ፈንቶ\nበሰከረ ፍቅር አለመስከር ከቻልን\nከመዉደድ ተስቦ ክትባት ተከትበን\nበነተበ ህይወት በዛለዉ ማንነት መኪና ገዝተናል\nፋሽናም ዘመናይ ወደፊት! ብለናል..\nኖራዉ ዘመናችን እንትናን ቀብቶ እንትን አበላሽቶ እንትን ቤቱ ሆኗል!",
                    
          "\n\n\nከንፈርሽ ላይ ሆኜ ከንፈርሽን ስሜ\nከልብሽ ዳር ሆኜ ልብሽንም ስሜ\nረብተሽኝ ሳላይ አየሁሽ በህልሜ\nሰዉ መሆኔን ጠላሁ አልገጥም ሲል ጎኔ" ,
          
@@ -93,18 +90,13 @@ class TableThree: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailThree
             
         }
     }
-    
-    
-    // MARK: - Segues
     
     override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail3" {
@@ -117,8 +109,6 @@ class TableThree: UITableViewController{
         }
     }
     
-    // MARK: - Table View
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -127,7 +117,6 @@ class TableThree: UITableViewController{
         return objects.count
     }
     
- 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3" , for: indexPath)
         let object = objects[indexPath.row]
@@ -240,7 +229,7 @@ class TableThree: UITableViewController{
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return false
     }
  
 }

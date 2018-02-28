@@ -17,13 +17,18 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     
     var interstitialThree : GADInterstitial!
     var adMobBannerView : GADBannerView!
-    var player : AVAudioPlayer?
     var detailThreeContent = ""
+    var detailItem: String? {
+        didSet {
+            
+            self.configureView()
+            
+        }
+    }
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var AdThreeBut: UIButton!
     @IBOutlet weak var myBut: UIButton!
-    
     
     struct Constants {
         
@@ -54,7 +59,23 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     let item21  = TableThree().details[20]
     let item22  = TableThree().details[21]
     
+     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        self.configureView()
+        bannerAdController()
+        addBannerViewToView(adMobBannerView)
+        detailDescriptionTextView.delegate = self
+        interstitialThree = createAndLoadInterstitial()
+        DetailOne.musicControl()
+    }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
     
     func configureView() {
         
@@ -65,43 +86,7 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
             
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        self.configureView()
-        bannerAdController()
-        addBannerViewToView(adMobBannerView)
-        detailDescriptionTextView.delegate = self
-        interstitialThree = createAndLoadInterstitial()
-        musicControl()
-    }
-    
-    func musicControl(){
-        
-        let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
-        
-        do {
-            
-            player = try AVAudioPlayer(contentsOf: url!)
-            
-            guard let player = player
-                else
-            {
-                return
-            }
-            
-            player.prepareToPlay()
-            
-        } catch let error {
-            
-            print(error.localizedDescription)
-            
-        }
-        
-    }
-    
+
     func addBannerViewToView(_ bannerView : GADBannerView){
         
         bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -179,23 +164,21 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
     }
     
-    
     @IBAction func AdThreeAction(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
         
-        if(player?.isPlaying)! {
+        if(DetailOne.player?.isPlaying)! {
             
-            player?.stop()
+            DetailOne.player?.stop()
             
         } else {
             
-            player?.play()
+            DetailOne.player?.play()
             
         }
         
     }
-    
     
     @IBAction func shareTwo(_ sender: UIButton) {
         
@@ -281,24 +264,11 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
     }
     
-    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
-    }
-    
-    var detailItem: String? {
-        didSet {
-            
-            self.configureView()
-            
-        }
-    }
-    
+   
 }
 
