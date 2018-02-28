@@ -13,7 +13,6 @@ import AVFoundation
 class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
     
-    
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var Advert: UIButton!
@@ -30,6 +29,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             self.configureView()
         }
     }
+    
     
     enum failed : Error {
         
@@ -293,7 +293,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-  
     
 }
 
