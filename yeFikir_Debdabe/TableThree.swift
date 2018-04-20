@@ -20,36 +20,12 @@ class TableThree: UITableViewController{
     var objects = ["ይንደድ የታባቱ!","በህልሜ","ዝናሽና ክብርሽ","ዉይ አንቺ!","ኪኪኪ...","ይታየኛል ለኔ","ፍቅርን ፍለጋ"," ቆይታ","ዲቪሽ","ተዉ ሆዴ ተዉ","አይ አንተ!",
                    "እድሜሽ","ቁማሩን በልተሻል","ሰዉ እንዳለ..አወቅኩ","ፐፑፒፓ","ፍቅርሽና ፍቅሬ","ተረት","አልቻልኩም","ፍቅር ድሮ ድሮ..","ይሻለኛል",
                    "መነሻዉ..","እመጣለሁ"]
-    
-    let image1 = UIImage(named: "b1")
-    let image2 = UIImage(named: "b2")
-    let image3 = UIImage(named: "b3")
-    let image4 = UIImage(named: "b4")
-    let image5 = UIImage(named: "b5")
-    let image6 = UIImage(named: "b6")
-    let image7 = UIImage(named: "b7")
-    let image8 = UIImage(named: "b8")
-    let image9 = UIImage(named: "b9")
-    let image10 = UIImage(named: "b10")
-    let image11 = UIImage(named: "b11")
-    let image12 = UIImage(named: "b12")
-    let image13 = UIImage(named: "b13")
-    let image14 = UIImage(named: "b14")
-    let image15 = UIImage(named: "b15")
-    let image16 = UIImage(named: "b16")
-    let image17 = UIImage(named: "b17")
-    let image18 = UIImage(named: "b18")
-    let image19 = UIImage(named: "b19")
-    let image20 = UIImage(named: "b20")
-    let image21 = UIImage(named: "b21")
-    let image22 = UIImage(named: "b22")
-    
+
     enum jsonError: Error {
         
         case failed(String)
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,7 +65,6 @@ class TableThree: UITableViewController{
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailThree
                 controller.detailItem = object[indexPath.row]
                 TableThree.contentText = controller.detailItem!
-            
             }
         }
     }
@@ -105,111 +80,9 @@ class TableThree: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3" , for: indexPath)
         let object = objects[indexPath.row]
-        
         cell.textLabel!.text = object
-        
-
-        // In TableView Three,the imageView are put in switch statement
-        
-        switch indexPath.row {
-            
-        case 0:
-            
-            cell.imageView!.image = image1
-            
-        case 1:
-            
-            cell.imageView!.image = image2
-            
-        case 2:
-            
-            cell.imageView!.image = image3
-            
-        case 3:
-            
-            cell.imageView!.image = image4
-            
-        case 4:
-            
-            cell.imageView!.image = image5
-           
-        case 5:
-            
-            cell.imageView!.image = image6
-            
-        case 6:
-            
-            cell.imageView!.image = image7
-            
-        case 7:
-            
-            cell.imageView!.image = image8
-            
-        case 8:
-            
-            cell.imageView!.image = image9
-            
-        case 9:
-            
-            cell.imageView!.image = image10
-            
-        case 10:
-            
-            cell.imageView!.image = image11
-            
-        case 11:
-            
-            cell.imageView!.image = image12
-            
-        case 12:
-            
-            cell.imageView!.image = image13
-            
-        case 13:
-            
-            cell.imageView!.image = image14
-            
-        case 14:
-            
-            cell.imageView!.image = image15
-            
-        case 15:
-            
-            cell.imageView!.image = image16
-            
-        case 16:
-            
-            cell.imageView!.image = image17
-            
-        case 17:
-            
-            cell.imageView!.image = image18
-            
-        case 18:
-            
-            cell.imageView!.image = image19
-     
-        case 19:
-            
-            cell.imageView!.image = image20
-            
-        case 20:
-            
-            cell.imageView!.image = image21
-            
-        case 21:
-            
-            cell.imageView!.image = image22
-            
-        default:
-            
-            print("Some of the images are missing..")
-            
-                }
-        
+        cell.imageView!.image = UIImage(named: "thirdImage")
         return cell
-
-    
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

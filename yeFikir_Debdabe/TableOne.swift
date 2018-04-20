@@ -20,7 +20,7 @@ class TableOne: UITableViewController{
     var object = [String]()
     static var contentText = ""
     var objects = ["ከልቤ ወደድኩሽ ስላት...","ኢትዮጲያዊ ደብዳቤ","የአመታት ጉዞ…በፍቅር ጥያቄ","ብልጣብልጥነትና የፍቅር ፍርፋሪ","የጨረታ ማስታወቂያ","ሰሞኑን...","የስራ ማስታወቂያ"," ደብዳቤ ወ ሳይኮሎጂ","የስራ ፈላጊዎች አሳዛኝ ደብዳቤ","ይድረስ አሜሪካ ላለኸዉ ወንድሜ" ,"በፈጠረሽ"]
-    let titleImage = UIImage(named: "firstImage")
+
     
     enum jsonError: Error {
         
@@ -84,7 +84,7 @@ class TableOne: UITableViewController{
         let zObject = objects[indexPath.row]
         
         cell.textLabel!.text = zObject
-        cell.imageView!.image = titleImage
+        cell.imageView!.image = UIImage(named: "firstImage")
         return cell
     }
     
