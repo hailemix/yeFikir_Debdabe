@@ -197,7 +197,6 @@
 				A19EBEC13A9A7ED3A88A4E8E /* Pods-yeFikir_DebdabeTests.debug.xcconfig */,
 				41A2830C3A3CDE6926C74109 /* Pods-yeFikir_DebdabeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
