@@ -5,11 +5,10 @@
 //  Copyright 2014 Google Inc. All rights reserved.
 //
 
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 #import <UIKit/UIKit.h>
 
-#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
-
-GAD_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /// Custom rendered ad. Your application renders the ad.
 @interface DFPCustomRenderedAd : NSObject
@@ -31,4 +30,4 @@ GAD_ASSUME_NONNULL_BEGIN
 
 @end
 
-GAD_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END
