@@ -22,6 +22,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var interstitialOne : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailOneContent : String = ""
+    var textIndex = 0
     var detailItem: String? {
         
         didSet {
@@ -37,17 +38,17 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-    let item1 = TableOne().details[0]
-    let item2 = TableOne().details[1]
-    let item3 = TableOne().details[2]
-    let item4 = TableOne().details[3]
-    let item5 = TableOne().details[4]
-    let item6 = TableOne().details[5]
-    let item7 = TableOne().details[6]
-    let item8 = TableOne().details[7]
-    let item9 = TableOne().details[8]
-    let item10 = TableOne().details[9]
-    let item11 = TableOne().details[10]
+    let item1 = TableOne().object[0]
+    let item2 = TableOne().object[1]
+    let item3 = TableOne().object[2]
+    let item4 = TableOne().object[3]
+    let item5 = TableOne().object[4]
+    let item6 = TableOne().object[5]
+    let item7 = TableOne().object[6]
+    let item8 = TableOne().object[7]
+    let item9 = TableOne().object[8]
+    let item10 = TableOne().object[9]
+    let item11 = TableOne().object[10]
     
     struct Constants {
         
@@ -241,51 +242,12 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         randomPresentationAd(oneIn: Constants.adRate)
         
-        
-        switch detailDescriptionTextView.text {
-            
-        case item1:
-            detailOneContent = item1
-            
-        case item2:
-            detailOneContent = item2
-            
-        case item3:
-            detailOneContent = item3
-            
-        case item4:
-            detailOneContent = item4
-            
-        case item5:
-            detailOneContent = item5
-            
-        case item6:
-            detailOneContent = item6
-            
-        case item7:
-            detailOneContent = item7
-            
-        case item8:
-            detailOneContent = item8
-            
-        case item9:
-            detailOneContent = item9
-            
-        case item10:
-            detailOneContent = item10
-            
-        case item11:
-            detailOneContent = item11
-            
-        default:
-            print("Please Check the code")
-        }
-        
+        self.detailDescriptionTextView.text = TableOne().object[textIndex]
         let activityViewController = UIActivityViewController(activityItems:[detailOneContent], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
-        activityViewController.excludedActivityTypes = [UIActivityType.airDrop,UIActivityType.copyToPasteboard,UIActivityType.mail,UIActivityType.assignToContact]
-        
+          activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
+          self.present(activityViewController,animated:true,completion:nil)
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {

@@ -12,6 +12,7 @@ target 'yeFikir_Debdabe' do
 # Pods for BestQuotes
 target 'yeFikir_DebdabeTests' do
     inherit! :search_paths
+    pod 'Firebase'
     # Pods for testing
 end
 

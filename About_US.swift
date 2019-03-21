@@ -32,15 +32,16 @@ class About_US: UIViewController{
         timer = Timer.scheduledTimer(timeInterval:3, target: self, selector: #selector(About_US.getRandomColor), userInfo: nil, repeats: true)
     }
     
-    func getRandomColor(){
+    @objc func getRandomColor(){
         
         let red = Float((arc4random() % 256)) / 255.0
         let green = Float((arc4random() % 256)) / 255.0
         let blue = Float((arc4random() % 256)) / 255.0
         let alpha = Float(1.0)
-        colours = UIColor(colorLiteralRed: red, green: green, blue: blue, alpha: alpha)
+        colours = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
         
-        UIView.animate(withDuration:3, delay: 0, options:[ UIViewAnimationOptions.repeat,UIViewAnimationOptions.autoreverse], animations: { self.view.backgroundColor = self.colours} ,completion: nil)
+        
+        UIView.animate(withDuration:3, delay: 0, options:[ UIView.AnimationOptions.repeat,UIView.AnimationOptions.autoreverse], animations: { self.view.backgroundColor = self.colours} ,completion: nil)
     }
 
     
