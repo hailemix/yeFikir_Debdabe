@@ -158,14 +158,11 @@ class TableTwo: UITableViewController{
             
             cell.imageView!.image = image1
             
-            
         }
         else if(indexPath.row == 1)
         {
-            
             cell.imageView!.image = image2
-            
-            
+        
         }
             
         else if (indexPath.row == 2)

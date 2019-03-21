@@ -13,6 +13,8 @@ class TableOne: UITableViewController{
     
 
     var detailViewController: DetailOne? = nil
+    var contentArray = [String]()
+    var contentString = ""
     var objects = ["ከልቤ ወደድኩሽ ስላት...","ኢትዮጲያዊ ደብዳቤ","የአመታት ጉዞ…በፍቅር ጥያቄ","ብልጣብልጥነትና የፍቅር ፍርፋሪ","የጨረታ ማስታወቂያ","ሰሞኑን...","የስራ ማስታወቂያ"," ደብዳቤ ወ ሳይኮሎጂ","የስራ ፈላጊዎች አሳዛኝ ደብዳቤ","ይድረስ አሜሪካ ላለኸዉ ወንድሜ" ,"በፈጠረሽ"]
     
     let image1 = UIImage(named: "a1")
@@ -27,7 +29,11 @@ class TableOne: UITableViewController{
     let image10 = UIImage(named: "a10")
     let image11 = UIImage(named: "a11")
   
-
+    enum jsonError: Error {
+        
+        case failed(String)
+    }
+    
     var details = ["እሱ----ሞዛዛ ሰዉ ያስጠላኛል…እየተሟዘዘ ሲናገር…እየተሟዘዘ ሲኖር…የሆነ ሞ..ዛ…ዛ!!\n\nእሷ---አንዴ ልሟዘዝ….አንዴ ብቻ….ስማ ሞዛዛ በህይወትህ እያንዳንዷ ደረጃ ላይ ልትጠቅምህ የምትችል ቅመም ቃል ናት፡፡ለምሳሌ ፍቅር ያዘኝ ምናምን እያልክ አገሩን አቧራ ስታጨስ ከከረምክ በኋላ ትንሽ ረገብ ሲልልህ (ያዉ ስትሟዘዝ ማለት ነዉ) አስጠላችኝ ደበረችኝ ለኔ አትመጥንም ቅብርጥስዮ ትላለህ ወሬ!\n\nእሱ---ስሚኝ የሞዛዛ አድናቂ…እናንተ ከ 80 ፐርሰንት በላይ የሆናችሁት ሴቶች ሞዛዞች ናችሁ፡፡(ለነገሩ ፐርሰንትም አይችላችሁ…ፀባያችሁን በፐርሰንት ከማስቀመጥ ፐርሰንትን በናንተ ጠባይ መመዘን ምንኛ ቀላል እንደሆነ የት ታዉቂና…ውይ!) \n\nአንዲት ሴት በአማካኝ ከ ግማሽ በላይ ወሬዋ ዉስጥ የሞዛዛነት ስሜት ታንፀባርቃለች ለምሳሌ ልጁ ደክሞት ስልክ ሲደወልለት አላነሳም በቃ አላየዉም ከዛ ጓደኛዉ ደወለች…ለምን ስልክህን አላነሳህም?-ምን ማለት ነዉ ቢደክምህስ?- ሊያስረዳት ቢጥርም ሰሚ አላገኘም…ስለማትወደኝ ነዉ…አስጠላሁህ አይደል?….ተጠቅመህ በሌላ ሴት አፕዴት የምታደርገኝ የትኛዉ ሶፍትዌር መሰልኩህ?…ባለፈዉ ግዛልኝ ያልኩህን ጫማ ችላ ብለህ…ምናምን እያለች አንዲሁ ስትሟዘዝ ልጁን አሰከረችዉ፡፡\n\nስለዚህ እባካችሁ 100% አትሟዘዙ ማለት ቢከብደኝም(ተፈጥሯችሁ ነዋ!) በተቻላችሁ መጠን ቀንሱት\n\nእሷ----አንዴ ተፈጥሯችሁ ነዉ ትላለህ ሌላ ጊዜ ደግሞ አትሟዘዙ ትላለህ…መጀመሪያ ከራስህ ጋር ዲፕሎማሲያዊ ግንኙነት አድርግ…የምን እንጣጥ እንጣጥ ልበል ነዉ!\n\nእሱ---ድሮ ድሮ ቦሌ አካባቢ ነበር ይህ በሽታ ሲታይ የነበረዉ አሁን ግን ድሀዉ ላይ ብሷል…ዉሃ ልቀዳ የሆነ ሰፈር ጀሪካን ይዤ 'እናቱ ዉሃ አለ?' ስል አንዷ የደሃ ሞዛዛ…'ፕሊስ ምንድነዉ የምታወራዉ?ይሄ ቦኖ መሰለህ?ቻት እያረኩ ነዉ ዶንት ዲስተርብ ሚ..' ምናምን አላለችኝም መሰለሽ ሞዛዛ!\n\nእሷ--ፕሊስ ለቀቅ አርገና! በዚህ እድሜ ነገር ፈትፍተህ ከምትበላ ቁም ነገር ብታወራ ይጠቅምሃል……ሰዉ በሞላበት ሃገር ሰዉ አጣሁ...ምን ላርግ?እሱ---እም..እንዴት?\n\nእሷ----ሰዉ አጣኋ…ገንዘብ ነዉ ኢንጅኑ፣እጅ ከምን፣ለ ሃይገር ባስና ለ ደሃ ፓርኪንግ ቦታ የለንም፣ ከሌለህ የለህም፣ ምናምን.. ከሚሉት አስተሳሰቦች አለፍ ያለ ነገር አጣሁ…አንዱ ደራሲ አንጀቱ አርሮ እንዲህ ብሎ ነበር 'አበሻ ከአፍንጫዉ ትንሽ አለፍ ብሎ ማሰብ አይሆንለትም'\n\nእሱ---ስለዚህ የልብ ሰዉ ካጣሽ ምናልባት ልብሽ ጋር ችግር ይኖር ይሆን…እሱን ቆም ብለሽ እስኪ እዪዉ \n\nእሷ---ምን አልባት የ ጸባይ ግትርነት የሚያጠቃኝ ሰዉ ስለሆንኩ ለብዙ ሰዉ የማይመች ማንነት ሊኖረኝ ይችላል…የፈለገ ቢሆን ግን አንድ ሰዉም ቢሆን እንዴት እንዴት አጣለሁ….?\n\nእሱ--ያሁኑ ዘመን ሰዎች…ለሁሉም ነገር ስለምንቸኩል እግዜር የሞታችንን ቀን በጆሯችን ቢነግረን እንኳ ወይ ፌስ ቡክ ላይ ው የወሬ ቡካችን ላይ ፖስት ለማረግ እንሽቀዳደማለን እንጂ አንሰማም…ለመብላት ጥድፊያ፣ ለመበላት ጥድፊያ፣ ኖሮ ለመሞት ጥድፊያ፣ ሞቶ ለመቅበር ጥድፊያ፣ለመጣደፍ ጥድፊያ…ስለዚህ አንቺም አትቸኩይ በሚጣደፍ ማንነት ዉስጥ አንኳን የልብ ሰዉ ከልብ ሰላምታ የሚያቀርብ ሰዉም ማግኘት ይከብዳል!\n\nእሷ--ይልቅ አሁን አሪፍ ምክር መከርከኝ፣ እስቲ እግዜር እስኪጥልልኝ ልታገሳ…\nእሱ--መልካም!",
                    
         "አራት የተለያየ ሀገር ዜግነት ያላቸዉ ሰዎች ለሚስቶቻቸዉ ምን ያህል ደብዳቤ እንደፃፉ ተጠየቁ…\n\n1.ጀርመናዊ፡  ላሁኗ ሚስቴ ከ300 በላይ የፍቅር ደብዳቤዎችን ፅፌላታለሁ\n\n 2.አሜሪካዊ፡ ሚስቴ በጣም እንደምትወደኝ አዉቃለሁ የኔ ማፍቀር ግን ይለያል፡ ከ700 ጊዜ በላይ እንደምወዳት በፅሁፍ ገልጬላታለሁ\n\n3.ስዊድናዊ፡  ከ1400 በላይ ደብዳቤዎችን በመፃፍ የፍቅሬን ሃያልነት ለመግለፅ ብሞክርም ሊወጣልኝ ባለመቻሉ ልቦለድ የሚያክል ፅሁፍ ፅፌ ሁሉ ለዉዴ መስጠቴን አልረሳሁም\n\n 4.ኢትዮጲያዊ፡ እ.....እ...እ... በየቀኑ ለሚስቴ ከ140,000 በላይ ደብዳቤ እፅፍላታለሁ፡፡ እ...ፅሁፉም ...”በፈጠረሽ ማታ ማታ መስኮቱን ዝጊዉ!-እ-እ..በሩን በደንብ ቀርቅሪ እንዳታዘርፊኝ!!!",
@@ -65,12 +71,33 @@ class TableOne: UITableViewController{
         }
     }
     
+    func retrieveFromJson() -> [String]{
+        
+        do {
+            
+            if let file = Bundle.main.url(forResource: "contents", withExtension: "json"){
+                let data = try Data(contentsOf: file)
+                let myArray = try JSONSerialization.jsonObject(with: data, options:[])
+                
+                if let contentDictionary = myArray as? [String: Any]{
+                    
+                    contentArray = (contentDictionary["contentA"] as? [String])!
+                }
+            }
+        } catch {
+            
+            print(jsonError.failed("Failed to Serialize Json file"))
+        }
+        return contentArray
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = details[indexPath.row]
+               // let object = details[indexPath.row]
+                let object = retrieveFromJson()
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
-                controller.detailItem = object as String?
+                controller.detailItem = object[indexPath.row]
             }
         }
     }
@@ -161,7 +188,6 @@ class TableOne: UITableViewController{
         
         }
   
-        
         return cell
     }
     

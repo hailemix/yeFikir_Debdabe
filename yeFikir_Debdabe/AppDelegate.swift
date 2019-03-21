@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import UserNotifications
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate {
@@ -19,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        GADMobileAds.configure(withApplicationID:"ca-app-pub-9156727777369518~1581272034")
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         application.registerForRemoteNotifications()
         
         if #available(iOS 10.0, *) {

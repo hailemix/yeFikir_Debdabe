@@ -27,6 +27,7 @@
 		CE8C79B21EDFF2BF00E14EF1 /* DetailTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */; };
 		CE8C79B41EDFFBD500E14EF1 /* DetailThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */; };
 		CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEB6BDE51F4C77EF00759048 /* sleep.mp3 */; };
+		E2B927F722441B1C00B73CF2 /* contents.json in Resources */ = {isa = PBXBuildFile; fileRef = E2B927F622441B1C00B73CF2 /* contents.json */; };
 		FA4A5E27E000B4EE1BE03E98 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTwo.swift; sourceTree = "<group>"; };
 		CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailThree.swift; sourceTree = "<group>"; };
 		CEB6BDE51F4C77EF00759048 /* sleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sleep.mp3; sourceTree = "<group>"; };
+		E2B927F622441B1C00B73CF2 /* contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		CE7570E01EDD267700816A9C = {
 			isa = PBXGroup;
 			children = (
+				E2B927F522441A7B00B73CF2 /* Json File */,
 				CE7570EB1EDD267700816A9C /* yeFikir_Debdabe */,
 				CE7571031EDD267700816A9C /* yeFikir_DebdabeTests */,
 				CE75710E1EDD267700816A9C /* yeFikir_DebdabeUITests */,
@@ -187,6 +190,14 @@
 				CE7571111EDD267700816A9C /* Info.plist */,
 			);
 			path = yeFikir_DebdabeUITests;
+			sourceTree = "<group>";
+		};
+		E2B927F522441A7B00B73CF2 /* Json File */ = {
+			isa = PBXGroup;
+			children = (
+				E2B927F622441B1C00B73CF2 /* contents.json */,
+			);
+			path = "Json File";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				CE7570F71EDD267700816A9C /* Assets.xcassets in Resources */,
 				CE7570F21EDD267700816A9C /* Main.storyboard in Resources */,
 				CE7571461EDD98AA00816A9C /* jiret.ttf in Resources */,
+				E2B927F722441B1C00B73CF2 /* contents.json in Resources */,
 				CE16525B2044346400762CF7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
