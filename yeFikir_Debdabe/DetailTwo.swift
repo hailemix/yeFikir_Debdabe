@@ -164,7 +164,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             NSLayoutConstraint(item:bannerView,
                                attribute: .bottom,
                                relatedBy: .equal,
-                               toItem: bottomLayoutGuide,
+                               toItem: view.safeAreaLayoutGuide.bottomAnchor,
                                attribute: .bottom,
                                multiplier: 1,
                                constant: 0),
