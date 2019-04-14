@@ -164,23 +164,24 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         if let detail = self.detailItem {
             if let UITextView = self.detailDescriptionTextView {
                 UITextView.text = detail.description
-                
             }
-            
         }
     }
     
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView){
         
-        if(scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+        if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
-            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 
                 self.myBut.isHidden = false
                 self.Advert.isHidden = false
             })
-            self.randomPresentationAd(oneIn: Constants.adRate)
+            
+            Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+                
+                self.randomPresentationAd(oneIn: Constants.adRate)
+            })
             
         } else {
             
