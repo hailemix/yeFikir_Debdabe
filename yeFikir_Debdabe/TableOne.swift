@@ -9,6 +9,8 @@
 import UIKit
 
 
+
+
 class TableOne: UITableViewController{
     
 
@@ -29,6 +31,7 @@ class TableOne: UITableViewController{
     let image10 = UIImage(named: "a10")
     let image11 = UIImage(named: "a11")
     var object = [String]()
+    
 
   
     enum jsonError: Error {
@@ -38,8 +41,6 @@ class TableOne: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-       
         
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -48,7 +49,7 @@ class TableOne: UITableViewController{
         }
     }
     
-    func retrieveFromJson() -> [String]{
+    func retrieveFromJson() -> [String] {
         
         do {
             
@@ -69,11 +70,14 @@ class TableOne: UITableViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        object = retrieveFromJson()
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                 object = retrieveFromJson()
+                
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
                 controller.detailItem = object[indexPath.row]
+                
             }
         }
     }
@@ -88,9 +92,9 @@ class TableOne: UITableViewController{
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell" , for: indexPath)
-        let object = objects[indexPath.row]
+        let zObject = objects[indexPath.row]
         
-        cell.textLabel!.text = object
+        cell.textLabel!.text = zObject
         
         
         
@@ -109,6 +113,7 @@ class TableOne: UITableViewController{
         else if (indexPath.row == 2)
         {
             cell.imageView!.image = image3
+            
     
         }
         else if (indexPath.row == 3)
@@ -123,6 +128,7 @@ class TableOne: UITableViewController{
         {
             cell.imageView!.image = image5
         }
+            
         else if (indexPath.row == 5)
         {
             cell.imageView!.image = image6
@@ -132,7 +138,7 @@ class TableOne: UITableViewController{
             
         {
             cell.imageView!.image = image7
-            
+
         }
         
         else if (indexPath.row == 7) {
@@ -143,12 +149,9 @@ class TableOne: UITableViewController{
         
         else if (indexPath.row == 8) {
         
-        
-        
         cell.imageView!.image = image9
-            
+
         }
-            
             
         else if (indexPath.row == 9) {
         
@@ -170,6 +173,13 @@ class TableOne: UITableViewController{
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return false
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 2 {
+            
+        }
     }
     
     

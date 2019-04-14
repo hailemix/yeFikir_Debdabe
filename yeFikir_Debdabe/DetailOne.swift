@@ -25,30 +25,10 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var textIndex = 0
     var detailItem: String? {
         
-        didSet {
-            
-            self.configureView()
-        }
+        didSet { self.configureView() }
     }
     
-    
-    enum failed : Error {
-        
-        case failedCode(String)
-        
-    }
-    
-    let item1 = TableOne().object[0]
-    let item2 = TableOne().object[1]
-    let item3 = TableOne().object[2]
-    let item4 = TableOne().object[3]
-    let item5 = TableOne().object[4]
-    let item6 = TableOne().object[5]
-    let item7 = TableOne().object[6]
-    let item8 = TableOne().object[7]
-    let item9 = TableOne().object[8]
-    let item10 = TableOne().object[9]
-    let item11 = TableOne().object[10]
+    enum failed : Error { case failedCode(String) }
     
     struct Constants {
         
@@ -102,7 +82,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
+        //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
+        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
@@ -110,7 +91,9 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
+      //  let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
@@ -137,7 +120,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             NSLayoutConstraint(item:bannerView,
                                attribute: .bottom,
                                relatedBy: .equal,
-                               toItem: view.safeAreaLayoutGuide.bottomAnchor,
+                               toItem: view,
                                attribute: .bottom,
                                multiplier: 1,
                                constant: 0),
@@ -163,7 +146,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
                 
                 if interstitialOne!.isReady{
                     
-                    interstitialOne.present(fromRootViewController: self)
+               interstitialOne.present(fromRootViewController: self)
                     
                 } else {
                     
@@ -187,41 +170,32 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         }
     }
     
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView){
         
-        switch detailDescriptionTextView.text {
+        if(scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
-        case item3,item7,item9:
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
+                
+                self.myBut.isHidden = false
+                self.Advert.isHidden = false
+            })
+            self.randomPresentationAd(oneIn: Constants.adRate)
+            
+        } else {
             
             Advert.isHidden = true
-            
-        default:
-            
             myBut.isHidden = true
         }
         
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func showButtons(){
         
         myBut.isHidden = false
-        
-        switch detailDescriptionTextView.text {
-            
-        case item3, item7, item9:
-            
-            Advert.isHidden = false
-            
-        case item1, item3, item5, item9, item11:
-            
-            randomPresentationAd(oneIn: Constants.adRate)
-            
-        default:
-            print(failed.failedCode("Error is found in the scrollVew func.Please check!"))
-        }
-        
+        Advert.isHidden = false
     }
-    
+ 
     @IBAction func myAdvert(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
