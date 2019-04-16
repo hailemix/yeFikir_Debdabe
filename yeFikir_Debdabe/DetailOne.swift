@@ -36,8 +36,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,7 +80,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     func bannerAdController() {
         
-        adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        adMobBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
         adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         adMobBannerView.rootViewController = self
@@ -168,14 +167,13 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView){
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
             Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 
-                self.myBut.isHidden = false
-                self.Advert.isHidden = false
+                self.showButtons()
             })
             
             Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
@@ -185,16 +183,21 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         } else {
             
-            Advert.isHidden = true
-            myBut.isHidden = true
+            self.hideButtons()
         }
         
     }
     
-    func showButtons(){
+    func showButtons() {
         
         myBut.isHidden = false
         Advert.isHidden = false
+    }
+    
+    func hideButtons(){
+        
+        Advert.isHidden = true
+        myBut.isHidden = true
     }
  
     @IBAction func myAdvert(_ sender: UIButton) {
@@ -217,11 +220,10 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         randomPresentationAd(oneIn: Constants.adRate)
         
-        self.detailDescriptionTextView.text = TableOne().object[textIndex]
-        let activityViewController = UIActivityViewController(activityItems:[detailOneContent], applicationActivities:nil)
+        let activityViewController = UIActivityViewController(activityItems:[TableOne.contentText], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
-          activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
           self.present(activityViewController,animated:true,completion:nil)
     }
     

@@ -15,6 +15,7 @@ class TableTwo: UITableViewController{
     var detailViewController: DetailTwo? = nil
     var contentArray = [String]()
     var object = [String]()
+    static var contentText = ""
     var objects = ["ማትስ ተማሪ ለፍቅረኛዋ የፃፈችዉ ደብዳቤ", "ሰዉ አይደለሁማ!","የ‹ለምን አንተን ወደድኩህ?›ፍልስፍና","የህግ ተመራቂ ለፍቅረኛዉ የፃፈዉ መልእክት","አምናለሁ","ትዝ ሲለኝ…","አዲስ አበቤና ኑሮ","ወደፊት!","ይገባታል...","ለምወድህና ለማፈቅርህ ብር...","አጭር መልእክት","ለብቻሽ አንብቢዉ","ክትባት ዉሰጂ"," ይድረስ ለሜካኒካል ኢንጅነሯ… ","ቃል እገባለሁ!","ልጅነቴ","ሞትና እሹሩሩ","ደብዳቤ 6","ምክር","ዉዴ","አቶ ገንዘብ ","ለምወድህ ካለህበት","ፍቅር ቆሎ አይደለም","ብልጣብልጥነትና የፍቅር ፍርፋሪ","ያማርኛ የፍቅር ፊልምና እቃቃ","RC1","መዋጋት ቀለለኝ እህህ ከበደኝ","ፍቅር በድውታ","*** ደራሲዉ ***","ህይወት ስትሟዘዝ…ስትጣደፍ","ዲያስፖራና የፍቅር ደብዳቤ","ቫለንታይን ዴይና ባላንጣዎቼ"]
     
     enum jsonError : Error {
@@ -89,11 +90,13 @@ class TableTwo: UITableViewController{
     
     
     override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         let object = retrieveFromJson()
         if segue.identifier == "showDetail2" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = retrieveFromJson()
+                
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailTwo
                 controller.detailItem = object[indexPath.row]
+                TableTwo.contentText = controller.detailItem!
                 
             }
         }
@@ -112,7 +115,7 @@ class TableTwo: UITableViewController{
         let object = objects[indexPath.row]
         
         cell.textLabel!.text = object
-        
+      
         if(indexPath.row == 0) {
             
             cell.imageView!.image = image1
@@ -299,7 +302,6 @@ class TableTwo: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return false
     }
     

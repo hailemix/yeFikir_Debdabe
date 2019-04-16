@@ -31,7 +31,8 @@ class TableOne: UITableViewController{
     let image10 = UIImage(named: "a10")
     let image11 = UIImage(named: "a11")
     var object = [String]()
-    
+    static var contentText = ""
+
 
   
     enum jsonError: Error {
@@ -77,6 +78,7 @@ class TableOne: UITableViewController{
                 
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailOne
                 controller.detailItem = object[indexPath.row]
+                TableOne.contentText = controller.detailItem!
                 
             }
         }
@@ -176,12 +178,8 @@ class TableOne: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if indexPath.row == 2 {
-            
-        }
-    }
     
+    }
     
 }
 

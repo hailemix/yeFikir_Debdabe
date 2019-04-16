@@ -43,40 +43,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-    let item1 = TableTwo().object[0]
-    let item2 = TableTwo().object[1]
-    let item3 = TableTwo().object[2]
-    let item4 = TableTwo().object[3]
-    let item5 = TableTwo().object[4]
-    let item6 = TableTwo().object[5]
-    let item7 = TableTwo().object[6]
-    let item8 = TableTwo().object[7]
-    let item9 = TableTwo().object[8]
-    let item10 = TableTwo().object[9]
-    let item11 = TableTwo().object[10]
-    let item12 = TableTwo().object[11]
-    let item13 = TableTwo().object[12]
-    let item14 = TableTwo().object[13]
-    let item15 = TableTwo().object[14]
-    let item16 = TableTwo().object[15]
-    let item17 = TableTwo().object[16]
-    let item18  = TableTwo().object[17]
-    let item19  = TableTwo().object[18]
-    let item20  = TableTwo().object[19]
-    let item21  = TableTwo().object[20]
-    let item22  = TableTwo().object[21]
-    let item23  = TableTwo().object[22]
-    let item24  = TableTwo().object[23]
-    let item25  = TableTwo().object[24]
-    let item26  = TableTwo().object[25]
-    let item27  = TableTwo().object[26]
-    let item28  = TableTwo().object[27]
-    let item29  = TableTwo().object[28]
-    let item30  = TableTwo().object[29]
-    let item31  = TableTwo().object[30]
-    let item32  = TableTwo().object[31]
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -164,7 +130,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             NSLayoutConstraint(item:bannerView,
                                attribute: .bottom,
                                relatedBy: .equal,
-                               toItem: view.safeAreaLayoutGuide.bottomAnchor,
+                               toItem: view,
                                attribute: .bottom,
                                multiplier: 1,
                                constant: 0),
@@ -181,41 +147,30 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        myBut.isHidden = true
-        
-        switch detailDescriptionTextView.text {
+        if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height){
             
-        case item1,item2, item5, item12, item19, item18, item28:
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+                
+                self.showButtons()
+            })
+            
+            Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+                
+                self.randomPresentationAd(oneIn: Constants.adRate)
+            })
+        } else {
             
             AdvertTwo.isHidden = true
-            
-        default:
-            print(detailTwoFailed.codeError("Please Check the code!"))
+            myBut.isHidden = true
         }
-        
-        
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    func showButtons(){
         
         myBut.isHidden = false
-        
-        switch detailDescriptionTextView.text {
-            
-        case item1,item2, item5, item12, item19, item18, item28:
-            
-            AdvertTwo.isHidden = false
-            
-        case item2, item6, item13, item17, item20, item25, item31:
-            
-            randomPresentationAd(oneIn: Constants.adRate)
-            
-        default:
-            print(detailTwoFailed.codeError("Please Check the code!"))
-        }
-        
+        AdvertTwo.isHidden = false
     }
-    
+        
     @IBAction func AdvertTwoButton(_ sender:UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
@@ -235,113 +190,12 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         
         randomPresentationAd(oneIn: Constants.adRate)
+    
         
-        switch detailDescriptionTextView.text {
-            
-        case item1:
-            detailTwoContent = item1
-            
-        case item2:
-            detailTwoContent = item2
-            
-        case item3:
-            detailTwoContent = item3
-            
-        case item4:
-            detailTwoContent = item4
-            
-        case item5:
-            detailTwoContent = item5
-            
-        case item6:
-            detailTwoContent = item6
-            
-        case item7:
-            detailTwoContent = item7
-            
-        case item8:
-            detailTwoContent = item8
-            
-        case item9:
-            detailTwoContent = item9
-            
-        case item10:
-            detailTwoContent = item10
-            
-        case item11:
-            detailTwoContent = item11
-            
-        case item12:
-            detailTwoContent = item12
-            
-        case item13:
-            detailTwoContent = item13
-            
-        case item14:
-            detailTwoContent = item14
-            
-        case item15:
-            detailTwoContent = item15
-            
-        case item16:
-            detailTwoContent = item16
-            
-        case item17:
-            detailTwoContent = item17
-            
-        case item18:
-            detailTwoContent = item18
-            
-        case item19:
-            detailTwoContent = item19
-            
-        case item20:
-            detailTwoContent = item20
-            
-        case item21:
-            detailTwoContent = item21
-            
-        case item22:
-            detailTwoContent = item22
-            
-        case item23:
-            detailTwoContent = item23
-            
-        case item24:
-            detailTwoContent = item24
-            
-        case item25:
-            detailTwoContent = item25
-            
-        case item26:
-            detailTwoContent = item26
-            
-        case item27:
-            detailTwoContent = item27
-            
-        case item28:
-            detailTwoContent = item28
-            
-        case item29:
-            detailTwoContent = item29
-            
-        case item30:
-            detailTwoContent = item30
-            
-        case item31:
-            detailTwoContent = item31
-            
-        case item32:
-            detailTwoContent = item32
-            
-        default:
-            print("Please Check the code")
-        }
-        
-        let activityViewController = UIActivityViewController(activityItems:[detailTwoContent], applicationActivities:nil)
+        let activityViewController = UIActivityViewController(activityItems:[TableTwo.contentText], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
-        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.mail,UIActivity.ActivityType.assignToContact]
+       // activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.mail,UIActivity.ActivityType.assignToContact]
         
         
     }
