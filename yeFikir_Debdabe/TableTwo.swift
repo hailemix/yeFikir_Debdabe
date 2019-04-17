@@ -116,187 +116,143 @@ class TableTwo: UITableViewController{
         
         cell.textLabel!.text = object
       
-        if(indexPath.row == 0) {
+        
+        switch indexPath.row {
+            
+        case 0:
             
             cell.imageView!.image = image1
             
-        }
-        else if(indexPath.row == 1)
-        {
-            cell.imageView!.image = image2
-        
-        }
+        case 1:
             
-        else if (indexPath.row == 2)
-        {
+            cell.imageView!.image = image2
+            
+        case 2:
+            
             cell.imageView!.image = image3
             
+        case 3:
             
-        }
-        else if (indexPath.row == 3)
-            
-        {
             cell.imageView!.image = image4
             
-        }
+        case 4:
             
-        else if (indexPath.row == 4)
-            
-        {
             cell.imageView!.image = image5
             
-        }
-        else if (indexPath.row == 5)
-        {
+        case 5:
+            
             cell.imageView!.image = image6
             
-        }
-        else if (indexPath.row == 6)
+        case 6:
             
-        {
             cell.imageView!.image = image7
             
-        }
-        
-        else if (indexPath.row == 7)
-        {
-        
-        
-        cell.imageView!.image = image8
-        
-        }
-        
-        else if (indexPath.row == 8) {
-        
-        cell.imageView!.image = image9
-        
-        }
-        
-        else if(indexPath.row == 9 ) {
-        
-        cell.imageView!.image = image10
-        
-        }
-        else if(indexPath.row == 10 ) {
+        case 7:
+            
+            cell.imageView!.image = image8
+            
+        case 8:
+            
+            cell.imageView!.image = image9
+            
+        case 9:
+            
+            cell.imageView!.image = image10
+            
+        case 10:
             
             cell.imageView!.image = image11
             
-        }
-        else if(indexPath.row == 11 ) {
+        case 11:
             
             cell.imageView!.image = image12
             
-        }
-        else if(indexPath.row == 12 ) {
+        case 12:
             
             cell.imageView!.image = image13
             
-        }
-        else if(indexPath.row == 13) {
+        case 13:
             
             cell.imageView!.image = image14
             
-        }
-        
-        else if(indexPath.row == 14 ) {
+        case 14:
             
             cell.imageView!.image = image15
             
-        }
-        
-        else if(indexPath.row == 15 ) {
+        case 15:
             
             cell.imageView!.image = image16
             
-        }
-        
-        else if(indexPath.row == 16) {
+        case 16:
             
             cell.imageView!.image = image17
             
-        }
-        
-        else if(indexPath.row == 17 ) {
+        case 17:
             
             cell.imageView!.image = image18
             
-        }
-        
-        else if(indexPath.row == 18) {
+        case 18:
             
             cell.imageView!.image = image19
             
-        }
-        
-        
-        else if(indexPath.row == 19) {
+        case 19:
             
             cell.imageView!.image = image20
             
-        }
-        
-        else if(indexPath.row == 20 ) {
+        case 20:
             
             cell.imageView!.image = image21
             
-        }
-        
-        else if(indexPath.row == 21 ) {
+        case 21:
             
             cell.imageView!.image = image22
-            
-        }
         
-        else if(indexPath.row == 22) {
+        case 22:
             
             cell.imageView!.image = image23
             
-        }
-        else if(indexPath.row == 23 ) {
+        case 23:
             
             cell.imageView!.image = image24
             
-        }
-        else if(indexPath.row == 24) {
+        case 24:
             
             cell.imageView!.image = image25
             
-        }
-        
-        else if(indexPath.row == 25 ) {
+        case 25:
             
             cell.imageView!.image = image26
             
-        }
-            
-        else if(indexPath.row == 26) {
+        case 26:
             
             cell.imageView!.image = image27
-        }
-        
-        else if(indexPath.row == 27) {
+            
+        case 27:
             
             cell.imageView!.image = image28
             
-        }
-        else if(indexPath.row == 28) {
+        case 28:
             
             cell.imageView!.image = image29
             
-        }
-        else if(indexPath.row == 29) {
+        case 29:
             
             cell.imageView!.image = image30
             
-        }
-        else if(indexPath.row == 30) {
+        case 30:
             
             cell.imageView!.image = image31
             
-        } else if (indexPath.row == 31){
-        
-           cell.imageView!.image = image32
+        case 31:
+            
+            cell.imageView!.image = image32
+            
+        default:
+            
+            print("Some of the images are missing..")
+            
         }
+        
         
         return cell
     }

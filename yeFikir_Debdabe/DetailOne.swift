@@ -22,11 +22,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var interstitialOne : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailOneContent : String = ""
-    var textIndex = 0
-    var detailItem: String? {
-        
-        didSet { self.configureView() }
-    }
+    var detailItem: String? { didSet {self.configureView()}}
     
     enum failed : Error { case failedCode(String) }
     
@@ -81,7 +77,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
+        //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170" .. This is real Ad
         adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
@@ -171,9 +167,10 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
+            
             Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 
-                self.showButtons()
+                self.showHideButtons(isShareButtonHiding: false, isMusicButtonHiding: false)
             })
             
             Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
@@ -183,22 +180,18 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
         } else {
             
-            self.hideButtons()
+            self.showHideButtons(isShareButtonHiding: true, isMusicButtonHiding: true)
         }
         
     }
     
-    func showButtons() {
+    
+    func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
         
-        myBut.isHidden = false
-        Advert.isHidden = false
+        myBut.isHidden = isShareButtonHiding
+        Advert.isHidden = isMusicButtonHiding
     }
     
-    func hideButtons(){
-        
-        Advert.isHidden = true
-        myBut.isHidden = true
-    }
  
     @IBAction func myAdvert(_ sender: UIButton) {
         

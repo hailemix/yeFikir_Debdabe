@@ -19,23 +19,13 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var interstitialTwo : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailTwoContent = ""
-    var detailItem: String? {
-        didSet {
-            
-            self.configureView()
-            
-        }
-    }
+    var detailItem: String? { didSet {self.configureView()}}
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var AdvertTwo: UIButton!
     
-    enum detailTwoFailed : Error {
-        
-        case codeError(String)
-        
-    }
+    enum detailTwoFailed : Error { case codeError(String)}
     
     struct Constants{
         
@@ -46,15 +36,13 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureView()
         
+        self.configureView()
         detailDescriptionTextView.delegate = self
         bannerAdController()
         addBannerViewToView(adMobBannerView)
         interstitialTwo = createAndLoadInterstitial()
         DetailOne.musicControl()
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -151,7 +139,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
             Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 
-                self.showButtons()
+                  self.showHideButtons(isShareButtonHiding: false, isMusicButtonHiding: false)
             })
             
             Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
@@ -160,16 +148,16 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             })
         } else {
             
-            AdvertTwo.isHidden = true
-            myBut.isHidden = true
+            self.showHideButtons(isShareButtonHiding: true, isMusicButtonHiding: true)
         }
     }
     
-    func showButtons(){
+    func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
         
-        myBut.isHidden = false
-        AdvertTwo.isHidden = false
+        myBut.isHidden = isShareButtonHiding
+        AdvertTwo.isHidden = isMusicButtonHiding
     }
+    
         
     @IBAction func AdvertTwoButton(_ sender:UIButton) {
         
@@ -195,7 +183,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         let activityViewController = UIActivityViewController(activityItems:[TableTwo.contentText], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
-       // activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.mail,UIActivity.ActivityType.assignToContact]
+       activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.mail,UIActivity.ActivityType.assignToContact]
         
         
     }

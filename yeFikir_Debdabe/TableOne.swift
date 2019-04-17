@@ -17,6 +17,8 @@ class TableOne: UITableViewController{
     var detailViewController: DetailOne? = nil
     var contentArray = [String]()
     var contentString = ""
+    var object = [String]()
+    static var contentText = ""
     var objects = ["ከልቤ ወደድኩሽ ስላት...","ኢትዮጲያዊ ደብዳቤ","የአመታት ጉዞ…በፍቅር ጥያቄ","ብልጣብልጥነትና የፍቅር ፍርፋሪ","የጨረታ ማስታወቂያ","ሰሞኑን...","የስራ ማስታወቂያ"," ደብዳቤ ወ ሳይኮሎጂ","የስራ ፈላጊዎች አሳዛኝ ደብዳቤ","ይድረስ አሜሪካ ላለኸዉ ወንድሜ" ,"በፈጠረሽ"]
     
     let image1 = UIImage(named: "a1")
@@ -30,11 +32,8 @@ class TableOne: UITableViewController{
     let image9 = UIImage(named: "a9")
     let image10 = UIImage(named: "a10")
     let image11 = UIImage(named: "a11")
-    var object = [String]()
-    static var contentText = ""
-
-
-  
+    var selectedImage = UIImage()
+   
     enum jsonError: Error {
         
         case failed(String)
@@ -99,76 +98,44 @@ class TableOne: UITableViewController{
         cell.textLabel!.text = zObject
         
         
-        
-        if(indexPath.row == 0) {
+        switch(indexPath.row) {
             
-            cell.imageView!.image = image1
+        case 0:
+            selectedImage = image1!
+            
+        case 1:
+            selectedImage = image2!
+            
+        case 2:
+             selectedImage = image3!
+         
+        case 3:
+             selectedImage = image4!
+        
+        case 4:
+             selectedImage = image5!
+            
+        case 5:
+            selectedImage = image6!
+            
+        case 6:
+             selectedImage = image7!
+            
+        case 8:
+             selectedImage = image8!
+            
+        case 9:
+             selectedImage = image9!
+            
+        case 10:
+             selectedImage = image10!
+        
+            default:
+                print("Some of the images are missing..")
             
         }
-        else if(indexPath.row == 1)
-        {
+        cell.imageView!.image = selectedImage
         
-            cell.imageView!.image = image2
-            
-        }
-            
-        else if (indexPath.row == 2)
-        {
-            cell.imageView!.image = image3
-            
-    
-        }
-        else if (indexPath.row == 3)
-            
-        {
-            cell.imageView!.image = image4
-            
-        }
-            
-        else if (indexPath.row == 4)
-            
-        {
-            cell.imageView!.image = image5
-        }
-            
-        else if (indexPath.row == 5)
-        {
-            cell.imageView!.image = image6
-            
-        }
-        else if (indexPath.row == 6)
-            
-        {
-            cell.imageView!.image = image7
-
-        }
-        
-        else if (indexPath.row == 7) {
-        
-        cell.imageView!.image = image8
-            
-        }
-        
-        else if (indexPath.row == 8) {
-        
-        cell.imageView!.image = image9
-
-        }
-            
-        else if (indexPath.row == 9) {
-        
-         cell.imageView!.image = image10
-            
-        
-        }
-        
-        else if (indexPath.row == 10) {
-        
-        
-        cell.imageView!.image = image11
-        
-        }
-  
         return cell
     }
     

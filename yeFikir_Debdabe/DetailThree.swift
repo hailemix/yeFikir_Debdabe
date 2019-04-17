@@ -12,53 +12,23 @@ import AVFoundation
 
 class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
-    
+    @IBOutlet weak var detailDescriptionTextView: UITextView!
+    @IBOutlet weak var AdThreeBut: UIButton!
+    @IBOutlet weak var myBut: UIButton!
     
     
     var interstitialThree : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailThreeContent = ""
-    var detailItem: String? {
-        didSet {
-            
-            self.configureView()
-            
-        }
-    }
+    var detailItem: String? { didSet {self.configureView()}}
     
-    @IBOutlet weak var detailDescriptionTextView: UITextView!
-    @IBOutlet weak var AdThreeBut: UIButton!
-    @IBOutlet weak var myBut: UIButton!
+    enum failed: Error {case failedCode(String)}
     
     struct Constants {
         
         static let adRate = 3
         
     }
-    
-    let item1   = TableThree().details[0]
-    let item2   = TableThree().details[1]
-    let item3   = TableThree().details[2]
-    let item4   = TableThree().details[3]
-    let item5   = TableThree().details[4]
-    let item6   = TableThree().details[5]
-    let item7   = TableThree().details[6]
-    let item8   = TableThree().details[7]
-    let item9   = TableThree().details[8]
-    let item10  = TableThree().details[9]
-    let item11  = TableThree().details[10]
-    let item12  = TableThree().details[11]
-    let item13  = TableThree().details[12]
-    let item14  = TableThree().details[13]
-    let item15  = TableThree().details[14]
-    let item16  = TableThree().details[15]
-    let item17  = TableThree().details[16]
-    let item18  = TableThree().details[17]
-    let item19  = TableThree().details[18]
-    let item20  = TableThree().details[19]
-    let item21  = TableThree().details[20]
-    let item22  = TableThree().details[21]
-    
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,16 +47,6 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
     }
     
-    func configureView() {
-        
-        if let detail3 = self.detailItem {
-            if let UITextView = self.detailDescriptionTextView {
-                UITextView.text = detail3.description
-            }
-            
-        }
-    }
-
     func addBannerViewToView(_ bannerView : GADBannerView){
         
         bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -96,7 +56,7 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
             NSLayoutConstraint(item:bannerView,
                                attribute: .bottom,
                                relatedBy: .equal,
-                               toItem: view.safeAreaLayoutGuide.bottomAnchor,
+                               toItem: view,
                                attribute: .bottom,
                                multiplier: 1,
                                constant: 0),
@@ -114,7 +74,8 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
+        //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170" .. This is Real Ad
+         adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
@@ -122,7 +83,9 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
+       // let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133") ..This is real Ad
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
@@ -164,6 +127,41 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
     }
     
+    func configureView() {
+        
+        if let detail3 = self.detailItem {
+            if let UITextView = self.detailDescriptionTextView {
+                UITextView.text = detail3.description
+            }
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if(scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+            
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+                
+                self.showHideButtons(isShareButtonHiding: false, isMusicButtonHiding: false)
+            })
+            Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+                
+                self.randomPresentationAd(oneIn: Constants.adRate)
+            })
+            
+        } else {
+            
+            self.showHideButtons(isShareButtonHiding: true, isMusicButtonHiding: true)
+        }
+    }
+    
+    
+    func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
+        
+        myBut.isHidden = isShareButtonHiding
+        AdThreeBut.isHidden = isMusicButtonHiding
+    }
+    
     @IBAction func AdThreeAction(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
@@ -177,90 +175,17 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
             DetailOne.player?.play()
             
         }
-        
     }
     
     @IBAction func shareTwo(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
         
-        switch detailDescriptionTextView.text {
-            
-        case item1:
-            detailThreeContent = item1
-            
-        case item2:
-            detailThreeContent = item2
-            
-        case item3:
-            detailThreeContent = item3
-            
-            
-        case item4:
-            detailThreeContent = item4
-            
-        case item5:
-            detailThreeContent = item5
-            
-        case item6:
-            detailThreeContent = item6
-            
-        case item7:
-            detailThreeContent = item7
-            
-        case item8:
-            detailThreeContent = item8
-            
-        case item9:
-            detailThreeContent = item9
-            
-        case item10:
-            detailThreeContent = item10
-            
-        case item11:
-            detailThreeContent = item11
-            
-        case item12:
-            detailThreeContent = item12
-            
-        case item13:
-            detailThreeContent = item13
-            
-        case item14:
-            detailThreeContent = item14
-            
-        case item15:
-            detailThreeContent = item15
-            
-        case item16:
-            detailThreeContent = item16
-            
-        case item17:
-            detailThreeContent = item17
-            
-        case item18:
-            detailThreeContent = item18
-            
-        case item19:
-            detailThreeContent = item19
-            
-        case item20:
-            detailThreeContent = item20
-            
-        case item21:
-            detailThreeContent = item21
-            
-        case item22:
-            detailThreeContent = item22
-            
-        default:
-            print("Please Check the code")
-        }
-        
-        let activityViewController = UIActivityViewController(activityItems:[detailThreeContent], applicationActivities:nil)
+        let activityViewController = UIActivityViewController(activityItems:[TableThree.contentText], applicationActivities:nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
-        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.mail,UIActivity.ActivityType.assignToContact]
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
+        self.present(activityViewController,animated:true,completion:nil)
         
     }
     
@@ -269,6 +194,5 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
     }
     
-   
 }
 
