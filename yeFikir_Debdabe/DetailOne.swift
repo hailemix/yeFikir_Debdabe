@@ -48,6 +48,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+        
     }
     
     static func musicControl() {
