@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E09CD201856CAE72EFA021E /* Pods_yeFikir_Debdabe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBE3DC39BC0451702630236 /* Pods_yeFikir_Debdabe.framework */; };
+		759DFE475C400627A0B1EA55 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0D2C042024403EDB7F858C /* Pods_yeFikir_DebdabeTests.framework */; };
 		CE16525B2044346400762CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE16525A2044346400762CF7 /* GoogleService-Info.plist */; };
 		CE16525C2044346400762CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE16525A2044346400762CF7 /* GoogleService-Info.plist */; };
 		CE16525D2044346400762CF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE16525A2044346400762CF7 /* GoogleService-Info.plist */; };
@@ -27,8 +27,8 @@
 		CE8C79B21EDFF2BF00E14EF1 /* DetailTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */; };
 		CE8C79B41EDFFBD500E14EF1 /* DetailThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */; };
 		CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEB6BDE51F4C77EF00759048 /* sleep.mp3 */; };
+		E17D884144A8E2E25362A426 /* Pods_yeFikir_Debdabe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E1A7126FE604C147A5D7F6 /* Pods_yeFikir_Debdabe.framework */; };
 		E2B927F722441B1C00B73CF2 /* contents.json in Resources */ = {isa = PBXBuildFile; fileRef = E2B927F622441B1C00B73CF2 /* contents.json */; };
-		FA4A5E27E000B4EE1BE03E98 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2229C3BC62A024CD08BF0883 /* Pods-yeFikir_Debdabe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.debug.xcconfig"; sourceTree = "<group>"; };
-		2E2758637364AEC005D614F0 /* Pods-yeFikir_Debdabe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.release.xcconfig"; sourceTree = "<group>"; };
-		517C823394518AF9AE24BF84 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9FBE3DC39BC0451702630236 /* Pods_yeFikir_Debdabe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_Debdabe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_DebdabeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1EED8215DF41ECDE066986A /* Pods-yeFikir_DebdabeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.release.xcconfig"; sourceTree = "<group>"; };
+		13E1A7126FE604C147A5D7F6 /* Pods_yeFikir_Debdabe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_Debdabe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A2830C3A3CDE6926C74109 /* Pods-yeFikir_DebdabeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.release.xcconfig"; path = "Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D0D2C042024403EDB7F858C /* Pods_yeFikir_DebdabeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yeFikir_DebdabeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		661D14B24993A4617EFE00CF /* Pods-yeFikir_Debdabe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.release.xcconfig"; path = "Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.release.xcconfig"; sourceTree = "<group>"; };
+		6CDE1AEE693A834D6595A832 /* Pods-yeFikir_Debdabe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_Debdabe.debug.xcconfig"; path = "Target Support Files/Pods-yeFikir_Debdabe/Pods-yeFikir_Debdabe.debug.xcconfig"; sourceTree = "<group>"; };
+		A19EBEC13A9A7ED3A88A4E8E /* Pods-yeFikir_DebdabeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yeFikir_DebdabeTests.debug.xcconfig"; path = "Target Support Files/Pods-yeFikir_DebdabeTests/Pods-yeFikir_DebdabeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE16525A2044346400762CF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE7570E91EDD267700816A9C /* yeFikir_Debdabe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yeFikir_Debdabe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7570EC1EDD267700816A9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E09CD201856CAE72EFA021E /* Pods_yeFikir_Debdabe.framework in Frameworks */,
+				E17D884144A8E2E25362A426 /* Pods_yeFikir_Debdabe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4A5E27E000B4EE1BE03E98 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */,
+				759DFE475C400627A0B1EA55 /* Pods_yeFikir_DebdabeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,26 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		75AF3BEC7386EEF33E6352E7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9FBE3DC39BC0451702630236 /* Pods_yeFikir_Debdabe.framework */,
-				A3DF2850E35639C944D3C55F /* Pods_yeFikir_DebdabeTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CCFAC16C2FF1FB32E8E7D304 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2229C3BC62A024CD08BF0883 /* Pods-yeFikir_Debdabe.debug.xcconfig */,
-				2E2758637364AEC005D614F0 /* Pods-yeFikir_Debdabe.release.xcconfig */,
-				517C823394518AF9AE24BF84 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */,
-				C1EED8215DF41ECDE066986A /* Pods-yeFikir_DebdabeTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CE7570E01EDD267700816A9C = {
 			isa = PBXGroup;
 			children = (
@@ -136,8 +116,8 @@
 				CE7571031EDD267700816A9C /* yeFikir_DebdabeTests */,
 				CE75710E1EDD267700816A9C /* yeFikir_DebdabeUITests */,
 				CE7570EA1EDD267700816A9C /* Products */,
-				CCFAC16C2FF1FB32E8E7D304 /* Pods */,
-				75AF3BEC7386EEF33E6352E7 /* Frameworks */,
+				F2EBD23708257A70EEAB8B72 /* Pods */,
+				E30D77142FC5BC4A595565AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +178,27 @@
 				E2B927F622441B1C00B73CF2 /* contents.json */,
 			);
 			path = "Json File";
+			sourceTree = "<group>";
+		};
+		E30D77142FC5BC4A595565AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13E1A7126FE604C147A5D7F6 /* Pods_yeFikir_Debdabe.framework */,
+				4D0D2C042024403EDB7F858C /* Pods_yeFikir_DebdabeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2EBD23708257A70EEAB8B72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CDE1AEE693A834D6595A832 /* Pods-yeFikir_Debdabe.debug.xcconfig */,
+				661D14B24993A4617EFE00CF /* Pods-yeFikir_Debdabe.release.xcconfig */,
+				A19EBEC13A9A7ED3A88A4E8E /* Pods-yeFikir_DebdabeTests.debug.xcconfig */,
+				41A2830C3A3CDE6926C74109 /* Pods-yeFikir_DebdabeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,7 +608,7 @@
 		};
 		CE7571151EDD267700816A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2229C3BC62A024CD08BF0883 /* Pods-yeFikir_Debdabe.debug.xcconfig */;
+			baseConfigurationReference = 6CDE1AEE693A834D6595A832 /* Pods-yeFikir_Debdabe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -628,7 +629,7 @@
 		};
 		CE7571161EDD267700816A9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E2758637364AEC005D614F0 /* Pods-yeFikir_Debdabe.release.xcconfig */;
+			baseConfigurationReference = 661D14B24993A4617EFE00CF /* Pods-yeFikir_Debdabe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -649,7 +650,7 @@
 		};
 		CE7571181EDD267700816A9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 517C823394518AF9AE24BF84 /* Pods-yeFikir_DebdabeTests.debug.xcconfig */;
+			baseConfigurationReference = A19EBEC13A9A7ED3A88A4E8E /* Pods-yeFikir_DebdabeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -665,7 +666,7 @@
 		};
 		CE7571191EDD267700816A9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1EED8215DF41ECDE066986A /* Pods-yeFikir_DebdabeTests.release.xcconfig */;
+			baseConfigurationReference = 41A2830C3A3CDE6926C74109 /* Pods-yeFikir_DebdabeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
