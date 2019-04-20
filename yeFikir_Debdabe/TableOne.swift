@@ -20,20 +20,8 @@ class TableOne: UITableViewController{
     var object = [String]()
     static var contentText = ""
     var objects = ["ከልቤ ወደድኩሽ ስላት...","ኢትዮጲያዊ ደብዳቤ","የአመታት ጉዞ…በፍቅር ጥያቄ","ብልጣብልጥነትና የፍቅር ፍርፋሪ","የጨረታ ማስታወቂያ","ሰሞኑን...","የስራ ማስታወቂያ"," ደብዳቤ ወ ሳይኮሎጂ","የስራ ፈላጊዎች አሳዛኝ ደብዳቤ","ይድረስ አሜሪካ ላለኸዉ ወንድሜ" ,"በፈጠረሽ"]
+    let titleImage = UIImage(named: "firstImage")
     
-    let image1 = UIImage(named: "a1")
-    let image2 = UIImage(named: "a2")
-    let image3 = UIImage(named: "a3")
-    let image4 = UIImage(named: "a4")
-    let image5 = UIImage(named: "a5")
-    let image6 = UIImage(named: "a6")
-    let image7 = UIImage(named: "a7")
-    let image8 = UIImage(named: "a8")
-    let image9 = UIImage(named: "a9")
-    let image10 = UIImage(named: "a10")
-    let image11 = UIImage(named: "a11")
-    var selectedImage = UIImage()
-   
     enum jsonError: Error {
         
         case failed(String)
@@ -96,46 +84,7 @@ class TableOne: UITableViewController{
         let zObject = objects[indexPath.row]
         
         cell.textLabel!.text = zObject
-        
-        
-        switch(indexPath.row) {
-            
-        case 0:
-            selectedImage = image1!
-            
-        case 1:
-            selectedImage = image2!
-            
-        case 2:
-             selectedImage = image3!
-         
-        case 3:
-             selectedImage = image4!
-        
-        case 4:
-             selectedImage = image5!
-            
-        case 5:
-            selectedImage = image6!
-            
-        case 6:
-             selectedImage = image7!
-            
-        case 8:
-             selectedImage = image8!
-            
-        case 9:
-             selectedImage = image9!
-            
-        case 10:
-             selectedImage = image10!
-        
-            default:
-                print("Some of the images are missing..")
-            
-        }
-        cell.imageView!.image = selectedImage
-        
+        cell.imageView!.image = titleImage
         return cell
     }
     
