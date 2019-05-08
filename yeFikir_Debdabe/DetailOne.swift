@@ -166,12 +166,12 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
             
-            Timer.scheduledTimer(withTimeInterval: 8, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
                 
                 self.showHideButtons(isShareButtonHiding: false, isMusicButtonHiding: false)
             })
             
-            Timer.scheduledTimer(withTimeInterval: 6, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
                 
                 self.randomPresentationAd(oneIn: Constants.adRate)
             })
