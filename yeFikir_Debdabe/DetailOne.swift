@@ -43,6 +43,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
         DetailOne.musicControl()
+        
        
     }
     

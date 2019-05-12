@@ -21,6 +21,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     var detailTwoContent = ""
     var detailItem: String? { didSet {self.configureView()}}
     
+    
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
     @IBOutlet weak var AdvertTwo: UIButton!
@@ -57,6 +58,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
                 
             }
         }
+        
     }
     
     func bannerAdController() {
@@ -151,6 +153,8 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             self.showHideButtons(isShareButtonHiding: true, isMusicButtonHiding: true)
         }
     }
+   
+
     
     func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
         

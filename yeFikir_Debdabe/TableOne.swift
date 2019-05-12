@@ -43,7 +43,7 @@ class TableOne: UITableViewController{
             
             if let file = Bundle.main.url(forResource: "contents", withExtension: "json"){
                 let data = try Data(contentsOf: file)
-                let myArray = try JSONSerialization.jsonObject(with: data, options:[])
+                let myArray = try JSONSerialization.jsonObject(with: data, options:[.allowFragments])
                 
                 if let contentDictionary = myArray as? [String: Any]{
                     

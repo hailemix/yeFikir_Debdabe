@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-aN-M7q">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-aN-M7q">
                                 <rect key="frame" x="0.0" y="64" width="375" height="492"/>
                                 <color key="backgroundColor" white="0.96586619127516782" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
