@@ -33,7 +33,6 @@ class TableOne: UITableViewController{
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailOne
-            
         }
     }
     

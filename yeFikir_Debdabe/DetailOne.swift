@@ -44,8 +44,13 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         interstitialOne = createAndLoadInterstitial()
         DetailOne.musicControl()
         
-       
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.detailDescriptionTextView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -136,10 +141,8 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
                     print("Ad is not ready")
                     
                 }
-                
             }
         }
-        
     }
 
     func configureView() {

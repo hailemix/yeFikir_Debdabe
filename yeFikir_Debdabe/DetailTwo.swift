@@ -46,6 +46,11 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         DetailOne.musicControl()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.detailDescriptionTextView.setContentOffset(CGPoint.zero, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
