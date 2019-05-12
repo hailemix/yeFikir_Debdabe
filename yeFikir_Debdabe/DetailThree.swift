@@ -74,8 +74,7 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170" .. This is Real Ad
-         adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
@@ -83,13 +82,10 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-       // let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133") ..This is real Ad
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
-        
     }
     
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
@@ -97,13 +93,10 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     }
     
     func randomNumberInRange(lower:Int ,upper:Int) -> Int {
-        
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-        
     }
     
     func randomPresentationAd (oneIn:Int)  {
-        
         
         let randomNumber = randomNumberInRange(lower:1 , upper: Constants.adRate)
         print("Random Number :\(randomNumber)")
@@ -120,11 +113,8 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
                     print("Ad is not ready")
                     
                 }
-                
             }
-            
         }
-        
     }
     
     func configureView() {

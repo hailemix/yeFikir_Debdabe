@@ -73,14 +73,12 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             print(error.localizedDescription)
             
         }
-        
     }
     
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        //adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170" .. This is real Ad
-        adMobBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        adMobBannerView.adUnitID = "ca-app-pub-9156727777369518/1529726170"
         adMobBannerView.rootViewController = self
         adMobBannerView.delegate = self
         adMobBannerView.load(GADRequest())
@@ -88,32 +86,24 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     func createAndLoadInterstitial() -> GADInterstitial {
         
-      //  let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
-        
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9156727777369518/3772746133")
         interstitial.load(GADRequest())
         interstitial.delegate = self
         return interstitial
-        
     }
-    
 
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitialOne = createAndLoadInterstitial()
-        
     }
     
     func randomNumberInRange(lower:Int,upper:Int) -> Int {
-        
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
-        
     }
     
     func addBannerViewToView(_ bannerView : GADBannerView){
         bannerDisplayed = true
         relayoutViews()
         view.addSubview(adMobBannerView)
-    
     }
     
     func relayoutViews() {
