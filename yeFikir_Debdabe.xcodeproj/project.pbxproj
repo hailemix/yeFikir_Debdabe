@@ -78,6 +78,7 @@
 		CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTwo.swift; sourceTree = "<group>"; };
 		CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailThree.swift; sourceTree = "<group>"; };
 		CEB6BDE51F4C77EF00759048 /* sleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sleep.mp3; sourceTree = "<group>"; };
+		E20D78FE228A058A001754A0 /* yeFikir_Debdabe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yeFikir_Debdabe.entitlements; sourceTree = "<group>"; };
 		E2B927F622441B1C00B73CF2 /* contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +135,7 @@
 		CE7570EB1EDD267700816A9C /* yeFikir_Debdabe */ = {
 			isa = PBXGroup;
 			children = (
+				E20D78FE228A058A001754A0 /* yeFikir_Debdabe.entitlements */,
 				CE7570EC1EDD267700816A9C /* AppDelegate.swift */,
 				CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */,
 				CE7571231EDD2F9C00816A9C /* DetailOne.swift */,
@@ -275,6 +277,11 @@
 						DevelopmentTeam = CZ27WXDYV6;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					CE7570FF1EDD267700816A9C = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -611,6 +618,7 @@
 			baseConfigurationReference = 6CDE1AEE693A834D6595A832 /* Pods-yeFikir_Debdabe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = yeFikir_Debdabe/yeFikir_Debdabe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = CZ27WXDYV6;
@@ -635,6 +643,7 @@
 			baseConfigurationReference = 661D14B24993A4617EFE00CF /* Pods-yeFikir_Debdabe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = yeFikir_Debdabe/yeFikir_Debdabe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = CZ27WXDYV6;

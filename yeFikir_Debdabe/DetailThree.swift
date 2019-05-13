@@ -33,7 +33,6 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.configureView()
         bannerAdController()
         addBannerViewToView(adMobBannerView)
