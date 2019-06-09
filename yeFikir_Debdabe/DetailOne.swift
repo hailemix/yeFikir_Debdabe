@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMobileAds
 import AVFoundation
+import Crashlytics
 
 class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
@@ -43,9 +44,11 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
         DetailOne.musicControl()
+
         
     }
     
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.detailDescriptionTextView.setContentOffset(CGPoint.zero, animated: false)
