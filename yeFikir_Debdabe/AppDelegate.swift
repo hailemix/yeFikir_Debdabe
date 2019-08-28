@@ -53,16 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        
-        if (DetailOne.player?.isPlaying)! {
-            
-            DetailOne.player?.stop()
-            
-        }
-
-    }
-
     func applicationDidEnterBackground(_ application: UIApplication) {
         
         if (DetailOne.player?.isPlaying)! {
