@@ -60,6 +60,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
+    
     static func musicControl() {
         
         let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")

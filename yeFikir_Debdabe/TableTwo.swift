@@ -31,6 +31,7 @@ class TableTwo: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailTwo
             
         }
+  
     }
     
     func retrieveFromJson() -> [String] {
@@ -63,6 +64,7 @@ class TableTwo: UITableViewController {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailTwo
                 controller.detailItem = object[indexPath.row]
                 TableTwo.contentText = controller.detailItem!
+                DetailOne.musicControl()   
                 
             }
         }
