@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE7570FF1EDD267700816A9C"
-               BuildableName = "yeFikir_DebdabeTests.xctest"
-               BlueprintName = "yeFikir_DebdabeTests"
-               ReferencedContainer = "container:yeFikir_Debdabe.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE75710A1EDD267700816A9C"
-               BuildableName = "yeFikir_DebdabeUITests.xctest"
-               BlueprintName = "yeFikir_DebdabeUITests"
-               ReferencedContainer = "container:yeFikir_Debdabe.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
