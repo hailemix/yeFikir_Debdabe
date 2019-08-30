@@ -43,7 +43,10 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         bannerAdController()
         addBannerViewToView(adMobBannerView)
         interstitialTwo = createAndLoadInterstitial()
-        DetailOne.musicControl()
+        if(DetailOne.musicIsStarted == false){
+           DetailOne.musicControl()
+        }
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -60,10 +63,8 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         if let detail2 = self.detailItem {
             if let UITextView = self.detailDescriptionTextView {
                 UITextView.text = detail2.description
-                
             }
         }
-        
     }
     
     func bannerAdController() {
@@ -179,6 +180,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             
             DetailOne.player?.play()
             
+            DetailOne.musicIsStarted = true
         }
         
     }

@@ -19,6 +19,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBOutlet weak var Advert: UIButton!
     
     static var player : AVAudioPlayer?
+    static var musicIsStarted = false
     
     var interstitialOne : GADInterstitial!
     var adMobBannerView : GADBannerView!
@@ -44,8 +45,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
         DetailOne.musicControl()
-
-        
+                 
     }
     
 
@@ -199,6 +199,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         } else {
             
             DetailOne.player?.play()
+            DetailOne.musicIsStarted = true
             
         }
         
@@ -216,7 +217,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+       dismiss(animated: true, completion: nil)
         
     }
     

@@ -38,7 +38,10 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialThree = createAndLoadInterstitial()
-        DetailOne.musicControl()
+        if( DetailOne.musicIsStarted == false){
+            DetailOne.musicControl()
+        }
+       
     }
     
     override func viewDidLayoutSubviews() {
@@ -167,6 +170,7 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         } else {
             
             DetailOne.player?.play()
+            DetailOne.musicIsStarted = true
             
         }
     }
