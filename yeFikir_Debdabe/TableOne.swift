@@ -20,12 +20,8 @@ class TableOne: UITableViewController{
     var object = [String]()
     static var contentText = ""
     var objects = ["ከልቤ ወደድኩሽ ስላት...","ኢትዮጲያዊ ደብዳቤ","የአመታት ጉዞ…በፍቅር ጥያቄ","ብልጣብልጥነትና የፍቅር ፍርፋሪ","የጨረታ ማስታወቂያ","ሰሞኑን...","የስራ ማስታወቂያ"," ደብዳቤ ወ ሳይኮሎጂ","የስራ ፈላጊዎች አሳዛኝ ደብዳቤ","ይድረስ አሜሪካ ላለኸዉ ወንድሜ" ,"በፈጠረሽ"]
-
     
-    enum jsonError: Error {
-        
-        case failed(String)
-    }
+    enum jsonError: Error { case failed(String) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
