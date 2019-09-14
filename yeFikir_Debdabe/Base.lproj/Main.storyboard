@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GL4-mL-aAA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GL4-mL-aAA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -48,17 +48,10 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A88-ea-MsL">
-                                <rect key="frame" x="16" y="464" width="80" height="92"/>
-                                <state key="normal" image="Advertise"/>
-                                <connections>
-                                    <action selector="AdvertTwoButton:" destination="x01-eL-ZQt" eventType="touchUpInside" id="KQy-5G-89q"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRc-Gg-iQK">
                                 <rect key="frame" x="274" y="461" width="85" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="BPw-cT-9O4"/>
+                                    <constraint firstAttribute="width" constant="85" id="dIM-Q7-F8I"/>
                                 </constraints>
                                 <state key="normal" image="fab"/>
                                 <connections>
@@ -68,14 +61,12 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j3a-aN-M7q" firstAttribute="bottom" secondItem="A88-ea-MsL" secondAttribute="bottom" id="Qg0-V9-vkR"/>
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="top" secondItem="x11-RR-oKd" secondAttribute="bottom" id="YfN-2A-Eed"/>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="bottom" secondItem="j3a-aN-M7q" secondAttribute="bottom" id="YrI-a1-aSE"/>
                             <constraint firstItem="j3a-aN-M7q" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leading" id="ZDm-sI-WFn"/>
+                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="NRc-Gg-iQK" secondAttribute="bottom" constant="62" id="ZQ2-ZU-G24"/>
                             <constraint firstAttribute="trailing" secondItem="j3a-aN-M7q" secondAttribute="trailing" id="ma6-pM-1nM"/>
-                            <constraint firstItem="A88-ea-MsL" firstAttribute="leading" secondItem="q6l-lg-GeG" secondAttribute="leadingMargin" id="oVi-fW-Ujd"/>
-                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="r15-Iv-lTg"/>
-                            <constraint firstItem="A88-ea-MsL" firstAttribute="bottom" secondItem="NRc-Gg-iQK" secondAttribute="bottom" id="ryN-9n-FLb"/>
-                            <constraint firstItem="47u-rs-oFn" firstAttribute="top" secondItem="A88-ea-MsL" secondAttribute="bottom" constant="62" id="yHS-uL-Zu2"/>
+                            <constraint firstItem="NRc-Gg-iQK" firstAttribute="trailing" secondItem="q6l-lg-GeG" secondAttribute="trailingMargin" id="zJu-49-rRu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*  ደብዳቤዎች  *" id="StW-w5-NxY" colorLabel="IBBuiltInLabel-Red">
@@ -91,7 +82,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="AdvertTwo" destination="A88-ea-MsL" id="CYe-0i-ZYG"/>
                         <outlet property="detailDescriptionTextView" destination="j3a-aN-M7q" id="yRX-3A-hjD"/>
                         <outlet property="myBut" destination="NRc-Gg-iQK" id="a2A-N7-Td7"/>
                     </connections>
@@ -258,13 +248,6 @@
                                 <fontDescription key="fontDescription" name="EthiopiaJiret" family="Ethiopia Jiret" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNZ-Dl-04C">
-                                <rect key="frame" x="16" y="464" width="80" height="92"/>
-                                <state key="normal" image="Advertise"/>
-                                <connections>
-                                    <action selector="AdThreeAction:" destination="5f7-8g-lRT" eventType="touchUpInside" id="xEb-PS-wrp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9B-dr-74q">
                                 <rect key="frame" x="274" y="461" width="85" height="95"/>
                                 <constraints>
@@ -278,14 +261,12 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="1oq-Nc-1Yd"/>
-                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="CWH-lk-EMC"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="QGW-3K-8G5"/>
-                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="JNZ-Dl-04C" secondAttribute="bottom" constant="62" id="Qsk-Zg-4Eh"/>
+                            <constraint firstAttribute="trailing" secondItem="zuA-Ke-HCt" secondAttribute="trailing" id="Fd3-eg-1q4"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leading" id="QIt-ig-he7"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="Ynf-4E-N54"/>
                             <constraint firstItem="e9B-dr-74q" firstAttribute="trailing" secondItem="4Cg-b6-0Wu" secondAttribute="trailingMargin" id="k1v-er-XIS"/>
-                            <constraint firstItem="JNZ-Dl-04C" firstAttribute="leading" secondItem="4Cg-b6-0Wu" secondAttribute="leadingMargin" id="l0P-bV-ugm"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="vIk-Kd-SJp"/>
-                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="top" secondItem="iIW-EY-bEc" secondAttribute="bottom" id="y5m-Dd-PZY"/>
+                            <constraint firstItem="wOB-Zi-8lC" firstAttribute="top" secondItem="zuA-Ke-HCt" secondAttribute="bottom" constant="62" id="u83-ut-yFc"/>
+                            <constraint firstItem="zuA-Ke-HCt" firstAttribute="bottom" secondItem="e9B-dr-74q" secondAttribute="bottom" id="uY0-hQ-TsM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="*   ግጥሞች   *" id="C9G-2e-Rxu" colorLabel="IBBuiltInLabel-Red">
@@ -301,7 +282,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="AdThreeBut" destination="JNZ-Dl-04C" id="WYO-DL-dq2"/>
                         <outlet property="detailDescriptionTextView" destination="zuA-Ke-HCt" id="h8B-DX-EOt"/>
                         <outlet property="myBut" destination="e9B-dr-74q" id="gVg-Fy-cJT"/>
                     </connections>
@@ -457,25 +437,15 @@
                                     <action selector="myShare:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Mp7-vK-BdW"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vh-x3-JQw">
-                                <rect key="frame" x="16" y="461" width="80" height="95"/>
-                                <state key="normal" image="Advertise"/>
-                                <connections>
-                                    <action selector="myAdvert:" destination="Fgl-9b-Sg2" eventType="touchUpInside" id="Tsj-gS-5Hs"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="2cB-lC-kWd"/>
-                            <constraint firstItem="9vh-x3-JQw" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" id="5rL-jr-K9c"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="DlA-zn-s63"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="uNk-wH-sz1" secondAttribute="bottom" id="EKq-ih-gUq"/>
-                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="9vh-x3-JQw" secondAttribute="bottom" constant="62" id="MZU-A7-CFg"/>
+                            <constraint firstItem="WNF-df-y4A" firstAttribute="top" secondItem="Szz-hv-Cgn" secondAttribute="bottom" constant="62" id="JMR-wo-XDz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Szz-hv-Cgn" secondAttribute="trailing" constant="-17" id="LGW-ur-IBk"/>
                             <constraint firstItem="uNk-wH-sz1" firstAttribute="trailing" secondItem="r9x-5S-2uC" secondAttribute="trailingMargin" id="NFF-ip-KyG"/>
-                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="QoR-Za-pZ0"/>
-                            <constraint firstItem="9vh-x3-JQw" firstAttribute="top" secondItem="uNk-wH-sz1" secondAttribute="top" id="ahi-D5-K8z"/>
-                            <constraint firstItem="9vh-x3-JQw" firstAttribute="bottom" secondItem="uNk-wH-sz1" secondAttribute="bottom" id="uim-Aa-m4H"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="leading" secondItem="r9x-5S-2uC" secondAttribute="leadingMargin" constant="-15" id="Rj6-UZ-khw"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="bottom" secondItem="uNk-wH-sz1" secondAttribute="bottom" id="hBn-nm-qgH"/>
+                            <constraint firstItem="Szz-hv-Cgn" firstAttribute="top" secondItem="55e-QX-50g" secondAttribute="bottom" id="pyr-n4-zBi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="              *  ዘና .. ዘና  *" id="xSK-As-Yf1" colorLabel="IBBuiltInLabel-Red">
@@ -491,7 +461,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="Advert" destination="9vh-x3-JQw" id="bQx-Ij-ssP"/>
                         <outlet property="detailDescriptionTextView" destination="Szz-hv-Cgn" id="3ID-qS-jdN"/>
                         <outlet property="myBut" destination="uNk-wH-sz1" id="AOe-Fi-okZ"/>
                     </connections>
@@ -550,7 +519,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Advertise" width="80" height="92"/>
         <image name="Fun" width="25" height="25"/>
         <image name="about_us" width="704" height="847"/>
         <image name="back_btn" width="13" height="21"/>

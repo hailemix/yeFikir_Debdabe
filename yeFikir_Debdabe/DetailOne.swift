@@ -16,7 +16,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
-    @IBOutlet weak var Advert: UIButton!
+    
     
     static var player : AVAudioPlayer?
     static var musicIsStarted = false
@@ -35,7 +35,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,11 +44,11 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
-        DetailOne.musicControl()
-                 
+        
+        
     }
     
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.detailDescriptionTextView.setContentOffset(CGPoint.zero, animated: false)
@@ -61,28 +61,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     }
     
     
-    static func musicControl() {
-        
-        let url = Bundle.main.url(forResource: "sleep", withExtension: "mp3")
-        
-        do {
-            
-            player = try AVAudioPlayer(contentsOf: url!)
-            
-            guard let myPlayer = player
-                else
-            {
-                return
-            }
-            
-            myPlayer.prepareToPlay()
-            
-        } catch let error {
-            
-            print(error.localizedDescription)
-            
-        }
-    }
     
     func bannerAdController() {
         
@@ -100,7 +78,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         interstitial.delegate = self
         return interstitial
     }
-
+    
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         interstitialOne = createAndLoadInterstitial()
     }
@@ -138,7 +116,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
                 
                 if interstitialOne!.isReady{
                     
-               interstitialOne.present(fromRootViewController: self)
+                    interstitialOne.present(fromRootViewController: self)
                     
                 } else {
                     
@@ -148,7 +126,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
             }
         }
     }
-
+    
     func configureView() {
         
         if let detail = self.detailItem {
@@ -184,10 +162,10 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
         
         myBut.isHidden = isShareButtonHiding
-        Advert.isHidden = isMusicButtonHiding
+        
     }
     
- 
+    
     @IBAction func myAdvert(_ sender: UIButton) {
         
         randomPresentationAd(oneIn: Constants.adRate)
@@ -213,11 +191,11 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
         activityViewController.excludedActivityTypes = [UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.saveToCameraRoll,UIActivity.ActivityType.copyToPasteboard]
-          self.present(activityViewController,animated:true,completion:nil)
+        self.present(activityViewController,animated:true,completion:nil)
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
-       dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
         
     }
     

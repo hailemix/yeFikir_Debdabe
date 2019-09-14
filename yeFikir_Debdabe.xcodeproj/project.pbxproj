@@ -26,7 +26,6 @@
 		CE84372F1EE144D30069B39B /* About_US.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84372E1EE144D30069B39B /* About_US.swift */; };
 		CE8C79B21EDFF2BF00E14EF1 /* DetailTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */; };
 		CE8C79B41EDFFBD500E14EF1 /* DetailThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */; };
-		CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEB6BDE51F4C77EF00759048 /* sleep.mp3 */; };
 		E17D884144A8E2E25362A426 /* Pods_yeFikir_Debdabe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E1A7126FE604C147A5D7F6 /* Pods_yeFikir_Debdabe.framework */; };
 		E2B927F722441B1C00B73CF2 /* contents.json in Resources */ = {isa = PBXBuildFile; fileRef = E2B927F622441B1C00B73CF2 /* contents.json */; };
 /* End PBXBuildFile section */
@@ -77,7 +76,6 @@
 		CE84372E1EE144D30069B39B /* About_US.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = About_US.swift; path = ../About_US.swift; sourceTree = "<group>"; };
 		CE8C79B11EDFF2BF00E14EF1 /* DetailTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTwo.swift; sourceTree = "<group>"; };
 		CE8C79B31EDFFBD500E14EF1 /* DetailThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailThree.swift; sourceTree = "<group>"; };
-		CEB6BDE51F4C77EF00759048 /* sleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sleep.mp3; sourceTree = "<group>"; };
 		E20D78FE228A058A001754A0 /* yeFikir_Debdabe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yeFikir_Debdabe.entitlements; sourceTree = "<group>"; };
 		E2B927F622441B1C00B73CF2 /* contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +143,6 @@
 				CE75711F1EDD292E00816A9C /* TableThree.swift */,
 				CE84372E1EE144D30069B39B /* About_US.swift */,
 				CE7571451EDD98AA00816A9C /* jiret.ttf */,
-				CEB6BDE51F4C77EF00759048 /* sleep.mp3 */,
 				CE7570F01EDD267700816A9C /* Main.storyboard */,
 				CE7570F61EDD267700816A9C /* Assets.xcassets */,
 				CE7570F81EDD267700816A9C /* LaunchScreen.storyboard */,
@@ -323,7 +320,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB6BDE61F4C77EF00759048 /* sleep.mp3 in Resources */,
 				CE7570FA1EDD267700816A9C /* LaunchScreen.storyboard in Resources */,
 				CE7570F71EDD267700816A9C /* Assets.xcassets in Resources */,
 				CE7570F21EDD267700816A9C /* Main.storyboard in Resources */,
@@ -571,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -624,7 +620,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -639,6 +635,7 @@
 			baseConfigurationReference = 6CDE1AEE693A834D6595A832 /* Pods-yeFikir_Debdabe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = yeFikir_Debdabe/yeFikir_Debdabe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -665,6 +662,7 @@
 			baseConfigurationReference = 661D14B24993A4617EFE00CF /* Pods-yeFikir_Debdabe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_ENTITLEMENTS = yeFikir_Debdabe/yeFikir_Debdabe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

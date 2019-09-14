@@ -25,13 +25,13 @@ class TableTwo: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailTwo
             
         }
-  
+        
     }
     
     func retrieveFromJson() -> [String] {
@@ -45,7 +45,7 @@ class TableTwo: UITableViewController {
                 
                 if let contentDictionary = myArray as? [String: Any] {
                     contentArray = (contentDictionary ["contentB"] as?
-                    [String])!
+                        [String])!
                 }
             }
         } catch {
@@ -57,15 +57,13 @@ class TableTwo: UITableViewController {
     
     
     override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         let object = retrieveFromJson()
+        let object = retrieveFromJson()
         if segue.identifier == "showDetail2" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailTwo
                 controller.detailItem = object[indexPath.row]
                 TableTwo.contentText = controller.detailItem!
-                DetailOne.musicControl()   
-                
             }
         }
     }
@@ -77,7 +75,7 @@ class TableTwo: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2" , for: indexPath)
         let object = objects[indexPath.row]

@@ -53,21 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     
     }
 
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        
-        if (DetailOne.player?.isPlaying)! {
-            
-            DetailOne.player?.stop()
-            
-        }
-
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    
-        DetailOne.player?.play()
-    }
-
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
@@ -78,7 +63,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         
     }
     
-    
-
 }
 

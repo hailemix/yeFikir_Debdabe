@@ -13,7 +13,6 @@ import AVFoundation
 class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBannerViewDelegate,GADInterstitialDelegate {
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
-    @IBOutlet weak var AdThreeBut: UIButton!
     @IBOutlet weak var myBut: UIButton!
     
     
@@ -29,7 +28,7 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         static let adRate = 3
         
     }
-     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,10 +37,7 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialThree = createAndLoadInterstitial()
-        if( DetailOne.musicIsStarted == false){
-            DetailOne.musicControl()
-        }
-       
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -156,24 +152,8 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
     func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
         
         myBut.isHidden = isShareButtonHiding
-        AdThreeBut.isHidden = isMusicButtonHiding
     }
     
-    @IBAction func AdThreeAction(_ sender: UIButton) {
-        
-        randomPresentationAd(oneIn: Constants.adRate)
-        
-        if(DetailOne.player?.isPlaying)! {
-            
-            DetailOne.player?.stop()
-            
-        } else {
-            
-            DetailOne.player?.play()
-            DetailOne.musicIsStarted = true
-            
-        }
-    }
     
     @IBAction func shareTwo(_ sender: UIButton) {
         

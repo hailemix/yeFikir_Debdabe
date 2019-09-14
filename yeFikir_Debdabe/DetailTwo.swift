@@ -24,7 +24,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
-    @IBOutlet weak var AdvertTwo: UIButton!
+
     
     enum detailTwoFailed : Error { case codeError(String)}
     
@@ -43,9 +43,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         bannerAdController()
         addBannerViewToView(adMobBannerView)
         interstitialTwo = createAndLoadInterstitial()
-        if(DetailOne.musicIsStarted == false){
-           DetailOne.musicControl()
-        }
         
     }
     
@@ -165,24 +162,6 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
         
         myBut.isHidden = isShareButtonHiding
-        AdvertTwo.isHidden = isMusicButtonHiding
-    }
-    
-        
-    @IBAction func AdvertTwoButton(_ sender:UIButton) {
-        
-        randomPresentationAd(oneIn: Constants.adRate)
-        
-        if(DetailOne.player?.isPlaying)!{
-            
-            DetailOne.player?.stop()
-        }  else {
-            
-            DetailOne.player?.play()
-            
-            DetailOne.musicIsStarted = true
-        }
-        
     }
     
     @IBAction func shareButton(_ sender: UIButton) {
