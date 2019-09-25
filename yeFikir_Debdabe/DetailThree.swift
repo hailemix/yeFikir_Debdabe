@@ -133,23 +133,23 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
         if(scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
-            Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: {_ in
                 
-                self.showHideButtons(isShareButtonHiding: false, isMusicButtonHiding: false)
+                self.showHideButtons(isShareButtonHiding: false)
             })
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 
                 self.randomPresentationAd(oneIn: Constants.adRate)
             })
             
         } else {
             
-            self.showHideButtons(isShareButtonHiding: true, isMusicButtonHiding: true)
+            self.showHideButtons(isShareButtonHiding: true)
         }
     }
     
     
-    func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
+    func showHideButtons(isShareButtonHiding: Bool) {
         
         myBut.isHidden = isShareButtonHiding
     }

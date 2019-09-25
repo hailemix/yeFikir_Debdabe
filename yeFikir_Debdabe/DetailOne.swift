@@ -18,9 +18,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBOutlet weak var myBut: UIButton!
     
     
-    static var player : AVAudioPlayer?
-    static var musicIsStarted = false
-    
     var interstitialOne : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailOneContent : String = ""
@@ -44,8 +41,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
-        
-        
+ 
     }
     
     
@@ -54,14 +50,11 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         self.detailDescriptionTextView.setContentOffset(CGPoint.zero, animated: false)
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
-    
-    
+
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
@@ -141,46 +134,27 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
             
-            Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: {_ in
                 
-                self.showHideButtons(isShareButtonHiding: false, isMusicButtonHiding: false)
+                self.showHideButtons(isShareButtonHiding: false)
             })
             
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: {_ in
+            Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 
                 self.randomPresentationAd(oneIn: Constants.adRate)
             })
             
         } else {
             
-            self.showHideButtons(isShareButtonHiding: true, isMusicButtonHiding: true)
+            self.showHideButtons(isShareButtonHiding: true)
         }
         
     }
     
     
-    func showHideButtons(isShareButtonHiding: Bool, isMusicButtonHiding: Bool) {
+    func showHideButtons(isShareButtonHiding: Bool) {
         
         myBut.isHidden = isShareButtonHiding
-        
-    }
-    
-    
-    @IBAction func myAdvert(_ sender: UIButton) {
-        
-        randomPresentationAd(oneIn: Constants.adRate)
-        
-        if(DetailOne.player?.isPlaying)! {
-            
-            DetailOne.player?.stop()
-            
-        } else {
-            
-            DetailOne.player?.play()
-            DetailOne.musicIsStarted = true
-            
-        }
-        
     }
     
     @IBAction func myShare(_ sender: UIButton) {
@@ -196,9 +170,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        
     }
-    
-    
+  
 }
 
