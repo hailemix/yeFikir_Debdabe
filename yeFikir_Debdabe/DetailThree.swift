@@ -133,12 +133,9 @@ class DetailThree: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADB
         
         if(scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: {_ in
-                
-                self.showHideButtons(isShareButtonHiding: false)
-            })
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 
+                self.showHideButtons(isShareButtonHiding: false)
                 self.randomPresentationAd(oneIn: Constants.adRate)
             })
             

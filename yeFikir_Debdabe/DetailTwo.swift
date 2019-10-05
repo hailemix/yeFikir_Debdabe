@@ -5,7 +5,7 @@
 //  Created by user on 5/30/17.
 //  Copyright © 2017 AFC Ethiopia. All rights reserved.
 
-/* Don't forget to add the delegates in the class extension,otherwise it won't work and Becareful of segues(delete their relationships) when copy-pasting buttons from one viewcontroller to another view controller
+/* Don't forget to add the delegates in the class extension,otherwise it won't work and Be careful of segues(delete their relationships) when copy-pasting buttons from one viewcontroller to another view controller
  */
 
 import UIKit
@@ -142,13 +142,10 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height){
             
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: {_ in
-                
-                self.showHideButtons(isShareButtonHiding: false)
-            })
             
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 
+                self.showHideButtons(isShareButtonHiding: false)
                 self.randomPresentationAd(oneIn: Constants.adRate)
             })
         } else {
@@ -174,15 +171,12 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController,animated:true,completion:nil)
         activityViewController.excludedActivityTypes = [UIActivity.ActivityType.airDrop,UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.mail,UIActivity.ActivityType.assignToContact]
-        
-        
+
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
+ 
 }
 

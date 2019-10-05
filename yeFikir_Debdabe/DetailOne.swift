@@ -17,12 +17,14 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBOutlet weak var detailDescriptionTextView: UITextView!
     @IBOutlet weak var myBut: UIButton!
     
-    
     var interstitialOne : GADInterstitial!
     var adMobBannerView : GADBannerView!
     var detailOneContent : String = ""
     var bannerDisplayed = false
-    var detailItem: String? { didSet {self.configureView()}}
+    var detailItem: String? {
+        didSet {
+            self.configureView()
+        }}
     
     enum failed : Error { case failedCode(String) }
     
@@ -41,7 +43,7 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         addBannerViewToView(adMobBannerView)
         detailDescriptionTextView.delegate = self
         interstitialOne = createAndLoadInterstitial()
- 
+        
     }
     
     
@@ -54,7 +56,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         super.didReceiveMemoryWarning()
     }
     
-
     func bannerAdController() {
         
         adMobBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
@@ -80,22 +81,17 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
     }
     
+    // Adding BannerView as a sub view and Moving the banner Ad to the bottom of the screen
     func addBannerViewToView(_ bannerView : GADBannerView){
-        bannerDisplayed = true
-        relayoutViews()
-        view.addSubview(adMobBannerView)
-    }
-    
-    func relayoutViews() {
+        
         let screenRect = UIScreen.main.bounds
         let screenHeight = screenRect.size.height
+        var bannerFrame = adMobBannerView!.frame
+        bannerFrame.origin.x = 0
+        bannerFrame.origin.y = screenHeight - bannerFrame.size.height
+        adMobBannerView!.frame = bannerFrame
+        view.addSubview(adMobBannerView)
         
-        if(bannerDisplayed){
-            var bannerFrame = adMobBannerView!.frame
-            bannerFrame.origin.x = 0
-            bannerFrame.origin.y = screenHeight - bannerFrame.size.height
-            adMobBannerView!.frame = bannerFrame
-        }
     }
     
     func randomPresentationAd (oneIn:Int) {
@@ -133,14 +129,9 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
         
         if (scrollView.contentOffset.y + 1) >= (scrollView.contentSize.height - scrollView.frame.size.height) {
             
-            
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: {_ in
-                
-                self.showHideButtons(isShareButtonHiding: false)
-            })
-            
             Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in
                 
+                self.showHideButtons(isShareButtonHiding: false)
                 self.randomPresentationAd(oneIn: Constants.adRate)
             })
             
@@ -171,6 +162,6 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     @IBAction func backBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-  
+    
 }
 
