@@ -84,13 +84,25 @@ class DetailOne: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
     // Adding BannerView as a sub view and Moving the banner Ad to the bottom of the screen
     func addBannerViewToView(_ bannerView : GADBannerView){
         
-        let screenRect = UIScreen.main.bounds
-        let screenHeight = screenRect.size.height
-        var bannerFrame = adMobBannerView!.frame
-        bannerFrame.origin.x = 0
-        bannerFrame.origin.y = screenHeight - bannerFrame.size.height
-        adMobBannerView!.frame = bannerFrame
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(adMobBannerView)
+        view.addConstraints([
+            
+            NSLayoutConstraint(item:bannerView,
+                               attribute: .bottom,
+                               relatedBy: .equal,
+                               toItem: view,
+                               attribute: .bottom,
+                               multiplier: 1,
+                               constant: 0),
+            
+            NSLayoutConstraint(item:bannerView,
+                               attribute: .centerX,
+                               relatedBy: .equal,
+                               toItem: view,
+                               attribute: .centerX,
+                               multiplier: 1,
+                               constant: 0) ])
         
     }
     

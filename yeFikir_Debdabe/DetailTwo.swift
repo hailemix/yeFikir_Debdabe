@@ -126,7 +126,7 @@ class DetailTwo: UIViewController,UITextViewDelegate,UIScrollViewDelegate,GADBan
                                toItem: view,
                                attribute: .bottom,
                                multiplier: 1,
-                               constant: 0),
+                                constant: 0),
             
             NSLayoutConstraint(item:bannerView,
                                attribute: .centerX,
